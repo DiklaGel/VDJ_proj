@@ -29,6 +29,7 @@ def threshold(groups):
 
 
 def reads_to_fasta(cell_barcodes, dir_name, fastq1, fastq2, cell_name):
+    io.makeOutputDir(dir_name)
     # finding the lines (list of numbers) in the fastq2 file that start with those 15-mers
     lines = io.find_lines(cell_barcodes, fastq2)
     # extracting the reads (list of strings) in the fastq2 file that are written in the lines we found above
@@ -110,7 +111,8 @@ def filter_abundant_barcodes(fastq2):
     return high_confidence_barcodes
 
 
-def split_by_cells(high_confidence_barcodes,wells_cells_file,output_dir,fastq1,fastq2,receptor_name):
+def split_by_cells(high_confidence_barcodes,wells_cells_file,output_dir,fastq1,fastq2):
+    cells_to_path = dict()
     map_cell_to_barcode = pd.read_csv(wells_cells_file, delimiter='\t',
                                       usecols=['well_coordinates', 'Cell_barcode', 'Amp_batch_ID', 'plate_ID'])
     # grouping to cells by barcodes
@@ -127,27 +129,11 @@ def split_by_cells(high_confidence_barcodes,wells_cells_file,output_dir,fastq1,f
         cell_dir = os.path.join(output_dir,cell_name)
         io.makeOutputDir(cell_dir)
 
-        data_dirs = ['filtered_reads','IgBLAST_output',
-                     'unfiltered_{receptor}_seqs'.format(
-                         receptor=receptor_name),
-                     'expression_quantification',
-                     'filtered_{receptor}_seqs'.format(
-                         receptor=receptor_name)]
-        for d in data_dirs:
-            io.makeOutputDir("{}/{}".format(cell_dir, d))
-
         cell_barcodes_rows = cell_barcodes_rows.sort_values(by= "num", ascending=False)
         cell_barcodes = ["".join([cell_barcodes_rows.iloc[i]["cell_barcode"], cell_barcodes_rows.iloc[i]["umi_barcode"]]) for i in range(0,len(cell_barcodes_rows))]
-        reads_to_fasta(cell_barcodes,cell_dir+"/"+'filtered_reads',fastq1,fastq2,cell_name)
-        '''
-        most_significant_barcode = cell_barcodes_rows.nlargest(1, "num")
-        other_significant_barcode = cell_barcodes_rows.drop(most_significant_barcode.index)
-        consensus = cell_consensus(most_significant_barcode, dir_name, fastq1, fastq2, cell_name, log_fd)
-        if len(other_significant_barcode) == 0:
-            continue
-        else:
-            filter_real_reads(consensus,other_significant_barcode,dir_name,fastq1,fastq2,cell_name,log_fd)
-        '''
+        fasta_path = reads_to_fasta(cell_barcodes,cell_dir+"/"+'filtered_reads',fastq1,fastq2,cell_name)
+        cells_to_path[cell_name] = fasta_path
+    return cells_to_path
 
 
 def group_to_cells(high_confidence_barcodes, map_cell_to_barcode):
