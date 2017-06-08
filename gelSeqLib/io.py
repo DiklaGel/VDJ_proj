@@ -1,23 +1,15 @@
 from __future__ import print_function
 
-import csv
-import distutils
-import shutil
-
-import pandas as pd
+import glob
 import os
 import re
-from collections import defaultdict
 import subprocess
+from collections import defaultdict
+
 import six
-import sys
 from Bio import SeqIO
 
-from VDJ_func import process_chunk
-import glob
-import pdb
-
-import json
+from gelSeqLib.VDJ_func import process_chunk
 
 
 def makeOutputDir(output_dir_path):

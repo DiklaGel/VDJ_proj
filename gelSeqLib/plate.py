@@ -1,11 +1,14 @@
-
 import argparse
-import sys, os
+import io
+import os
+import sys
 from configparser import ConfigParser
-from . import io, VDJ_func, plate_to_cells
-from io import check_binary
+
+from gelSeqLib import plate_to_cells
+
+from gelSeqLib import VDJ_func
 from . import base_dir, wells_cells_file
-from collections import defaultdict
+
 
 class Task:
     base_parser = argparse.ArgumentParser(add_help=False,formatter_class=argparse.ArgumentDefaultsHelpFormatter)
@@ -24,7 +27,7 @@ class Task:
         if self.config.has_option('tool_locations', tool_key):
             user_path = self.resolve_relative_path(
                 self.config.get('tool_locations', tool_key))
-        return check_binary(name, user_path)
+        return io.check_binary(name, user_path)
 
     def read_config(self, config_file):
         # Read config file

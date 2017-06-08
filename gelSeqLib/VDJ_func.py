@@ -14,24 +14,16 @@
 
 from __future__ import print_function
 
-import glob
+import copy
 import os
 import re
-import shutil
 import subprocess
 from collections import defaultdict, Counter
-from time import sleep
 
 import Levenshtein
 import networkx as nx
-import six
-from Bio import SeqIO
 from Bio.Alphabet import IUPAC
 from Bio.Seq import Seq
-
-from . import io
-
-import copy
 
 
 def process_chunk(chunk):

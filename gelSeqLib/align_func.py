@@ -1,15 +1,6 @@
+import operator
+import subprocess
 
-import sys, os,csv, operator, tempfile, subprocess, numpy, Bio
-import pandas as pd
-import numpy as np
-from itertools import groupby, count
-from collections import Counter
-from Bio.Blast import NCBIXML
-from Bio import pairwise2
-from collections import defaultdict
-import warnings
-import copy
-import io
 
 # running multiple alignment via clustalOmega
 def clustalo_align(fasta,log_fd):

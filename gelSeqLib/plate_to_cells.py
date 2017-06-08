@@ -1,15 +1,14 @@
-
-import sys, os,csv, operator, tempfile, subprocess, numpy, Bio
-import pandas as pd
-import numpy as np
-from itertools import groupby, count
-from collections import Counter
-from Bio.Blast import NCBIXML
-from Bio import pairwise2
+import io
+import os
+import subprocess
 from collections import defaultdict
-import warnings
-import copy
-from . import io, align_func
+
+import numpy as np
+import pandas as pd
+from Bio import pairwise2
+
+from gelSeqLib import align_func
+
 
 ################################################################
 #  --------------------------to do-----------------------------#
@@ -53,7 +52,7 @@ def cell_consensus(most_significant_barcode, dir_name, fastq1, fastq2, cell_name
     io.reads_to_fastq(reads2, fastq_path)
     # converting fastq to fasta for further using in multiple alignment
     fasta_path = io.fastq_to_fasta(fastq_path)
-    alignment_file = align_func.clustalw_align(fasta_path,log_fd)
+    alignment_file = align_func.clustalw_align(fasta_path, log_fd)
     # generating a consensus sequence for the reads with the most abundant 15-mer barcode in cell
     consensus = align_func.make_consensus(alignment_file, "clustal")
     print("consensus for cell " + cell_name, flush=True)
@@ -76,7 +75,8 @@ def filter_real_reads(consensus, other_significant_barcode,dir_name, fastq1, fas
         read = io.get_reads([line], fastq1)[0]
         #alignment = pairwise2.align.globalmc(consensus,read,1,0,gap_function_consensus,gap_function_read, gap_char = '_', score_only = True)
         # score = max([alignment[i][2] for i in range(0,len(alignment))])
-        score = pairwise2.align.globalmc(consensus,read,1,0,align_func.gap_function_consensus,align_func.gap_function_read, gap_char = '-', score_only = True)
+        score = pairwise2.align.globalmc(consensus, read, 1, 0, align_func.gap_function_consensus,
+                                         align_func.gap_function_read, gap_char ='-', score_only = True)
         sum += score
         count += 1
         if score < min:
@@ -152,14 +152,14 @@ def group_to_cells(high_confidence_barcodes, map_cell_to_barcode):
             same_umi_rows = high_confidence_barcodes[high_confidence_barcodes["umi_barcode"] == umi_barcode]
             for umi in list(set(high_confidence_barcodes["umi_barcode"].tolist())):
                 #iterating over all the umi barcodes is the data frame
-                if align_func.hamming_distance(umi,umi_barcode) == 1:
+                if align_func.hamming_distance(umi, umi_barcode) == 1:
                     # this umi is very similar to our current umi_barcode
                     same_umi_rows = same_umi_rows.append(high_confidence_barcodes[high_confidence_barcodes["umi_barcode"] == umi])
             for index,row_umi in same_umi_rows.iterrows():
                 # iterating over the cell barcodes in the data frame we constructed
                 other_barcode = row_umi["cell_barcode"]
                 if other_barcode in map_cell_to_barcode['Cell_barcode'].tolist() and align_func.hamming_distance(other_barcode,
-                                                                                                      cell_barcode) == 1:
+                                                                                                                 cell_barcode) == 1:
                     cell_barcode_mapping[other_barcode].append(cell_barcode)
                     if other_barcode not in checked_cells.keys():
                         checked_cells[other_barcode].append(umi_barcode)
