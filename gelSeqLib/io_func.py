@@ -9,7 +9,7 @@ from collections import defaultdict
 import six
 from Bio import SeqIO
 
-from gelSeqLib.VDJ_func import process_chunk
+from gelSeqLib.VDJ_func import process_chunk, find_possible_alignments
 
 
 def makeOutputDir(output_dir_path):
@@ -140,11 +140,12 @@ def parse_IgBLAST(receptor, loci, output_dir, cell_name, raw_seq_dir, species,
         else:
             all_locus_data[locus] = None
 
-    '''
-    cell = find_possible_alignments(all_locus_data, locus_names, cell_name,
+
+    find_possible_alignments(all_locus_data, locus_names, cell_name,
                                     IMGT_seqs, output_dir, species, seq_method,
                                     invariant_seqs, loci_for_segments, receptor,
                                     loci, max_junc_len)
+    '''
     return (cell)
     '''
 

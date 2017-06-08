@@ -6,7 +6,7 @@ mpl.use('pdf')
 import argparse
 import sys
 
-from gelSeqLib.plate import Plate_Task, VDJ_Plate_Task
+from gelSeqLib.plate import Plate_Task, Cell_Task
 
 
 def launch():
@@ -17,17 +17,17 @@ def launch():
               Modes are :
 
               - plate: process regular plate fastq file - split them by cell barcodes
-              - vdj: assemble TCR sequences from single-cell RNA-sequencing reads
+              - cell: assemble TCR sequences from single-cell RNA-sequencing reads
 
               use gelSeq.py <mode> -h for specific help
               ''')
     parser.add_argument('mode', metavar="<MODE>", help='gelSeq.py mode (plate, vdj)',
-                        choices=['plate', 'vdj'])
+                        choices=['plate', 'cell'])
     args = parser.parse_args(sys.argv[1:2])
 
     task_mapper = {
         'plate': Plate_Task,
-        'vdj': VDJ_Plate_Task,
+        'cell': Cell_Task,
     }
 
     if args.mode not in task_mapper:

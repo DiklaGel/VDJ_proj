@@ -177,10 +177,10 @@ class Cell_Task(Task):
             self.parser.add_argument('output_dir', metavar="<OUTPUT_DIR>",
                                      help='directory for output as <output_dir>/<cell_name>')
 
-            self.vdj_parser.add_argument('--receptor_name',
+            self.parser.add_argument('--receptor_name',
                                          help="Name of receptor to reconstruct",
                                          default='TCR')
-            self.vdj_parser.add_argument('--loci',
+            self.parser.add_argument('--loci',
                                          help="Space-separated list of loci to reconstruct for receptor",
                                          default=['A', 'B'], nargs='+')
 
@@ -226,7 +226,7 @@ class Cell_Task(Task):
         for d in data_dirs:
             io_func.makeOutputDir("{}/{}".format(self.output_dir, d))
 
-        cell=self.ig_blast()
+        self.ig_blast()
 
     def ig_blast(self):
         igblastn = self.get_binary('igblastn')
@@ -248,16 +248,16 @@ class Cell_Task(Task):
             warnings.simplefilter("ignore")
             # cell = io.parse_IgBLAST(self.receptor_name, self.loci, self.output_dir, self.cell_name, imgt_seq_location,
             # self.species, self.seq_method, self.invariant_sequences)
-            cell = io_func.parse_IgBLAST(self.receptor_name, self.loci,
-                                    self.output_dir, self.cell_name,
-                                    imgt_seq_location,
-                                    self.species, self.seq_method,
-                                    self.max_junc_len)
+            io_func.parse_IgBLAST(self.receptor_name, self.loci,
+                                    self.output_dir, self.cell_name,imgt_seq_location,
+                                    self.species, 'imgt',
+                                    50)
+            '''
             if cell.is_empty:
                 self.die_with_empty_cell(self.cell_name, self.output_dir,
                                          self.species)
-
-        return cell
+            '''
+        #return cell
 
 
 

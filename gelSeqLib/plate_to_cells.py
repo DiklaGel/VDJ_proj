@@ -130,7 +130,7 @@ def split_by_cells(high_confidence_barcodes,wells_cells_file,output_dir,fastq1,f
 
         cell_barcodes_rows = cell_barcodes_rows.sort_values(by= "num", ascending=False)
         cell_barcodes = ["".join([cell_barcodes_rows.iloc[i]["cell_barcode"], cell_barcodes_rows.iloc[i]["umi_barcode"]]) for i in range(0,len(cell_barcodes_rows))]
-        fasta_path = reads_to_fasta(cell_barcodes,cell_dir+"/"+'filtered_reads',fastq1,fastq2,cell_name)
+        fasta_path = reads_to_fasta(cell_barcodes,cell_dir+"/"+'reads',fastq1,fastq2,cell_name)
         cells_to_path[cell_name] = fasta_path
     return cells_to_path
 
