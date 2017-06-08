@@ -1,4 +1,3 @@
-import io
 import os
 import subprocess
 from collections import defaultdict
@@ -7,7 +6,7 @@ import numpy as np
 import pandas as pd
 from Bio import pairwise2
 
-from gelSeqLib import align_func
+from gelSeqLib import align_func, io_func
 
 
 ################################################################
@@ -28,15 +27,15 @@ def threshold(groups):
 
 
 def reads_to_fasta(cell_barcodes, dir_name, fastq1, fastq2, cell_name):
-    io.makeOutputDir(dir_name)
+    io_func.makeOutputDir(dir_name)
     # finding the lines (list of numbers) in the fastq2 file that start with those 15-mers
-    lines = io.find_lines(cell_barcodes, fastq2)
+    lines = io_func.find_lines(cell_barcodes, fastq2)
     # extracting the reads (list of strings) in the fastq2 file that are written in the lines we found above
-    reads2 = io.get_full_reads(lines, fastq1)
+    reads2 = io_func.get_full_reads(lines, fastq1)
     fastq_path = os.path.join(dir_name, cell_name + ".fastq")
-    io.reads_to_fastq(reads2, fastq_path)
+    io_func.reads_to_fastq(reads2, fastq_path)
     # converting fastq to fasta for further using in multiple alignment
-    fasta_path = io.fastq_to_fasta(fastq_path)
+    fasta_path = io_func.fastq_to_fasta(fastq_path)
     return fasta_path
 
 def cell_consensus(most_significant_barcode, dir_name, fastq1, fastq2, cell_name,log_fd):
@@ -45,13 +44,13 @@ def cell_consensus(most_significant_barcode, dir_name, fastq1, fastq2, cell_name
         "".join([most_significant_barcode.iloc[i]["cell_barcode"], most_significant_barcode.iloc[i]["umi_barcode"]]) for
         i in range(0, len(most_significant_barcode))]
     # finding the lines (list of numbers) in the fastq2 file that start with those 15-mers
-    lines = io.find_lines(cell_barcodes, fastq2)
+    lines = io_func.find_lines(cell_barcodes, fastq2)
     # extracting the reads (list of strings) in the fastq2 file that are written in the lines we found above
-    reads2 = io.get_full_reads(lines, fastq1)
+    reads2 = io_func.get_full_reads(lines, fastq1)
     fastq_path = os.path.join(dir_name, cell_name + ".fastq")
-    io.reads_to_fastq(reads2, fastq_path)
+    io_func.reads_to_fastq(reads2, fastq_path)
     # converting fastq to fasta for further using in multiple alignment
-    fasta_path = io.fastq_to_fasta(fastq_path)
+    fasta_path = io_func.fastq_to_fasta(fastq_path)
     alignment_file = align_func.clustalw_align(fasta_path, log_fd)
     # generating a consensus sequence for the reads with the most abundant 15-mer barcode in cell
     consensus = align_func.make_consensus(alignment_file, "clustal")
@@ -65,14 +64,14 @@ def filter_real_reads(consensus, other_significant_barcode,dir_name, fastq1, fas
         "".join([other_significant_barcode.iloc[i]["cell_barcode"], other_significant_barcode.iloc[i]["umi_barcode"]]) for
         i in range(0, len(other_significant_barcode))]
     # finding the lines (list of numbers) in the fastq2 file that start with those 15-mers
-    lines = io.find_lines(cell_barcodes, fastq2)
+    lines = io_func.find_lines(cell_barcodes, fastq2)
     # extracting the reads (list of strings) in the fastq2 file that are written in the lines we found above
     min = 10000
     max = -10000
     sum = 0
     count = 0
     for line in lines:
-        read = io.get_reads([line], fastq1)[0]
+        read = io_func.get_reads([line], fastq1)[0]
         #alignment = pairwise2.align.globalmc(consensus,read,1,0,gap_function_consensus,gap_function_read, gap_char = '_', score_only = True)
         # score = max([alignment[i][2] for i in range(0,len(alignment))])
         score = pairwise2.align.globalmc(consensus, read, 1, 0, align_func.gap_function_consensus,
@@ -127,7 +126,7 @@ def split_by_cells(high_confidence_barcodes,wells_cells_file,output_dir,fastq1,f
         cell_name = map_cell_to_barcode[map_cell_to_barcode['Cell_barcode'] == cell_barcode]['well_coordinates'].tolist()[0]
 
         cell_dir = os.path.join(output_dir,cell_name)
-        io.makeOutputDir(cell_dir)
+        io_func.makeOutputDir(cell_dir)
 
         cell_barcodes_rows = cell_barcodes_rows.sort_values(by= "num", ascending=False)
         cell_barcodes = ["".join([cell_barcodes_rows.iloc[i]["cell_barcode"], cell_barcodes_rows.iloc[i]["umi_barcode"]]) for i in range(0,len(cell_barcodes_rows))]
@@ -168,7 +167,7 @@ def group_to_cells(high_confidence_barcodes, map_cell_to_barcode):
 
 def cell_to_tcr(dir_name):
     output_dir = os.path.join(dir_name,"IgBLAST_output")
-    io.makeOutputDir(output_dir)
+    io_func.makeOutputDir(output_dir)
     for file in os.listdir(dir_name):
         if "fasta" in file:
             run_igblast(os.path.join(dir_name,file),output_dir)
