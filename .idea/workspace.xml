@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f3e8759-58e1-4dbd-80d5-980aa4a2fe39" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gelSeq.conf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/gelSeqLib/io.py" afterPath="$PROJECT_DIR$/gelSeqLib/io_func.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gelSeqLib/VDJ_func.py" afterPath="$PROJECT_DIR$/gelSeqLib/VDJ_func.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gelSeqLib/io_func.py" afterPath="$PROJECT_DIR$/gelSeqLib/io_func.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gelSeqLib/plate.py" afterPath="$PROJECT_DIR$/gelSeqLib/plate.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gelSeqLib/plate_to_cells.py" afterPath="$PROJECT_DIR$/gelSeqLib/plate_to_cells.py" />
     </list>
@@ -21,13 +21,34 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="plate.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="plate.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gelSeqLib/plate.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="211" column="0" lean-forward="true" selection-start-line="211" selection-start-column="0" selection-end-line="211" selection-end-column="0" />
+            <state relative-caret-position="-508">
+              <caret line="215" column="67" lean-forward="false" selection-start-line="215" selection-start-column="67" selection-end-line="215" selection-end-column="67" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
+                <element signature="e#2492#6190#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VDJ_func.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gelSeqLib/VDJ_func.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="863">
+              <caret line="90" column="0" lean-forward="false" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
+              <folding>
+                <element signature="e#1028#1065#0" expanded="true" />
+                <element signature="e#3519#3977#0" expanded="false" />
+                <element signature="e#4021#4190#0" expanded="false" />
+                <element signature="e#4249#10369#0" expanded="false" />
+                <element signature="e#10545#13997#0" expanded="false" />
+                <element signature="e#14153#15792#0" expanded="false" />
+                <element signature="e#15854#18441#0" expanded="false" />
+                <element signature="e#18481#18625#0" expanded="false" />
+                <element signature="e#18770#21126#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -36,12 +57,14 @@
       <file leaf-file-name="plate_to_cells.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gelSeqLib/plate_to_cells.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="128" column="24" lean-forward="false" selection-start-line="128" selection-start-column="24" selection-end-line="128" selection-end-column="24" />
+            <state relative-caret-position="192">
+              <caret line="128" column="49" lean-forward="false" selection-start-line="128" selection-start-column="49" selection-end-line="128" selection-end-column="49" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
                 <element signature="e#503#711#0" expanded="false" />
-                <element signature="e#6972#9090#0" expanded="false" />
+                <element signature="e#6983#9101#0" expanded="false" />
+                <marker date="1496925427471" expanded="false" signature="9133:9358" ph="..." />
+                <marker date="1496925427471" expanded="false" signature="9399:10929" ph="..." />
               </folding>
             </state>
           </provider>
@@ -50,7 +73,7 @@
       <file leaf-file-name="launcher.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gelSeqLib/launcher.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
+            <state relative-caret-position="315">
               <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
@@ -81,11 +104,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="io_func.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="io_func.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gelSeqLib/io_func.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="19" lean-forward="false" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+            <state relative-caret-position="317">
+              <caret line="141" column="0" lean-forward="true" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
               </folding>
@@ -108,8 +131,11 @@
       <find>defaul</find>
       <find>get_av</find>
       <find>io.</find>
-      <find>io</find>
       <find>mak</find>
+      <find>io</find>
+      <find>igb</find>
+      <find>find</find>
+      <find>find_p</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -132,6 +158,8 @@
         <option value="$PROJECT_DIR$/resources/Hsap/gelSeq.conf" />
         <option value="$PROJECT_DIR$/gelSeqLib/plate_to_cells.py" />
         <option value="$PROJECT_DIR$/gelSeqLib/plate.py" />
+        <option value="$PROJECT_DIR$/gelSeqLib/VDJ_func.py" />
+        <option value="$PROJECT_DIR$/gelSeqLib/io_func.py" />
       </list>
     </option>
   </component>
@@ -507,7 +535,14 @@
       <option name="project" value="LOCAL" />
       <updated>1496911818642</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="14:38">
+      <created>1496921926514</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1496921926514</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -540,22 +575,19 @@
     <MESSAGE value="first version" />
     <MESSAGE value="gelSeq" />
     <MESSAGE value="11:50" />
-    <option name="LAST_COMMIT_MESSAGE" value="11:50" />
+    <MESSAGE value="14:38" />
+    <option name="LAST_COMMIT_MESSAGE" value="14:38" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/gelSeqLib/VDJ_func.py</url>
-          <line>370</line>
-        </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/gelSeqLib/plate_to_cells.py</url>
           <line>19</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="5" />
+      <option name="time" value="8" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -566,6 +598,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#2492#6190#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -576,6 +609,14 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#1028#1065#0" expanded="true" />
+            <element signature="e#3519#3977#0" expanded="false" />
+            <element signature="e#4021#4190#0" expanded="false" />
+            <element signature="e#4249#10369#0" expanded="false" />
+            <element signature="e#10545#13997#0" expanded="false" />
+            <element signature="e#14153#15792#0" expanded="false" />
+            <element signature="e#15854#18441#0" expanded="false" />
+            <element signature="e#18481#18625#0" expanded="false" />
+            <element signature="e#18770#21126#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -612,6 +653,7 @@
           <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#2492#6190#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -622,6 +664,14 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#1028#1065#0" expanded="true" />
+            <element signature="e#3519#3977#0" expanded="false" />
+            <element signature="e#4021#4190#0" expanded="false" />
+            <element signature="e#4249#10369#0" expanded="false" />
+            <element signature="e#10545#13997#0" expanded="false" />
+            <element signature="e#14153#15792#0" expanded="false" />
+            <element signature="e#15854#18441#0" expanded="false" />
+            <element signature="e#18481#18625#0" expanded="false" />
+            <element signature="e#18770#21126#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -658,6 +708,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#2492#6190#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -704,38 +755,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gelSeqLib/plate_to_cells.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="128" column="24" lean-forward="false" selection-start-line="128" selection-start-column="24" selection-end-line="128" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#503#711#0" expanded="false" />
-            <element signature="e#6972#9090#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gelSeqLib/io_func.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="19" lean-forward="false" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gelSeqLib/VDJ_func.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-135">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#1028#1065#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/plates/103_S10_L001/E4/filtered_reads/E4.fasta">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -760,16 +779,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gelSeqLib/launcher.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gelSeqLib/cell.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -778,12 +787,65 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/gelSeqLib/launcher.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gelSeqLib/plate_to_cells.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="128" column="49" lean-forward="false" selection-start-line="128" selection-start-column="49" selection-end-line="128" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#503#711#0" expanded="false" />
+            <element signature="e#6983#9101#0" expanded="false" />
+            <marker date="1496925427471" expanded="false" signature="9133:9358" ph="..." />
+            <marker date="1496925427471" expanded="false" signature="9399:10929" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/gelSeqLib/plate.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="211" column="0" lean-forward="true" selection-start-line="211" selection-start-column="0" selection-end-line="211" selection-end-column="0" />
+        <state relative-caret-position="-508">
+          <caret line="215" column="67" lean-forward="false" selection-start-line="215" selection-start-column="67" selection-end-line="215" selection-end-column="67" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#2492#6190#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gelSeqLib/VDJ_func.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="863">
+          <caret line="90" column="0" lean-forward="false" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
+          <folding>
+            <element signature="e#1028#1065#0" expanded="true" />
+            <element signature="e#3519#3977#0" expanded="false" />
+            <element signature="e#4021#4190#0" expanded="false" />
+            <element signature="e#4249#10369#0" expanded="false" />
+            <element signature="e#10545#13997#0" expanded="false" />
+            <element signature="e#14153#15792#0" expanded="false" />
+            <element signature="e#15854#18441#0" expanded="false" />
+            <element signature="e#18481#18625#0" expanded="false" />
+            <element signature="e#18770#21126#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gelSeqLib/io_func.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="141" column="0" lean-forward="true" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
           </folding>
         </state>
       </provider>

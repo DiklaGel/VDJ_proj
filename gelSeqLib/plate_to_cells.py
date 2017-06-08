@@ -126,7 +126,7 @@ def split_by_cells(high_confidence_barcodes,wells_cells_file,output_dir,fastq1,f
         cell_name = map_cell_to_barcode[map_cell_to_barcode['Cell_barcode'] == cell_barcode]['well_coordinates'].tolist()[0]
 
         cell_dir = os.path.join(output_dir,cell_name)
-        io_func.makeOutputDir(cell_dir)
+        io_func.makeOutputDir(cell_dir + "/reads")
 
         cell_barcodes_rows = cell_barcodes_rows.sort_values(by= "num", ascending=False)
         cell_barcodes = ["".join([cell_barcodes_rows.iloc[i]["cell_barcode"], cell_barcodes_rows.iloc[i]["umi_barcode"]]) for i in range(0,len(cell_barcodes_rows))]
@@ -165,13 +165,13 @@ def group_to_cells(high_confidence_barcodes, map_cell_to_barcode):
                     break
     return checked_cells, cell_barcode_mapping
 
+'''
 def cell_to_tcr(dir_name):
     output_dir = os.path.join(dir_name,"IgBLAST_output")
     io_func.makeOutputDir(output_dir)
     for file in os.listdir(dir_name):
         if "fasta" in file:
             run_igblast(os.path.join(dir_name,file),output_dir)
-
 
 def run_igblast(fasta_file,output_dir):
     print("##Running IgBLAST##")
@@ -212,4 +212,4 @@ def run_igblast(fasta_file,output_dir):
 
     DEVNULL.close()
 
-
+'''

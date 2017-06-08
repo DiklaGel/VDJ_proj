@@ -1,6 +1,7 @@
 import argparse
 import os
 import sys
+import warnings
 from configparser import ConfigParser
 
 from gelSeqLib import plate_to_cells,VDJ_func, io_func
@@ -210,7 +211,53 @@ class Cell_Task(Task):
         self.config = self.read_config(config_file)
         # self.locus_names = ["TCRA", "TCRB"]
 
+    def run(self, **kwargs):
+        if not os.path.exists(self.output_dir+'/reads'):
+            print("dir {}/reads not exists ".format(self.output_dir))
+            return
 
+
+        data_dirs = ['IgBLAST_output',
+                     'unfiltered_{receptor}_seqs'.format(
+                         receptor=self.receptor_name),
+                     'expression_quantification',
+                     'filtered_{receptor}_seqs'.format(
+                         receptor=self.receptor_name)]
+        for d in data_dirs:
+            io_func.makeOutputDir("{}/{}".format(self.output_dir, d))
+
+        cell=self.ig_blast()
+
+    def ig_blast(self):
+        igblastn = self.get_binary('igblastn')
+
+        # Reference data locations
+        igblast_index_location = self.get_index_location('igblast_dbs')
+        imgt_seq_location = self.get_index_location('raw_seqs')
+
+        igblast_seqtype = self.config.get('IgBlast_options', 'igblast_seqtype')
+
+        # IgBlast of assembled contigs
+        VDJ_func.run_IgBlast(igblastn, self.fasta, self.receptor_name, self.loci,
+                                self.output_dir, self.cell_name, self.species,
+                                igblast_index_location,
+                                igblast_seqtype,self.resume_with_existing_files)
+        print()
+
+        with warnings.catch_warnings():
+            warnings.simplefilter("ignore")
+            # cell = io.parse_IgBLAST(self.receptor_name, self.loci, self.output_dir, self.cell_name, imgt_seq_location,
+            # self.species, self.seq_method, self.invariant_sequences)
+            cell = io_func.parse_IgBLAST(self.receptor_name, self.loci,
+                                    self.output_dir, self.cell_name,
+                                    imgt_seq_location,
+                                    self.species, self.seq_method,
+                                    self.max_junc_len)
+            if cell.is_empty:
+                self.die_with_empty_cell(self.cell_name, self.output_dir,
+                                         self.species)
+
+        return cell
 
 
 
