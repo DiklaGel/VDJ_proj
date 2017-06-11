@@ -6,7 +6,7 @@ mpl.use('pdf')
 import argparse
 import sys
 
-from gelSeqLib.plate import Plate_Task, Cell_Task
+from gelSeqLib.tasks import Plate_Task, Cell_Task
 
 
 def launch():

@@ -2,12 +2,147 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f3e8759-58e1-4dbd-80d5-980aa4a2fe39" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Hsap/combinatorial_recombinomes/TCR_A.1.bt2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Hsap/combinatorial_recombinomes/TCR_A.2.bt2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Hsap/combinatorial_recombinomes/TCR_A.3.bt2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Hsap/combinatorial_recombinomes/TCR_A.4.bt2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Hsap/combinatorial_recombinomes/TCR_A.rev.1.bt2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Hsap/combinatorial_recombinomes/TCR_A.rev.2.bt2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Hsap/combinatorial_recombinomes/TCR_B.1.bt2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Hsap/combinatorial_recombinomes/TCR_B.2.bt2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Hsap/combinatorial_recombinomes/TCR_B.3.bt2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Hsap/combinatorial_recombinomes/TCR_B.4.bt2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Hsap/combinatorial_recombinomes/TCR_B.rev.1.bt2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Hsap/combinatorial_recombinomes/TCR_B.rev.2.bt2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Hsap/combinatorial_recombinomes/TCR_D.1.bt2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Hsap/combinatorial_recombinomes/TCR_D.2.bt2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Hsap/combinatorial_recombinomes/TCR_D.3.bt2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Hsap/combinatorial_recombinomes/TCR_D.4.bt2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Hsap/combinatorial_recombinomes/TCR_D.rev.1.bt2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Hsap/combinatorial_recombinomes/TCR_D.rev.2.bt2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Hsap/combinatorial_recombinomes/TCR_G.1.bt2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Hsap/combinatorial_recombinomes/TCR_G.2.bt2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Hsap/combinatorial_recombinomes/TCR_G.3.bt2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Hsap/combinatorial_recombinomes/TCR_G.4.bt2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Hsap/combinatorial_recombinomes/TCR_G.rev.1.bt2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Hsap/combinatorial_recombinomes/TCR_G.rev.2.bt2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Hsap/igblast_dbs/TCR_D.fa.nhr" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Hsap/igblast_dbs/TCR_D.fa.nin" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Hsap/igblast_dbs/TCR_D.fa.nog" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Hsap/igblast_dbs/TCR_D.fa.nsd" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Hsap/igblast_dbs/TCR_D.fa.nsi" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Hsap/igblast_dbs/TCR_D.fa.nsq" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Hsap/igblast_dbs/TCR_J.fa.nhr" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Hsap/igblast_dbs/TCR_J.fa.nin" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Hsap/igblast_dbs/TCR_J.fa.nog" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Hsap/igblast_dbs/TCR_J.fa.nsd" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Hsap/igblast_dbs/TCR_J.fa.nsi" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Hsap/igblast_dbs/TCR_J.fa.nsq" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Hsap/igblast_dbs/TCR_V.fa.nhr" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Hsap/igblast_dbs/TCR_V.fa.nin" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Hsap/igblast_dbs/TCR_V.fa.nog" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Hsap/igblast_dbs/TCR_V.fa.nsd" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Hsap/igblast_dbs/TCR_V.fa.nsi" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Hsap/igblast_dbs/TCR_V.fa.nsq" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Mmus/combinatorial_recombinomes/TCR_A.1.bt2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Mmus/combinatorial_recombinomes/TCR_A.2.bt2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Mmus/combinatorial_recombinomes/TCR_A.3.bt2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Mmus/combinatorial_recombinomes/TCR_A.4.bt2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Mmus/combinatorial_recombinomes/TCR_A.rev.1.bt2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Mmus/combinatorial_recombinomes/TCR_A.rev.2.bt2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Mmus/combinatorial_recombinomes/TCR_B.1.bt2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Mmus/combinatorial_recombinomes/TCR_B.2.bt2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Mmus/combinatorial_recombinomes/TCR_B.3.bt2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Mmus/combinatorial_recombinomes/TCR_B.4.bt2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Mmus/combinatorial_recombinomes/TCR_B.rev.1.bt2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Mmus/combinatorial_recombinomes/TCR_B.rev.2.bt2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Mmus/combinatorial_recombinomes/TCR_D.1.bt2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Mmus/combinatorial_recombinomes/TCR_D.2.bt2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Mmus/combinatorial_recombinomes/TCR_D.3.bt2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Mmus/combinatorial_recombinomes/TCR_D.4.bt2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Mmus/combinatorial_recombinomes/TCR_D.rev.1.bt2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Mmus/combinatorial_recombinomes/TCR_D.rev.2.bt2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Mmus/combinatorial_recombinomes/TCR_G.1.bt2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Mmus/combinatorial_recombinomes/TCR_G.2.bt2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Mmus/combinatorial_recombinomes/TCR_G.3.bt2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Mmus/combinatorial_recombinomes/TCR_G.4.bt2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Mmus/combinatorial_recombinomes/TCR_G.rev.1.bt2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Mmus/combinatorial_recombinomes/TCR_G.rev.2.bt2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Mmus/igblast_dbs/TCR_D.fa.nhr" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Mmus/igblast_dbs/TCR_D.fa.nin" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Mmus/igblast_dbs/TCR_D.fa.nog" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Mmus/igblast_dbs/TCR_D.fa.nsd" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Mmus/igblast_dbs/TCR_D.fa.nsi" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Mmus/igblast_dbs/TCR_D.fa.nsq" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Mmus/igblast_dbs/TCR_J.fa.nhr" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Mmus/igblast_dbs/TCR_J.fa.nin" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Mmus/igblast_dbs/TCR_J.fa.nog" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Mmus/igblast_dbs/TCR_J.fa.nsd" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Mmus/igblast_dbs/TCR_J.fa.nsi" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Mmus/igblast_dbs/TCR_J.fa.nsq" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Mmus/igblast_dbs/TCR_V.fa.nhr" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Mmus/igblast_dbs/TCR_V.fa.nin" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Mmus/igblast_dbs/TCR_V.fa.nog" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Mmus/igblast_dbs/TCR_V.fa.nsd" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Mmus/igblast_dbs/TCR_V.fa.nsi" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Mmus/igblast_dbs/TCR_V.fa.nsq" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gelSeqLib/core.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plates/103_S10_L001/E4/IgBLAST_output/E4_TCR_TCR_B.IgBLASTOut" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plates/103_S10_L001/E4/reads/E4.fasta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plates/103_S10_L001/E4/reads/E4.fastq" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plates/103_S10_L001/H14/IgBLAST_output/H14_TCR_TCR_B.IgBLASTOut" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plates/103_S10_L001/H14/reads/H14.fasta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plates/103_S10_L001/H14/reads/H14.fastq" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Hsap/colours.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Hsap/combinatorial_recombinomes/TCR_A.fa" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Hsap/combinatorial_recombinomes/TCR_B.fa" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Hsap/combinatorial_recombinomes/TCR_D.fa" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Hsap/combinatorial_recombinomes/TCR_G.fa" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Hsap/igblast_dbs/TCR_D.fa" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Hsap/igblast_dbs/TCR_J.fa" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Hsap/igblast_dbs/TCR_V.fa" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Hsap/invariant_cells.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Hsap/raw_seqs/TCR_A_C.fa" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Hsap/raw_seqs/TCR_A_J.fa" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Hsap/raw_seqs/TCR_A_V.fa" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Hsap/raw_seqs/TCR_B_C.fa" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Hsap/raw_seqs/TCR_B_D.fa" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Hsap/raw_seqs/TCR_B_J.fa" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Hsap/raw_seqs/TCR_B_V.fa" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Hsap/raw_seqs/TCR_D_C.fa" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Hsap/raw_seqs/TCR_D_D.fa" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Hsap/raw_seqs/TCR_D_J.fa" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Hsap/raw_seqs/TCR_D_V.fa" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Hsap/raw_seqs/TCR_G_C.fa" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Hsap/raw_seqs/TCR_G_J.fa" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Hsap/raw_seqs/TCR_G_V.fa" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Mmus/colours.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Mmus/combinatorial_recombinomes/TCR_A.fa" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Mmus/combinatorial_recombinomes/TCR_B.fa" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Mmus/combinatorial_recombinomes/TCR_D.fa" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Mmus/combinatorial_recombinomes/TCR_G.fa" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Mmus/igblast_dbs/TCR_D.fa" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Mmus/igblast_dbs/TCR_J.fa" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Mmus/igblast_dbs/TCR_V.fa" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Mmus/invariant_cells.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Mmus/raw_seqs/TCR_A_C.fa" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Mmus/raw_seqs/TCR_A_J.fa" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Mmus/raw_seqs/TCR_A_V.fa" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Mmus/raw_seqs/TCR_B_C.fa" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Mmus/raw_seqs/TCR_B_D.fa" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Mmus/raw_seqs/TCR_B_J.fa" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Mmus/raw_seqs/TCR_B_V.fa" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Mmus/raw_seqs/TCR_D_C.fa" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Mmus/raw_seqs/TCR_D_D.fa" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Mmus/raw_seqs/TCR_D_J.fa" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Mmus/raw_seqs/TCR_D_V.fa" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Mmus/raw_seqs/TCR_G_C.fa" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Mmus/raw_seqs/TCR_G_J.fa" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/Mmus/raw_seqs/TCR_G_V.fa" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/gelSeqLib/plate.py" afterPath="$PROJECT_DIR$/gelSeqLib/tasks.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gelSeqLib/VDJ_func.py" afterPath="$PROJECT_DIR$/gelSeqLib/VDJ_func.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gelSeqLib/io_func.py" afterPath="$PROJECT_DIR$/gelSeqLib/io_func.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gelSeqLib/launcher.py" afterPath="$PROJECT_DIR$/gelSeqLib/launcher.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gelSeqLib/plate.py" afterPath="$PROJECT_DIR$/gelSeqLib/plate.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gelSeqLib/plate_to_cells.py" afterPath="$PROJECT_DIR$/gelSeqLib/plate_to_cells.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,11 +157,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="plate.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gelSeqLib/plate.py">
+      <file leaf-file-name="tasks.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gelSeqLib/tasks.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="182" column="23" lean-forward="false" selection-start-line="182" selection-start-column="23" selection-end-line="182" selection-end-column="23" />
+            <state relative-caret-position="2535">
+              <caret line="250" column="29" lean-forward="false" selection-start-line="250" selection-start-column="29" selection-end-line="250" selection-end-column="29" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
                 <element signature="e#2492#6190#0" expanded="false" />
@@ -35,88 +170,73 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="launcher.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gelSeqLib/launcher.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="19" column="20" lean-forward="false" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
-              <folding>
-                <element signature="e#0#37#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="VDJ_func.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gelSeqLib/VDJ_func.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="347">
-              <caret line="97" column="0" lean-forward="true" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
+            <state relative-caret-position="232">
+              <caret line="198" column="61" lean-forward="false" selection-start-line="198" selection-start-column="61" selection-end-line="198" selection-end-column="61" />
               <folding>
                 <element signature="e#1028#1065#0" expanded="true" />
-                <element signature="e#10212#14308#0" expanded="false" />
-                <element signature="e#14353#14811#0" expanded="false" />
-                <element signature="e#14846#15185#0" expanded="false" />
-                <element signature="e#15220#15287#0" expanded="false" />
-                <element signature="e#15328#15406#0" expanded="false" />
-                <element signature="e#16946#17404#0" expanded="false" />
-                <element signature="e#17448#17617#0" expanded="false" />
-                <element signature="e#17676#23796#0" expanded="false" />
-                <element signature="e#23972#27424#0" expanded="false" />
-                <element signature="e#27580#29219#0" expanded="false" />
-                <element signature="e#29281#31868#0" expanded="false" />
-                <element signature="e#31908#32052#0" expanded="false" />
-                <element signature="e#32197#34553#0" expanded="false" />
+                <element signature="e#1323#3505#0" expanded="false" />
+                <element signature="e#14318#14776#0" expanded="false" />
+                <element signature="e#15184#15251#0" expanded="false" />
+                <element signature="e#15292#15370#0" expanded="false" />
+                <element signature="e#16913#17371#0" expanded="false" />
+                <element signature="e#17415#17584#0" expanded="false" />
+                <element signature="e#17643#23763#0" expanded="false" />
+                <element signature="e#23939#27391#0" expanded="false" />
+                <element signature="e#27547#29186#0" expanded="false" />
+                <element signature="e#29248#31835#0" expanded="false" />
+                <element signature="e#31875#32019#0" expanded="false" />
+                <element signature="e#32164#34520#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="plate_to_cells.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gelSeqLib/plate_to_cells.py">
+      <file leaf-file-name="core.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/gelSeqLib/core.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="128" column="49" lean-forward="false" selection-start-line="128" selection-start-column="49" selection-end-line="128" selection-end-column="49" />
+            <state relative-caret-position="1140">
+              <caret line="278" column="22" lean-forward="true" selection-start-line="278" selection-start-column="22" selection-end-line="278" selection-end-column="22" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
-                <element signature="e#503#711#0" expanded="false" />
-                <element signature="e#6974#9092#0" expanded="false" />
-                <marker date="1496927123193" expanded="false" signature="9124:9349" ph="..." />
-                <marker date="1496927123193" expanded="false" signature="9390:10920" ph="..." />
+                <element signature="e#7015#8110#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cell.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gelSeqLib/cell.py">
+      <file leaf-file-name="E4_TCR_TCR_B.IgBLASTOut" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plates/103_S10_L001/E4/IgBLAST_output/E4_TCR_TCR_B.IgBLASTOut">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
+            <state relative-caret-position="-360">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="align_func.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gelSeqLib/align_func.py">
+      <file leaf-file-name="H14_TCR_TCR_B.IgBLASTOut" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plates/103_S10_L001/H14/IgBLAST_output/H14_TCR_TCR_B.IgBLASTOut">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-4485">
+              <caret line="226" column="48" lean-forward="false" selection-start-line="226" selection-start-column="48" selection-end-line="226" selection-end-column="48" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="io_func.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="io_func.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gelSeqLib/io_func.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="122">
-              <caret line="135" column="38" lean-forward="false" selection-start-line="135" selection-start-column="38" selection-end-line="135" selection-end-column="38" />
+            <state relative-caret-position="118">
+              <caret line="143" column="18" lean-forward="false" selection-start-line="143" selection-start-column="18" selection-end-line="143" selection-end-column="18" />
               <folding>
-                <element signature="e#0#37#0" expanded="true" />
+                <element signature="e#2144#2505#0" expanded="false" />
+                <element signature="e#2546#2646#0" expanded="false" />
+                <element signature="e#2695#2863#0" expanded="false" />
+                <element signature="e#2896#3050#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -143,8 +263,11 @@
       <find>find</find>
       <find>find_p</find>
       <find>len</find>
-      <find>pars</find>
       <find>find_pos</find>
+      <find>pars</find>
+      <find>IGBLASTN</find>
+      <find>process</find>
+      <find>get_coords</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -168,7 +291,9 @@
         <option value="$PROJECT_DIR$/gelSeqLib/io_func.py" />
         <option value="$PROJECT_DIR$/gelSeqLib/launcher.py" />
         <option value="$PROJECT_DIR$/gelSeqLib/plate.py" />
+        <option value="$PROJECT_DIR$/plates/103_S10_L001/E4/IgBLAST_output/E4_TCR_TCR_B.IgBLASTOut" />
         <option value="$PROJECT_DIR$/gelSeqLib/VDJ_func.py" />
+        <option value="$PROJECT_DIR$/gelSeqLib/core.py" />
       </list>
     </option>
   </component>
@@ -213,6 +338,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -242,10 +368,119 @@
               <option name="myItemId" value="103_S10_L001" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="H14" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VDJ_proj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VDJ_proj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="103_S10_L001" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="H14" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IgBLAST_output" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VDJ_proj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VDJ_proj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="103_S10_L001" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="E4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VDJ_proj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VDJ_proj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="103_S10_L001" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="E4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IgBLAST_output" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VDJ_proj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VDJ_proj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="103_S10_L001" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VDJ_proj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VDJ_proj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gelSeqLib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope">
         <subPane subId="Project Files">
           <PATH>
@@ -343,7 +578,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/gelSeq.py" />
+    <property name="last_opened_file_path" value="$USER_HOME$/tracer" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -366,7 +601,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="VDJ_proj" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/gelSeq.py" />
-      <option name="PARAMETERS" value="cell -s Hsap --loci=B plates/103_S10_L001/H14/reads/H14.fasta H14 plates/103_S10_L001/H14" />
+      <option name="PARAMETERS" value="cell -s Hsap --loci=B plates/103_S10_L001/E4/reads/E4.fasta E4 plates/103_S10_L001/E4" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
@@ -612,17 +847,23 @@
       <option name="project" value="LOCAL" />
       <updated>1496925484999</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="08062017 16:27">
+      <created>1496928491153</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1496928491153</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="8" y="31" width="1362" height="705" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2496329" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2496329" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328594" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328594" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -635,6 +876,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328594" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -666,7 +908,8 @@
     <MESSAGE value="11:50" />
     <MESSAGE value="14:38" />
     <MESSAGE value="08062017 15:37" />
-    <option name="LAST_COMMIT_MESSAGE" value="08062017 15:37" />
+    <MESSAGE value="08062017 16:27" />
+    <option name="LAST_COMMIT_MESSAGE" value="08062017 16:27" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -678,26 +921,161 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/gelSeqLib/VDJ_func.py</url>
-          <line>106</line>
-          <option name="timeStamp" value="10" />
+          <line>103</line>
+          <option name="timeStamp" value="30" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/gelSeqLib/VDJ_func.py</url>
-          <line>151</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/gelSeqLib/VDJ_func.py</url>
-          <line>160</line>
-          <option name="timeStamp" value="14" />
+          <line>114</line>
+          <option name="timeStamp" value="33" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="15" />
+      <option name="time" value="34" />
     </breakpoint-manager>
-    <watches-manager />
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="IMGT_seqs" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/gelSeqLib/plate.py">
+    <entry file="file://$PROJECT_DIR$/gelSeqLib/tasks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2535">
+          <caret line="250" column="29" lean-forward="false" selection-start-line="250" selection-start-column="29" selection-end-line="250" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#2492#6190#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gelSeqLib/VDJ_func.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#1028#1065#0" expanded="true" />
+            <element signature="e#1323#3505#0" expanded="false" />
+            <element signature="e#14318#14776#0" expanded="false" />
+            <element signature="e#15184#15251#0" expanded="false" />
+            <element signature="e#15292#15370#0" expanded="false" />
+            <element signature="e#16913#17371#0" expanded="false" />
+            <element signature="e#17415#17584#0" expanded="false" />
+            <element signature="e#17643#23763#0" expanded="false" />
+            <element signature="e#23939#27391#0" expanded="false" />
+            <element signature="e#27547#29186#0" expanded="false" />
+            <element signature="e#29248#31835#0" expanded="false" />
+            <element signature="e#31875#32019#0" expanded="false" />
+            <element signature="e#32164#34520#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gelSeqLib/io_func.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1875">
+          <caret line="136" column="48" lean-forward="false" selection-start-line="136" selection-start-column="48" selection-end-line="136" selection-end-column="48" />
+          <folding>
+            <element signature="e#2144#2505#0" expanded="false" />
+            <element signature="e#2546#2646#0" expanded="false" />
+            <element signature="e#2695#2863#0" expanded="false" />
+            <element signature="e#2896#3050#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gelSeqLib/tasks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1635">
+          <caret line="190" column="20" lean-forward="false" selection-start-line="190" selection-start-column="20" selection-end-line="190" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#2492#6190#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gelSeqLib/VDJ_func.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1455">
+          <caret line="97" column="0" lean-forward="false" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
+          <folding>
+            <element signature="e#1028#1065#0" expanded="true" />
+            <element signature="e#1323#3505#0" expanded="false" />
+            <element signature="e#14318#14776#0" expanded="false" />
+            <element signature="e#15184#15251#0" expanded="false" />
+            <element signature="e#15292#15370#0" expanded="false" />
+            <element signature="e#16913#17371#0" expanded="false" />
+            <element signature="e#17415#17584#0" expanded="false" />
+            <element signature="e#17643#23763#0" expanded="false" />
+            <element signature="e#23939#27391#0" expanded="false" />
+            <element signature="e#27547#29186#0" expanded="false" />
+            <element signature="e#29248#31835#0" expanded="false" />
+            <element signature="e#31875#32019#0" expanded="false" />
+            <element signature="e#32164#34520#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gelSeqLib/io_func.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#2144#2505#0" expanded="false" />
+            <element signature="e#2546#2646#0" expanded="false" />
+            <element signature="e#2695#2863#0" expanded="false" />
+            <element signature="e#2896#3050#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gelSeqLib/tasks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1635">
+          <caret line="190" column="20" lean-forward="false" selection-start-line="190" selection-start-column="20" selection-end-line="190" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#2492#6190#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gelSeqLib/VDJ_func.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1455">
+          <caret line="97" column="0" lean-forward="false" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
+          <folding>
+            <element signature="e#1028#1065#0" expanded="true" />
+            <element signature="e#1323#3505#0" expanded="false" />
+            <element signature="e#14318#14776#0" expanded="false" />
+            <element signature="e#15184#15251#0" expanded="false" />
+            <element signature="e#15292#15370#0" expanded="false" />
+            <element signature="e#16913#17371#0" expanded="false" />
+            <element signature="e#17415#17584#0" expanded="false" />
+            <element signature="e#17643#23763#0" expanded="false" />
+            <element signature="e#23939#27391#0" expanded="false" />
+            <element signature="e#27547#29186#0" expanded="false" />
+            <element signature="e#29248#31835#0" expanded="false" />
+            <element signature="e#31875#32019#0" expanded="false" />
+            <element signature="e#32164#34520#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gelSeqLib/tasks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#2492#6190#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gelSeqLib/tasks.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -714,19 +1092,18 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#1028#1065#0" expanded="true" />
-            <element signature="e#10212#14308#0" expanded="false" />
-            <element signature="e#14353#14811#0" expanded="false" />
-            <element signature="e#14846#15185#0" expanded="false" />
-            <element signature="e#15220#15287#0" expanded="false" />
-            <element signature="e#15328#15406#0" expanded="false" />
-            <element signature="e#16946#17404#0" expanded="false" />
-            <element signature="e#17448#17617#0" expanded="false" />
-            <element signature="e#17676#23796#0" expanded="false" />
-            <element signature="e#23972#27424#0" expanded="false" />
-            <element signature="e#27580#29219#0" expanded="false" />
-            <element signature="e#29281#31868#0" expanded="false" />
-            <element signature="e#31908#32052#0" expanded="false" />
-            <element signature="e#32197#34553#0" expanded="false" />
+            <element signature="e#1323#3505#0" expanded="false" />
+            <element signature="e#14318#14776#0" expanded="false" />
+            <element signature="e#15184#15251#0" expanded="false" />
+            <element signature="e#15292#15370#0" expanded="false" />
+            <element signature="e#16913#17371#0" expanded="false" />
+            <element signature="e#17415#17584#0" expanded="false" />
+            <element signature="e#17643#23763#0" expanded="false" />
+            <element signature="e#23939#27391#0" expanded="false" />
+            <element signature="e#27547#29186#0" expanded="false" />
+            <element signature="e#29248#31835#0" expanded="false" />
+            <element signature="e#31875#32019#0" expanded="false" />
+            <element signature="e#32164#34520#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -735,7 +1112,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#0#9#0" expanded="false" />
+            <element signature="e#503#711#0" expanded="false" />
+            <element signature="e#6974#9092#0" expanded="false" />
+            <marker date="1496927123193" expanded="false" signature="9124:9349" ph="..." />
+            <marker date="1496927123193" expanded="false" signature="9390:10920" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -743,7 +1126,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -751,13 +1133,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gelSeqLib/plate.py">
+    <entry file="file://$PROJECT_DIR$/gelSeqLib/tasks.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="645">
           <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
@@ -774,19 +1153,18 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#1028#1065#0" expanded="true" />
-            <element signature="e#10212#14308#0" expanded="false" />
-            <element signature="e#14353#14811#0" expanded="false" />
-            <element signature="e#14846#15185#0" expanded="false" />
-            <element signature="e#15220#15287#0" expanded="false" />
-            <element signature="e#15328#15406#0" expanded="false" />
-            <element signature="e#16946#17404#0" expanded="false" />
-            <element signature="e#17448#17617#0" expanded="false" />
-            <element signature="e#17676#23796#0" expanded="false" />
-            <element signature="e#23972#27424#0" expanded="false" />
-            <element signature="e#27580#29219#0" expanded="false" />
-            <element signature="e#29281#31868#0" expanded="false" />
-            <element signature="e#31908#32052#0" expanded="false" />
-            <element signature="e#32197#34553#0" expanded="false" />
+            <element signature="e#1323#3505#0" expanded="false" />
+            <element signature="e#14318#14776#0" expanded="false" />
+            <element signature="e#15184#15251#0" expanded="false" />
+            <element signature="e#15292#15370#0" expanded="false" />
+            <element signature="e#16913#17371#0" expanded="false" />
+            <element signature="e#17415#17584#0" expanded="false" />
+            <element signature="e#17643#23763#0" expanded="false" />
+            <element signature="e#23939#27391#0" expanded="false" />
+            <element signature="e#27547#29186#0" expanded="false" />
+            <element signature="e#29248#31835#0" expanded="false" />
+            <element signature="e#31875#32019#0" expanded="false" />
+            <element signature="e#32164#34520#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -795,7 +1173,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#0#9#0" expanded="false" />
+            <element signature="e#503#711#0" expanded="false" />
+            <element signature="e#6974#9092#0" expanded="false" />
+            <marker date="1496927123193" expanded="false" signature="9124:9349" ph="..." />
+            <marker date="1496927123193" expanded="false" signature="9390:10920" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -803,7 +1187,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -811,13 +1194,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gelSeqLib/plate.py">
+    <entry file="file://$PROJECT_DIR$/gelSeqLib/tasks.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -832,7 +1212,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -840,7 +1219,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -848,7 +1226,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -856,7 +1233,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -864,7 +1240,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -872,7 +1247,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -880,7 +1254,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -888,7 +1261,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -896,17 +1268,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plates/103_S10_L001/E4/IgBLAST_output/E4_TCR_TCR_B.IgBLASTOut">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="65" lean-forward="false" selection-start-line="1" selection-start-column="65" selection-end-line="1" selection-end-column="65" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -914,18 +1275,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="972">
           <caret line="580" column="0" lean-forward="false" selection-start-line="580" selection-start-column="0" selection-end-line="580" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gelSeqLib/plate.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="182" column="23" lean-forward="false" selection-start-line="182" selection-start-column="23" selection-end-line="182" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-            <element signature="e#2492#6190#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -934,7 +1283,7 @@
         <state relative-caret-position="192">
           <caret line="128" column="49" lean-forward="false" selection-start-line="128" selection-start-column="49" selection-end-line="128" selection-end-column="49" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#0#9#0" expanded="false" />
             <element signature="e#503#711#0" expanded="false" />
             <element signature="e#6974#9092#0" expanded="false" />
             <marker date="1496927123193" expanded="false" signature="9124:9349" ph="..." />
@@ -945,43 +1294,88 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gelSeqLib/launcher.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
+        <state relative-caret-position="214">
           <caret line="19" column="20" lean-forward="false" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gelSeqLib/tasks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2535">
+          <caret line="250" column="29" lean-forward="false" selection-start-line="250" selection-start-column="29" selection-end-line="250" selection-end-column="29" />
           <folding>
-            <element signature="e#0#37#0" expanded="true" />
+            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#2492#6190#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/3.5env/lib/python3.5/re.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="281" column="0" lean-forward="false" selection-start-line="281" selection-start-column="0" selection-end-line="281" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plates/103_S10_L001/H14/IgBLAST_output/H14_TCR_TCR_B.IgBLASTOut">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4485">
+          <caret line="226" column="48" lean-forward="false" selection-start-line="226" selection-start-column="48" selection-end-line="226" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plates/103_S10_L001/E4/IgBLAST_output/E4_TCR_TCR_B.IgBLASTOut">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-360">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gelSeqLib/io_func.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="143" column="18" lean-forward="false" selection-start-line="143" selection-start-column="18" selection-end-line="143" selection-end-column="18" />
+          <folding>
+            <element signature="e#2144#2505#0" expanded="false" />
+            <element signature="e#2546#2646#0" expanded="false" />
+            <element signature="e#2695#2863#0" expanded="false" />
+            <element signature="e#2896#3050#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gelSeqLib/VDJ_func.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="97" column="0" lean-forward="true" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
+        <state relative-caret-position="232">
+          <caret line="198" column="61" lean-forward="false" selection-start-line="198" selection-start-column="61" selection-end-line="198" selection-end-column="61" />
           <folding>
             <element signature="e#1028#1065#0" expanded="true" />
-            <element signature="e#10212#14308#0" expanded="false" />
-            <element signature="e#14353#14811#0" expanded="false" />
-            <element signature="e#14846#15185#0" expanded="false" />
-            <element signature="e#15220#15287#0" expanded="false" />
-            <element signature="e#15328#15406#0" expanded="false" />
-            <element signature="e#16946#17404#0" expanded="false" />
-            <element signature="e#17448#17617#0" expanded="false" />
-            <element signature="e#17676#23796#0" expanded="false" />
-            <element signature="e#23972#27424#0" expanded="false" />
-            <element signature="e#27580#29219#0" expanded="false" />
-            <element signature="e#29281#31868#0" expanded="false" />
-            <element signature="e#31908#32052#0" expanded="false" />
-            <element signature="e#32197#34553#0" expanded="false" />
+            <element signature="e#1323#3505#0" expanded="false" />
+            <element signature="e#14318#14776#0" expanded="false" />
+            <element signature="e#15184#15251#0" expanded="false" />
+            <element signature="e#15292#15370#0" expanded="false" />
+            <element signature="e#16913#17371#0" expanded="false" />
+            <element signature="e#17415#17584#0" expanded="false" />
+            <element signature="e#17643#23763#0" expanded="false" />
+            <element signature="e#23939#27391#0" expanded="false" />
+            <element signature="e#27547#29186#0" expanded="false" />
+            <element signature="e#29248#31835#0" expanded="false" />
+            <element signature="e#31875#32019#0" expanded="false" />
+            <element signature="e#32164#34520#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gelSeqLib/io_func.py">
+    <entry file="file://$PROJECT_DIR$/gelSeqLib/core.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="135" column="38" lean-forward="false" selection-start-line="135" selection-start-column="38" selection-end-line="135" selection-end-column="38" />
+        <state relative-caret-position="1140">
+          <caret line="278" column="22" lean-forward="true" selection-start-line="278" selection-start-column="22" selection-end-line="278" selection-end-column="22" />
           <folding>
-            <element signature="e#0#37#0" expanded="true" />
+            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#7015#8110#0" expanded="false" />
           </folding>
         </state>
       </provider>

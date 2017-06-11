@@ -69,7 +69,7 @@ def process_chunk(chunk):
                     return_dict['hit_table'].append(line_x)
 
         elif line_x.startswith('# Query'):
-            query_name = line_x.split(" ")[1]
+            query_name = line_x.split(" ")[2]
             #query_length = line_x.split(" ")[3]
             #return_dict['query_length'] = int(query_length.split("=")[1])
             return_dict['query_name'] = query_name
@@ -160,7 +160,6 @@ def find_possible_alignments(sample_dict, locus_names, cell_name, IMGT_seqs,
                             if query_name in record.id:
                                 fasta_seq = record
 
-                    '''
                     if 'reversed' in good_hits[0][1]:
                         fasta_seq = fasta_seq.reverse_complement().seq
                     else:
@@ -197,7 +196,7 @@ def find_possible_alignments(sample_dict, locus_names, cell_name, IMGT_seqs,
                                           junction_details=junction_list,
                                           best_VJ_names=bestVJNames,
                                           alignment_summary=alignment_summary,
-                                          trinity_seq=trinity_seq,
+                                          fasta_seq=fasta_seq,
                                           imgt_reconstructed_seq=imgt_reconstructed_seq,
                                           has_D=has_D)
                         recombinants[locus].append(rec)
@@ -218,7 +217,7 @@ def find_possible_alignments(sample_dict, locus_names, cell_name, IMGT_seqs,
                     invariant_seqs=invariant_seqs, receptor=receptor, loci=loci)
 
     return (cell)
-    '''
+
 
 def get_fasta_line_for_contig_imgt(rearrangement_summary, junction_details,
                                    hit_table, locus, IMGT_seqs,
@@ -350,7 +349,6 @@ def is_rearrangement_productive(seq):
     return (productive, contains_stop, in_frame)
 
 
-
 def get_coords(hit_table):
     found_V = False
     found_J = False
@@ -388,7 +386,7 @@ def process_hit_table(query_name, query_data, locus):
 
     good_hits = []
 
-    segment_locus_pattern = re.compile(r"TRAV.+DV.+")
+    segment_locus_pattern = re.compile(r"TR[AB]V.+DV.+")
 
     locus_name = locus.split("_")[1]
 

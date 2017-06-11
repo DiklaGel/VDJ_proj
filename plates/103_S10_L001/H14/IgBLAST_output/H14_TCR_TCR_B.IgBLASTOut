@@ -1,0 +1,953 @@
+# IGBLASTN 2.6.1+
+# Query: M00393:54:000000000-B84BB:1:1101:10388:5818 1:N:0:GGACTCCT
+# Database: /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_V.fa /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_D.fa /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_J.fa
+# Domain classification requested: imgt
+
+# V-(D)-J rearrangement summary for query sequence (Top V gene match, Top D gene match, Top J gene match, Chain type, stop codon, V-J frame, Productive, Strand).  Multiple equivalent top matches, if present, are separated by a comma.
+TRBV30*01,TRBV30*02,TRBV30*04,TRBV30*05	TRBD1*01	TRBJ2-2P*01	VB	No	N/A	N/A	+
+
+# V-(D)-J junction details based on top germline gene matches (V end, V-D junction, D region, D-J junction, J start).  Note that possible overlapping nucleotides at VDJ junction (i.e, nucleotides that could be assigned to either rearranging gene) are indicated in parentheses (i.e., (TACT)) but are not included under the V, D, or J gene itself
+CCAGC	T	GACAG	CACTCA	CTGGG	
+
+# Alignment summary between query and top germline V gene hit (from, to, length, matches, mismatches, gaps, percent identity)
+FR3-IMGT	1	17	17	16	1	0	94.1
+Total	N/A	N/A	17	16	1	0	94.1
+
+# Hit table (the first field indicates the chain type of the hit)
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, gaps, q. start, q. end, s. start, s. end, evalue, bit score
+# 11 hits found
+V	M00393:54:000000000-B84BB:1:1101:10388:5818	TRBV30*01	94.118	17	1	0	0	1	17	201	217	0.24	25.2
+V	M00393:54:000000000-B84BB:1:1101:10388:5818	TRBV30*02	94.118	17	1	0	0	1	17	201	217	0.24	25.2
+V	M00393:54:000000000-B84BB:1:1101:10388:5818	TRBV30*04	94.118	17	1	0	0	1	17	195	211	0.24	25.2
+V	M00393:54:000000000-B84BB:1:1101:10388:5818	TRBV30*05	94.118	17	1	0	0	1	17	201	217	0.24	25.2
+V	M00393:54:000000000-B84BB:1:1101:10388:5818	TRBV15*01	100.000	13	0	0	0	38	50	195	207	2.1	22.1
+D	M00393:54:000000000-B84BB:1:1101:10388:5818	TRBD1*01	100.000	5	0	0	0	19	23	3	7	4.3	10.4
+J	M00393:54:000000000-B84BB:1:1101:10388:5818	TRBJ2-2P*01	100.000	9	0	0	0	30	38	22	30	2.0	18.3
+J	M00393:54:000000000-B84BB:1:1101:10388:5818	TRBJ2-2*01	91.667	12	1	0	0	77	88	24	35	8.1	16.4
+J	M00393:54:000000000-B84BB:1:1101:10388:5818	TRBJ2-6*01	100.000	8	0	0	0	46	53	28	35	8.1	16.4
+J	M00393:54:000000000-B84BB:1:1101:10388:5818	TRBJ2-2P*01	100.000	7	0	0	0	30	36	14	20	32	14.4
+J	M00393:54:000000000-B84BB:1:1101:10388:5818	TRBJ2-7*01	100.000	7	0	0	0	81	87	31	37	32	14.4
+# IGBLASTN 2.6.1+
+# Query: M00393:54:000000000-B84BB:1:1101:24894:14192 1:N:0:GGACTCCT
+# Database: /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_V.fa /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_D.fa /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_J.fa
+# Domain classification requested: imgt
+
+# V-(D)-J rearrangement summary for query sequence (Top V gene match, Top D gene match, Top J gene match, Chain type, stop codon, V-J frame, Productive, Strand).  Multiple equivalent top matches, if present, are separated by a comma.
+TRBV30*01,TRBV30*02,TRBV30*04,TRBV30*05	TRBD1*01	TRBJ2-2P*01	VB	No	N/A	N/A	+
+
+# V-(D)-J junction details based on top germline gene matches (V end, V-D junction, D region, D-J junction, J start).  Note that possible overlapping nucleotides at VDJ junction (i.e, nucleotides that could be assigned to either rearranging gene) are indicated in parentheses (i.e., (TACT)) but are not included under the V, D, or J gene itself
+CCAGC	T	GACAG	CACTCA	CTGGG	
+
+# Alignment summary between query and top germline V gene hit (from, to, length, matches, mismatches, gaps, percent identity)
+FR3-IMGT	1	17	17	16	1	0	94.1
+Total	N/A	N/A	17	16	1	0	94.1
+
+# Hit table (the first field indicates the chain type of the hit)
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, gaps, q. start, q. end, s. start, s. end, evalue, bit score
+# 11 hits found
+V	M00393:54:000000000-B84BB:1:1101:24894:14192	TRBV30*01	94.118	17	1	0	0	1	17	201	217	0.24	25.2
+V	M00393:54:000000000-B84BB:1:1101:24894:14192	TRBV30*02	94.118	17	1	0	0	1	17	201	217	0.24	25.2
+V	M00393:54:000000000-B84BB:1:1101:24894:14192	TRBV30*04	94.118	17	1	0	0	1	17	195	211	0.24	25.2
+V	M00393:54:000000000-B84BB:1:1101:24894:14192	TRBV30*05	94.118	17	1	0	0	1	17	201	217	0.24	25.2
+V	M00393:54:000000000-B84BB:1:1101:24894:14192	TRBV15*01	100.000	13	0	0	0	38	50	195	207	2.1	22.1
+D	M00393:54:000000000-B84BB:1:1101:24894:14192	TRBD1*01	100.000	5	0	0	0	19	23	3	7	4.3	10.4
+J	M00393:54:000000000-B84BB:1:1101:24894:14192	TRBJ2-2P*01	100.000	9	0	0	0	30	38	22	30	2.0	18.3
+J	M00393:54:000000000-B84BB:1:1101:24894:14192	TRBJ2-2*01	91.667	12	1	0	0	77	88	24	35	8.1	16.4
+J	M00393:54:000000000-B84BB:1:1101:24894:14192	TRBJ2-6*01	100.000	8	0	0	0	46	53	28	35	8.1	16.4
+J	M00393:54:000000000-B84BB:1:1101:24894:14192	TRBJ2-2P*01	100.000	7	0	0	0	30	36	14	20	32	14.4
+J	M00393:54:000000000-B84BB:1:1101:24894:14192	TRBJ2-7*01	100.000	7	0	0	0	81	87	31	37	32	14.4
+# IGBLASTN 2.6.1+
+# Query: M00393:54:000000000-B84BB:1:1101:7690:25770 1:N:0:GGACTCCT
+# Database: /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_V.fa /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_D.fa /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_J.fa
+# Domain classification requested: imgt
+
+# V-(D)-J rearrangement summary for query sequence (Top V gene match, Top D gene match, Top J gene match, Chain type, stop codon, V-J frame, Productive, Strand).  Multiple equivalent top matches, if present, are separated by a comma.
+TRBV30*01,TRBV30*02,TRBV30*04,TRBV30*05	TRBD1*01	TRBJ2-2P*01	VB	No	N/A	N/A	+
+
+# V-(D)-J junction details based on top germline gene matches (V end, V-D junction, D region, D-J junction, J start).  Note that possible overlapping nucleotides at VDJ junction (i.e, nucleotides that could be assigned to either rearranging gene) are indicated in parentheses (i.e., (TACT)) but are not included under the V, D, or J gene itself
+CCAGC	T	GACAG	CACTCA	CTGGG	
+
+# Alignment summary between query and top germline V gene hit (from, to, length, matches, mismatches, gaps, percent identity)
+FR3-IMGT	1	17	17	16	1	0	94.1
+Total	N/A	N/A	17	16	1	0	94.1
+
+# Hit table (the first field indicates the chain type of the hit)
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, gaps, q. start, q. end, s. start, s. end, evalue, bit score
+# 11 hits found
+V	M00393:54:000000000-B84BB:1:1101:7690:25770	TRBV30*01	94.118	17	1	0	0	1	17	201	217	0.24	25.2
+V	M00393:54:000000000-B84BB:1:1101:7690:25770	TRBV30*02	94.118	17	1	0	0	1	17	201	217	0.24	25.2
+V	M00393:54:000000000-B84BB:1:1101:7690:25770	TRBV30*04	94.118	17	1	0	0	1	17	195	211	0.24	25.2
+V	M00393:54:000000000-B84BB:1:1101:7690:25770	TRBV30*05	94.118	17	1	0	0	1	17	201	217	0.24	25.2
+V	M00393:54:000000000-B84BB:1:1101:7690:25770	TRBV15*01	100.000	13	0	0	0	38	50	195	207	2.1	22.1
+D	M00393:54:000000000-B84BB:1:1101:7690:25770	TRBD1*01	100.000	5	0	0	0	19	23	3	7	4.3	10.4
+J	M00393:54:000000000-B84BB:1:1101:7690:25770	TRBJ2-2P*01	100.000	9	0	0	0	30	38	22	30	2.0	18.3
+J	M00393:54:000000000-B84BB:1:1101:7690:25770	TRBJ2-6*01	100.000	8	0	0	0	46	53	28	35	8.1	16.4
+J	M00393:54:000000000-B84BB:1:1101:7690:25770	TRBJ2-2*01	100.000	7	0	0	0	82	88	29	35	32	14.4
+J	M00393:54:000000000-B84BB:1:1101:7690:25770	TRBJ2-2P*01	100.000	7	0	0	0	30	36	14	20	32	14.4
+J	M00393:54:000000000-B84BB:1:1101:7690:25770	TRBJ2-7*01	100.000	7	0	0	0	81	87	31	37	32	14.4
+# IGBLASTN 2.6.1+
+# Query: M00393:54:000000000-B84BB:1:1101:15245:26779 1:N:0:GGACTCCT
+# Database: /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_V.fa /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_D.fa /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_J.fa
+# Domain classification requested: imgt
+
+# V-(D)-J rearrangement summary for query sequence (Top V gene match, Top D gene match, Top J gene match, Chain type, stop codon, V-J frame, Productive, Strand).  Multiple equivalent top matches, if present, are separated by a comma.
+TRBV30*01,TRBV30*02,TRBV30*04,TRBV30*05	TRBD1*01	TRBJ2-2P*01	VB	No	N/A	N/A	+
+
+# V-(D)-J junction details based on top germline gene matches (V end, V-D junction, D region, D-J junction, J start).  Note that possible overlapping nucleotides at VDJ junction (i.e, nucleotides that could be assigned to either rearranging gene) are indicated in parentheses (i.e., (TACT)) but are not included under the V, D, or J gene itself
+CCAGC	T	GACAG	CACTCA	CTGGG	
+
+# Alignment summary between query and top germline V gene hit (from, to, length, matches, mismatches, gaps, percent identity)
+FR3-IMGT	1	17	17	16	1	0	94.1
+Total	N/A	N/A	17	16	1	0	94.1
+
+# Hit table (the first field indicates the chain type of the hit)
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, gaps, q. start, q. end, s. start, s. end, evalue, bit score
+# 11 hits found
+V	M00393:54:000000000-B84BB:1:1101:15245:26779	TRBV30*01	94.118	17	1	0	0	1	17	201	217	0.24	25.2
+V	M00393:54:000000000-B84BB:1:1101:15245:26779	TRBV30*02	94.118	17	1	0	0	1	17	201	217	0.24	25.2
+V	M00393:54:000000000-B84BB:1:1101:15245:26779	TRBV30*04	94.118	17	1	0	0	1	17	195	211	0.24	25.2
+V	M00393:54:000000000-B84BB:1:1101:15245:26779	TRBV30*05	94.118	17	1	0	0	1	17	201	217	0.24	25.2
+V	M00393:54:000000000-B84BB:1:1101:15245:26779	TRBV15*01	100.000	13	0	0	0	38	50	195	207	2.1	22.1
+D	M00393:54:000000000-B84BB:1:1101:15245:26779	TRBD1*01	100.000	5	0	0	0	19	23	3	7	4.3	10.4
+J	M00393:54:000000000-B84BB:1:1101:15245:26779	TRBJ2-2P*01	100.000	9	0	0	0	30	38	22	30	2.0	18.3
+J	M00393:54:000000000-B84BB:1:1101:15245:26779	TRBJ2-2*01	91.667	12	1	0	0	77	88	24	35	8.1	16.4
+J	M00393:54:000000000-B84BB:1:1101:15245:26779	TRBJ2-6*01	100.000	8	0	0	0	46	53	28	35	8.1	16.4
+J	M00393:54:000000000-B84BB:1:1101:15245:26779	TRBJ2-2P*01	100.000	7	0	0	0	30	36	14	20	32	14.4
+J	M00393:54:000000000-B84BB:1:1101:15245:26779	TRBJ2-7*01	100.000	7	0	0	0	81	87	31	37	32	14.4
+# IGBLASTN 2.6.1+
+# Query: M00393:54:000000000-B84BB:1:1103:12069:6583 1:N:0:GGACTCCT
+# Database: /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_V.fa /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_D.fa /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_J.fa
+# Domain classification requested: imgt
+
+# V-(D)-J rearrangement summary for query sequence (Top V gene match, Top D gene match, Top J gene match, Chain type, stop codon, V-J frame, Productive, Strand).  Multiple equivalent top matches, if present, are separated by a comma.
+TRBV30*01,TRBV30*02,TRBV30*04,TRBV30*05	TRBD1*01	TRBJ2-2P*01	VB	No	N/A	N/A	+
+
+# V-(D)-J junction details based on top germline gene matches (V end, V-D junction, D region, D-J junction, J start).  Note that possible overlapping nucleotides at VDJ junction (i.e, nucleotides that could be assigned to either rearranging gene) are indicated in parentheses (i.e., (TACT)) but are not included under the V, D, or J gene itself
+CCAGC	T	GACAG	CACTCA	CTGGG	
+
+# Alignment summary between query and top germline V gene hit (from, to, length, matches, mismatches, gaps, percent identity)
+FR3-IMGT	1	17	17	16	1	0	94.1
+Total	N/A	N/A	17	16	1	0	94.1
+
+# Hit table (the first field indicates the chain type of the hit)
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, gaps, q. start, q. end, s. start, s. end, evalue, bit score
+# 11 hits found
+V	M00393:54:000000000-B84BB:1:1103:12069:6583	TRBV30*01	94.118	17	1	0	0	1	17	201	217	0.24	25.2
+V	M00393:54:000000000-B84BB:1:1103:12069:6583	TRBV30*02	94.118	17	1	0	0	1	17	201	217	0.24	25.2
+V	M00393:54:000000000-B84BB:1:1103:12069:6583	TRBV30*04	94.118	17	1	0	0	1	17	195	211	0.24	25.2
+V	M00393:54:000000000-B84BB:1:1103:12069:6583	TRBV30*05	94.118	17	1	0	0	1	17	201	217	0.24	25.2
+V	M00393:54:000000000-B84BB:1:1103:12069:6583	TRBV15*01	100.000	13	0	0	0	38	50	195	207	2.1	22.1
+D	M00393:54:000000000-B84BB:1:1103:12069:6583	TRBD1*01	100.000	5	0	0	0	19	23	3	7	4.3	10.4
+J	M00393:54:000000000-B84BB:1:1103:12069:6583	TRBJ2-2P*01	100.000	9	0	0	0	30	38	22	30	2.0	18.3
+J	M00393:54:000000000-B84BB:1:1103:12069:6583	TRBJ2-2*01	91.667	12	1	0	0	77	88	24	35	8.1	16.4
+J	M00393:54:000000000-B84BB:1:1103:12069:6583	TRBJ2-6*01	100.000	8	0	0	0	46	53	28	35	8.1	16.4
+J	M00393:54:000000000-B84BB:1:1103:12069:6583	TRBJ2-2P*01	100.000	7	0	0	0	30	36	14	20	32	14.4
+J	M00393:54:000000000-B84BB:1:1103:12069:6583	TRBJ2-7*01	100.000	7	0	0	0	81	87	31	37	32	14.4
+# IGBLASTN 2.6.1+
+# Query: M00393:54:000000000-B84BB:1:1103:16300:20471 1:N:0:GGACTCCT
+# Database: /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_V.fa /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_D.fa /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_J.fa
+# Domain classification requested: imgt
+
+# V-(D)-J rearrangement summary for query sequence (Top V gene match, Top D gene match, Top J gene match, Chain type, stop codon, V-J frame, Productive, Strand).  Multiple equivalent top matches, if present, are separated by a comma.
+TRBV15*01,TRBV15*02,TRBV15*03	TRBD2*02	TRBJ2-2*01	VB	No	N/A	N/A	+
+
+# V-(D)-J junction details based on top germline gene matches (V end, V-D junction, D region, D-J junction, J start).  Note that possible overlapping nucleotides at VDJ junction (i.e, nucleotides that could be assigned to either rearranging gene) are indicated in parentheses (i.e., (TACT)) but are not included under the V, D, or J gene itself
+GGCCG	GCAC	GGAGG	TGGTCAAGGCTAAAGCC	GGAGC	
+
+# Alignment summary between query and top germline V gene hit (from, to, length, matches, mismatches, gaps, percent identity)
+FR3-IMGT	1	24	24	24	0	0	100
+Total	N/A	N/A	24	24	0	0	100
+
+# Hit table (the first field indicates the chain type of the hit)
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, gaps, q. start, q. end, s. start, s. end, evalue, bit score
+# 11 hits found
+V	M00393:54:000000000-B84BB:1:1103:16300:20471	TRBV15*01	100.000	24	0	0	0	1	24	184	207	1.45e-05	39.2
+V	M00393:54:000000000-B84BB:1:1103:16300:20471	TRBV15*02	100.000	24	0	0	0	1	24	184	207	1.45e-05	39.2
+V	M00393:54:000000000-B84BB:1:1103:16300:20471	TRBV15*03	100.000	24	0	0	0	1	24	184	207	1.45e-05	39.2
+V	M00393:54:000000000-B84BB:1:1103:16300:20471	TRBV24-1*01	67.647	34	11	0	0	118	151	38	71	6.2	20.5
+V	M00393:54:000000000-B84BB:1:1103:16300:20471	TRBV24_OR9-2*01	67.647	34	11	0	0	118	151	38	71	6.2	20.5
+D	M00393:54:000000000-B84BB:1:1103:16300:20471	TRBD2*02	100.000	5	0	0	0	29	33	11	15	4.3	10.4
+J	M00393:54:000000000-B84BB:1:1103:16300:20471	TRBJ2-2*01	91.667	12	1	0	0	51	62	24	35	8.1	16.4
+J	M00393:54:000000000-B84BB:1:1103:16300:20471	TRBJ2-3*01	100.000	8	0	0	0	87	94	28	35	8.1	16.4
+J	M00393:54:000000000-B84BB:1:1103:16300:20471	TRBJ2-6*01	100.000	7	0	0	0	84	90	29	35	32	14.4
+J	M00393:54:000000000-B84BB:1:1103:16300:20471	TRBJ2-7*01	100.000	7	0	0	0	55	61	31	37	32	14.4
+J	M00393:54:000000000-B84BB:1:1103:16300:20471	TRBJ2-7*02	100.000	7	0	0	0	55	61	31	37	32	14.4
+# IGBLASTN 2.6.1+
+# Query: M00393:54:000000000-B84BB:1:1106:3957:11494 1:N:0:GGACTCCT
+# Database: /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_V.fa /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_D.fa /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_J.fa
+# Domain classification requested: imgt
+
+# V-(D)-J rearrangement summary for query sequence (Top V gene match, Top D gene match, Top J gene match, Chain type, stop codon, V-J frame, Productive, Strand).  Multiple equivalent top matches, if present, are separated by a comma.
+TRBV30*01,TRBV30*02,TRBV30*04,TRBV30*05	TRBD1*01	TRBJ2-2P*01	VB	No	N/A	N/A	+
+
+# V-(D)-J junction details based on top germline gene matches (V end, V-D junction, D region, D-J junction, J start).  Note that possible overlapping nucleotides at VDJ junction (i.e, nucleotides that could be assigned to either rearranging gene) are indicated in parentheses (i.e., (TACT)) but are not included under the V, D, or J gene itself
+CCAGC	T	GACAG	CACTCA	CTGGG	
+
+# Alignment summary between query and top germline V gene hit (from, to, length, matches, mismatches, gaps, percent identity)
+FR3-IMGT	1	17	17	16	1	0	94.1
+Total	N/A	N/A	17	16	1	0	94.1
+
+# Hit table (the first field indicates the chain type of the hit)
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, gaps, q. start, q. end, s. start, s. end, evalue, bit score
+# 11 hits found
+V	M00393:54:000000000-B84BB:1:1106:3957:11494	TRBV30*01	94.118	17	1	0	0	1	17	201	217	0.24	25.2
+V	M00393:54:000000000-B84BB:1:1106:3957:11494	TRBV30*02	94.118	17	1	0	0	1	17	201	217	0.24	25.2
+V	M00393:54:000000000-B84BB:1:1106:3957:11494	TRBV30*04	94.118	17	1	0	0	1	17	195	211	0.24	25.2
+V	M00393:54:000000000-B84BB:1:1106:3957:11494	TRBV30*05	94.118	17	1	0	0	1	17	201	217	0.24	25.2
+V	M00393:54:000000000-B84BB:1:1106:3957:11494	TRBV15*01	100.000	13	0	0	0	38	50	195	207	2.1	22.1
+D	M00393:54:000000000-B84BB:1:1106:3957:11494	TRBD1*01	100.000	5	0	0	0	19	23	3	7	4.3	10.4
+J	M00393:54:000000000-B84BB:1:1106:3957:11494	TRBJ2-2P*01	100.000	9	0	0	0	30	38	22	30	2.0	18.3
+J	M00393:54:000000000-B84BB:1:1106:3957:11494	TRBJ2-6*01	100.000	8	0	0	0	46	53	28	35	8.1	16.4
+J	M00393:54:000000000-B84BB:1:1106:3957:11494	TRBJ1-2*01	100.000	7	0	0	0	67	73	9	15	32	14.4
+J	M00393:54:000000000-B84BB:1:1106:3957:11494	TRBJ2-2P*01	100.000	7	0	0	0	30	36	14	20	32	14.4
+J	M00393:54:000000000-B84BB:1:1106:3957:11494	TRBJ2-7*01	100.000	7	0	0	0	81	87	31	37	32	14.4
+# IGBLASTN 2.6.1+
+# Query: M00393:54:000000000-B84BB:1:1106:21553:16945 1:N:0:GGACTCCT
+# Database: /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_V.fa /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_D.fa /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_J.fa
+# Domain classification requested: imgt
+
+# V-(D)-J rearrangement summary for query sequence (Top V gene match, Top D gene match, Top J gene match, Chain type, stop codon, V-J frame, Productive, Strand).  Multiple equivalent top matches, if present, are separated by a comma.
+TRBV30*01,TRBV30*02,TRBV30*04,TRBV30*05	TRBD1*01	TRBJ2-2P*01	VB	No	N/A	N/A	+
+
+# V-(D)-J junction details based on top germline gene matches (V end, V-D junction, D region, D-J junction, J start).  Note that possible overlapping nucleotides at VDJ junction (i.e, nucleotides that could be assigned to either rearranging gene) are indicated in parentheses (i.e., (TACT)) but are not included under the V, D, or J gene itself
+CCAGC	T	GACAG	CACTCA	CTGGG	
+
+# Alignment summary between query and top germline V gene hit (from, to, length, matches, mismatches, gaps, percent identity)
+FR3-IMGT	1	17	17	16	1	0	94.1
+Total	N/A	N/A	17	16	1	0	94.1
+
+# Hit table (the first field indicates the chain type of the hit)
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, gaps, q. start, q. end, s. start, s. end, evalue, bit score
+# 11 hits found
+V	M00393:54:000000000-B84BB:1:1106:21553:16945	TRBV30*01	94.118	17	1	0	0	1	17	201	217	0.24	25.2
+V	M00393:54:000000000-B84BB:1:1106:21553:16945	TRBV30*02	94.118	17	1	0	0	1	17	201	217	0.24	25.2
+V	M00393:54:000000000-B84BB:1:1106:21553:16945	TRBV30*04	94.118	17	1	0	0	1	17	195	211	0.24	25.2
+V	M00393:54:000000000-B84BB:1:1106:21553:16945	TRBV30*05	94.118	17	1	0	0	1	17	201	217	0.24	25.2
+V	M00393:54:000000000-B84BB:1:1106:21553:16945	TRBV15*01	100.000	13	0	0	0	38	50	195	207	2.1	22.1
+D	M00393:54:000000000-B84BB:1:1106:21553:16945	TRBD1*01	100.000	5	0	0	0	19	23	3	7	4.3	10.4
+J	M00393:54:000000000-B84BB:1:1106:21553:16945	TRBJ2-2P*01	100.000	9	0	0	0	30	38	22	30	2.0	18.3
+J	M00393:54:000000000-B84BB:1:1106:21553:16945	TRBJ2-2*01	91.667	12	1	0	0	77	88	24	35	8.1	16.4
+J	M00393:54:000000000-B84BB:1:1106:21553:16945	TRBJ2-6*01	100.000	8	0	0	0	46	53	28	35	8.1	16.4
+J	M00393:54:000000000-B84BB:1:1106:21553:16945	TRBJ2-2P*01	100.000	7	0	0	0	30	36	14	20	32	14.4
+J	M00393:54:000000000-B84BB:1:1106:21553:16945	TRBJ2-7*01	100.000	7	0	0	0	81	87	31	37	32	14.4
+# IGBLASTN 2.6.1+
+# Query: M00393:54:000000000-B84BB:1:1106:22445:23997 1:N:0:GGACTCCT
+# Database: /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_V.fa /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_D.fa /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_J.fa
+# Domain classification requested: imgt
+
+# V-(D)-J rearrangement summary for query sequence (Top V gene match, Top D gene match, Top J gene match, Chain type, stop codon, V-J frame, Productive, Strand).  Multiple equivalent top matches, if present, are separated by a comma.
+TRBV30*01,TRBV30*02,TRBV30*04,TRBV30*05	TRBD1*01	TRBJ2-2P*01	VB	No	N/A	N/A	+
+
+# V-(D)-J junction details based on top germline gene matches (V end, V-D junction, D region, D-J junction, J start).  Note that possible overlapping nucleotides at VDJ junction (i.e, nucleotides that could be assigned to either rearranging gene) are indicated in parentheses (i.e., (TACT)) but are not included under the V, D, or J gene itself
+CCAGC	T	GACAG	CACTCA	CTGGG	
+
+# Alignment summary between query and top germline V gene hit (from, to, length, matches, mismatches, gaps, percent identity)
+FR3-IMGT	1	17	17	16	1	0	94.1
+Total	N/A	N/A	17	16	1	0	94.1
+
+# Hit table (the first field indicates the chain type of the hit)
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, gaps, q. start, q. end, s. start, s. end, evalue, bit score
+# 11 hits found
+V	M00393:54:000000000-B84BB:1:1106:22445:23997	TRBV30*01	94.118	17	1	0	0	1	17	201	217	0.24	25.2
+V	M00393:54:000000000-B84BB:1:1106:22445:23997	TRBV30*02	94.118	17	1	0	0	1	17	201	217	0.24	25.2
+V	M00393:54:000000000-B84BB:1:1106:22445:23997	TRBV30*04	94.118	17	1	0	0	1	17	195	211	0.24	25.2
+V	M00393:54:000000000-B84BB:1:1106:22445:23997	TRBV30*05	94.118	17	1	0	0	1	17	201	217	0.24	25.2
+V	M00393:54:000000000-B84BB:1:1106:22445:23997	TRBV15*01	100.000	13	0	0	0	38	50	195	207	2.1	22.1
+D	M00393:54:000000000-B84BB:1:1106:22445:23997	TRBD1*01	100.000	5	0	0	0	19	23	3	7	4.3	10.4
+J	M00393:54:000000000-B84BB:1:1106:22445:23997	TRBJ2-2P*01	100.000	9	0	0	0	30	38	22	30	2.0	18.3
+J	M00393:54:000000000-B84BB:1:1106:22445:23997	TRBJ2-2*01	91.667	12	1	0	0	77	88	24	35	8.1	16.4
+J	M00393:54:000000000-B84BB:1:1106:22445:23997	TRBJ2-6*01	100.000	8	0	0	0	46	53	28	35	8.1	16.4
+J	M00393:54:000000000-B84BB:1:1106:22445:23997	TRBJ2-2P*01	100.000	7	0	0	0	30	36	14	20	32	14.4
+J	M00393:54:000000000-B84BB:1:1106:22445:23997	TRBJ2-7*01	100.000	7	0	0	0	81	87	31	37	32	14.4
+# IGBLASTN 2.6.1+
+# Query: M00393:54:000000000-B84BB:1:1105:15179:13746 1:N:0:GGACTCCT
+# Database: /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_V.fa /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_D.fa /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_J.fa
+# Domain classification requested: imgt
+
+# V-(D)-J rearrangement summary for query sequence (Top V gene match, Top D gene match, Top J gene match, Chain type, stop codon, V-J frame, Productive, Strand).  Multiple equivalent top matches, if present, are separated by a comma.
+TRBV30*01,TRBV30*02,TRBV30*04,TRBV30*05	TRBD1*01	TRBJ2-2P*01	VB	No	N/A	N/A	+
+
+# V-(D)-J junction details based on top germline gene matches (V end, V-D junction, D region, D-J junction, J start).  Note that possible overlapping nucleotides at VDJ junction (i.e, nucleotides that could be assigned to either rearranging gene) are indicated in parentheses (i.e., (TACT)) but are not included under the V, D, or J gene itself
+CCAGC	T	GACAG	CACTCA	CTGGG	
+
+# Alignment summary between query and top germline V gene hit (from, to, length, matches, mismatches, gaps, percent identity)
+FR3-IMGT	1	17	17	16	1	0	94.1
+Total	N/A	N/A	17	16	1	0	94.1
+
+# Hit table (the first field indicates the chain type of the hit)
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, gaps, q. start, q. end, s. start, s. end, evalue, bit score
+# 11 hits found
+V	M00393:54:000000000-B84BB:1:1105:15179:13746	TRBV30*01	94.118	17	1	0	0	1	17	201	217	0.24	25.2
+V	M00393:54:000000000-B84BB:1:1105:15179:13746	TRBV30*02	94.118	17	1	0	0	1	17	201	217	0.24	25.2
+V	M00393:54:000000000-B84BB:1:1105:15179:13746	TRBV30*04	94.118	17	1	0	0	1	17	195	211	0.24	25.2
+V	M00393:54:000000000-B84BB:1:1105:15179:13746	TRBV30*05	94.118	17	1	0	0	1	17	201	217	0.24	25.2
+V	M00393:54:000000000-B84BB:1:1105:15179:13746	TRBV15*01	100.000	13	0	0	0	38	50	195	207	2.1	22.1
+D	M00393:54:000000000-B84BB:1:1105:15179:13746	TRBD1*01	100.000	5	0	0	0	19	23	3	7	4.3	10.4
+J	M00393:54:000000000-B84BB:1:1105:15179:13746	TRBJ2-2P*01	100.000	9	0	0	0	30	38	22	30	2.0	18.3
+J	M00393:54:000000000-B84BB:1:1105:15179:13746	TRBJ2-2*01	91.667	12	1	0	0	77	88	24	35	8.1	16.4
+J	M00393:54:000000000-B84BB:1:1105:15179:13746	TRBJ2-6*01	100.000	8	0	0	0	46	53	28	35	8.1	16.4
+J	M00393:54:000000000-B84BB:1:1105:15179:13746	TRBJ2-2P*01	100.000	7	0	0	0	30	36	14	20	32	14.4
+J	M00393:54:000000000-B84BB:1:1105:15179:13746	TRBJ2-7*01	100.000	7	0	0	0	81	87	31	37	32	14.4
+# IGBLASTN 2.6.1+
+# Query: M00393:54:000000000-B84BB:1:1108:14921:19204 1:N:0:GGACTCCT
+# Database: /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_V.fa /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_D.fa /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_J.fa
+# Domain classification requested: imgt
+
+# V-(D)-J rearrangement summary for query sequence (Top V gene match, Top D gene match, Top J gene match, Chain type, stop codon, V-J frame, Productive, Strand).  Multiple equivalent top matches, if present, are separated by a comma.
+TRBV30*01,TRBV30*02,TRBV30*04,TRBV30*05	TRBD1*01	TRBJ2-2P*01	VB	No	N/A	N/A	+
+
+# V-(D)-J junction details based on top germline gene matches (V end, V-D junction, D region, D-J junction, J start).  Note that possible overlapping nucleotides at VDJ junction (i.e, nucleotides that could be assigned to either rearranging gene) are indicated in parentheses (i.e., (TACT)) but are not included under the V, D, or J gene itself
+CCAGC	T	GACAG	CACTCA	CTGGG	
+
+# Alignment summary between query and top germline V gene hit (from, to, length, matches, mismatches, gaps, percent identity)
+FR3-IMGT	1	17	17	16	1	0	94.1
+Total	N/A	N/A	17	16	1	0	94.1
+
+# Hit table (the first field indicates the chain type of the hit)
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, gaps, q. start, q. end, s. start, s. end, evalue, bit score
+# 11 hits found
+V	M00393:54:000000000-B84BB:1:1108:14921:19204	TRBV30*01	94.118	17	1	0	0	1	17	201	217	0.24	25.2
+V	M00393:54:000000000-B84BB:1:1108:14921:19204	TRBV30*02	94.118	17	1	0	0	1	17	201	217	0.24	25.2
+V	M00393:54:000000000-B84BB:1:1108:14921:19204	TRBV30*04	94.118	17	1	0	0	1	17	195	211	0.24	25.2
+V	M00393:54:000000000-B84BB:1:1108:14921:19204	TRBV30*05	94.118	17	1	0	0	1	17	201	217	0.24	25.2
+V	M00393:54:000000000-B84BB:1:1108:14921:19204	TRBV15*01	100.000	13	0	0	0	38	50	195	207	2.1	22.1
+D	M00393:54:000000000-B84BB:1:1108:14921:19204	TRBD1*01	100.000	5	0	0	0	19	23	3	7	4.3	10.4
+J	M00393:54:000000000-B84BB:1:1108:14921:19204	TRBJ2-2P*01	100.000	9	0	0	0	30	38	22	30	2.0	18.3
+J	M00393:54:000000000-B84BB:1:1108:14921:19204	TRBJ2-2*01	91.667	12	1	0	0	77	88	24	35	8.1	16.4
+J	M00393:54:000000000-B84BB:1:1108:14921:19204	TRBJ2-6*01	100.000	8	0	0	0	46	53	28	35	8.1	16.4
+J	M00393:54:000000000-B84BB:1:1108:14921:19204	TRBJ2-2P*01	100.000	7	0	0	0	30	36	14	20	32	14.4
+J	M00393:54:000000000-B84BB:1:1108:14921:19204	TRBJ2-2P*01	100.000	7	0	0	0	54	60	27	33	32	14.4
+# IGBLASTN 2.6.1+
+# Query: M00393:54:000000000-B84BB:1:1108:11833:20524 1:N:0:GGACTCCT
+# Database: /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_V.fa /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_D.fa /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_J.fa
+# Domain classification requested: imgt
+
+# V-(D)-J rearrangement summary for query sequence (Top V gene match, Top D gene match, Top J gene match, Chain type, stop codon, V-J frame, Productive, Strand).  Multiple equivalent top matches, if present, are separated by a comma.
+TRBV30*01,TRBV30*02,TRBV30*04,TRBV30*05	TRBD1*01	TRBJ2-2P*01	VB	No	N/A	N/A	+
+
+# V-(D)-J junction details based on top germline gene matches (V end, V-D junction, D region, D-J junction, J start).  Note that possible overlapping nucleotides at VDJ junction (i.e, nucleotides that could be assigned to either rearranging gene) are indicated in parentheses (i.e., (TACT)) but are not included under the V, D, or J gene itself
+CCAGC	T	GACAG	CACTCA	CTGGG	
+
+# Alignment summary between query and top germline V gene hit (from, to, length, matches, mismatches, gaps, percent identity)
+FR3-IMGT	1	17	17	16	1	0	94.1
+Total	N/A	N/A	17	16	1	0	94.1
+
+# Hit table (the first field indicates the chain type of the hit)
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, gaps, q. start, q. end, s. start, s. end, evalue, bit score
+# 11 hits found
+V	M00393:54:000000000-B84BB:1:1108:11833:20524	TRBV30*01	94.118	17	1	0	0	1	17	201	217	0.24	25.2
+V	M00393:54:000000000-B84BB:1:1108:11833:20524	TRBV30*02	94.118	17	1	0	0	1	17	201	217	0.24	25.2
+V	M00393:54:000000000-B84BB:1:1108:11833:20524	TRBV30*04	94.118	17	1	0	0	1	17	195	211	0.24	25.2
+V	M00393:54:000000000-B84BB:1:1108:11833:20524	TRBV30*05	94.118	17	1	0	0	1	17	201	217	0.24	25.2
+V	M00393:54:000000000-B84BB:1:1108:11833:20524	TRBV15*01	100.000	13	0	0	0	38	50	195	207	2.1	22.1
+D	M00393:54:000000000-B84BB:1:1108:11833:20524	TRBD1*01	100.000	5	0	0	0	19	23	3	7	4.3	10.4
+J	M00393:54:000000000-B84BB:1:1108:11833:20524	TRBJ2-2P*01	100.000	9	0	0	0	30	38	22	30	2.1	18.3
+J	M00393:54:000000000-B84BB:1:1108:11833:20524	TRBJ2-2*01	91.667	12	1	0	0	77	88	24	35	8.1	16.4
+J	M00393:54:000000000-B84BB:1:1108:11833:20524	TRBJ2-6*01	100.000	8	0	0	0	46	53	28	35	8.1	16.4
+J	M00393:54:000000000-B84BB:1:1108:11833:20524	TRBJ2-2P*01	100.000	7	0	0	0	30	36	14	20	32	14.4
+J	M00393:54:000000000-B84BB:1:1108:11833:20524	TRBJ2-7*01	100.000	7	0	0	0	81	87	31	37	32	14.4
+# IGBLASTN 2.6.1+
+# Query: M00393:54:000000000-B84BB:1:1107:9716:5850 1:N:0:GGACTCCT
+# Database: /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_V.fa /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_D.fa /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_J.fa
+# Domain classification requested: imgt
+
+# V-(D)-J rearrangement summary for query sequence (Top V gene match, Top D gene match, Top J gene match, Chain type, stop codon, V-J frame, Productive, Strand).  Multiple equivalent top matches, if present, are separated by a comma.
+TRBV15*01,TRBV15*02,TRBV15*03	TRBD2*02	TRBJ2-2*01	VB	No	N/A	N/A	+
+
+# V-(D)-J junction details based on top germline gene matches (V end, V-D junction, D region, D-J junction, J start).  Note that possible overlapping nucleotides at VDJ junction (i.e, nucleotides that could be assigned to either rearranging gene) are indicated in parentheses (i.e., (TACT)) but are not included under the V, D, or J gene itself
+GGCCG	GCCC	GGAGG	CGGTCAAGGCTAAAGCC	GGAGC	
+
+# Alignment summary between query and top germline V gene hit (from, to, length, matches, mismatches, gaps, percent identity)
+FR3-IMGT	1	24	24	24	0	0	100
+Total	N/A	N/A	24	24	0	0	100
+
+# Hit table (the first field indicates the chain type of the hit)
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, gaps, q. start, q. end, s. start, s. end, evalue, bit score
+# 10 hits found
+V	M00393:54:000000000-B84BB:1:1107:9716:5850	TRBV15*01	100.000	24	0	0	0	1	24	184	207	1.45e-05	39.2
+V	M00393:54:000000000-B84BB:1:1107:9716:5850	TRBV15*02	100.000	24	0	0	0	1	24	184	207	1.45e-05	39.2
+V	M00393:54:000000000-B84BB:1:1107:9716:5850	TRBV15*03	100.000	24	0	0	0	1	24	184	207	1.45e-05	39.2
+V	M00393:54:000000000-B84BB:1:1107:9716:5850	TRBV20-1*03	65.000	40	14	0	0	4	43	144	183	6.2	20.5
+V	M00393:54:000000000-B84BB:1:1107:9716:5850	TRBV24-1*01	67.647	34	11	0	0	118	151	38	71	6.2	20.5
+D	M00393:54:000000000-B84BB:1:1107:9716:5850	TRBD2*02	100.000	5	0	0	0	29	33	11	15	4.3	10.4
+J	M00393:54:000000000-B84BB:1:1107:9716:5850	TRBJ2-2*01	91.667	12	1	0	0	51	62	24	35	8.1	16.4
+J	M00393:54:000000000-B84BB:1:1107:9716:5850	TRBJ2-4*01	100.000	7	0	0	0	86	92	22	28	32	14.4
+J	M00393:54:000000000-B84BB:1:1107:9716:5850	TRBJ2-7*01	100.000	7	0	0	0	55	61	31	37	32	14.4
+J	M00393:54:000000000-B84BB:1:1107:9716:5850	TRBJ2-7*02	100.000	7	0	0	0	55	61	31	37	32	14.4
+# IGBLASTN 2.6.1+
+# Query: M00393:54:000000000-B84BB:1:1110:10585:13261 1:N:0:GGACTCCT
+# Database: /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_V.fa /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_D.fa /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_J.fa
+# Domain classification requested: imgt
+
+# V-(D)-J rearrangement summary for query sequence (Top V gene match, Top D gene match, Top J gene match, Chain type, stop codon, V-J frame, Productive, Strand).  Multiple equivalent top matches, if present, are separated by a comma.
+TRBV30*01,TRBV30*02,TRBV30*04,TRBV30*05	TRBD1*01	TRBJ2-2P*01	VB	No	N/A	N/A	+
+
+# V-(D)-J junction details based on top germline gene matches (V end, V-D junction, D region, D-J junction, J start).  Note that possible overlapping nucleotides at VDJ junction (i.e, nucleotides that could be assigned to either rearranging gene) are indicated in parentheses (i.e., (TACT)) but are not included under the V, D, or J gene itself
+CCAGC	T	GACAG	CACTCA	CTGGG	
+
+# Alignment summary between query and top germline V gene hit (from, to, length, matches, mismatches, gaps, percent identity)
+FR3-IMGT	1	17	17	16	1	0	94.1
+Total	N/A	N/A	17	16	1	0	94.1
+
+# Hit table (the first field indicates the chain type of the hit)
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, gaps, q. start, q. end, s. start, s. end, evalue, bit score
+# 11 hits found
+V	M00393:54:000000000-B84BB:1:1110:10585:13261	TRBV30*01	94.118	17	1	0	0	1	17	201	217	0.24	25.2
+V	M00393:54:000000000-B84BB:1:1110:10585:13261	TRBV30*02	94.118	17	1	0	0	1	17	201	217	0.24	25.2
+V	M00393:54:000000000-B84BB:1:1110:10585:13261	TRBV30*04	94.118	17	1	0	0	1	17	195	211	0.24	25.2
+V	M00393:54:000000000-B84BB:1:1110:10585:13261	TRBV30*05	94.118	17	1	0	0	1	17	201	217	0.24	25.2
+V	M00393:54:000000000-B84BB:1:1110:10585:13261	TRBV15*01	100.000	13	0	0	0	38	50	195	207	2.1	22.1
+D	M00393:54:000000000-B84BB:1:1110:10585:13261	TRBD1*01	100.000	5	0	0	0	19	23	3	7	4.3	10.4
+J	M00393:54:000000000-B84BB:1:1110:10585:13261	TRBJ2-2P*01	100.000	9	0	0	0	30	38	22	30	2.0	18.3
+J	M00393:54:000000000-B84BB:1:1110:10585:13261	TRBJ2-2*01	91.667	12	1	0	0	77	88	24	35	8.1	16.4
+J	M00393:54:000000000-B84BB:1:1110:10585:13261	TRBJ2-6*01	100.000	8	0	0	0	46	53	28	35	8.1	16.4
+J	M00393:54:000000000-B84BB:1:1110:10585:13261	TRBJ2-2P*01	100.000	7	0	0	0	30	36	14	20	32	14.4
+J	M00393:54:000000000-B84BB:1:1110:10585:13261	TRBJ2-7*01	100.000	7	0	0	0	81	87	31	37	32	14.4
+# IGBLASTN 2.6.1+
+# Query: M00393:54:000000000-B84BB:1:1109:6392:21943 1:N:0:GGACTCCT
+# Database: /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_V.fa /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_D.fa /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_J.fa
+# Domain classification requested: imgt
+
+# V-(D)-J rearrangement summary for query sequence (Top V gene match, Top D gene match, Top J gene match, Chain type, stop codon, V-J frame, Productive, Strand).  Multiple equivalent top matches, if present, are separated by a comma.
+TRBV30*01,TRBV30*02,TRBV30*04,TRBV30*05	TRBD1*01	TRBJ2-2P*01	VB	No	N/A	N/A	+
+
+# V-(D)-J junction details based on top germline gene matches (V end, V-D junction, D region, D-J junction, J start).  Note that possible overlapping nucleotides at VDJ junction (i.e, nucleotides that could be assigned to either rearranging gene) are indicated in parentheses (i.e., (TACT)) but are not included under the V, D, or J gene itself
+CCAGC	T	GACAG	CACTCA	CTGGG	
+
+# Alignment summary between query and top germline V gene hit (from, to, length, matches, mismatches, gaps, percent identity)
+FR3-IMGT	1	17	17	16	1	0	94.1
+Total	N/A	N/A	17	16	1	0	94.1
+
+# Hit table (the first field indicates the chain type of the hit)
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, gaps, q. start, q. end, s. start, s. end, evalue, bit score
+# 11 hits found
+V	M00393:54:000000000-B84BB:1:1109:6392:21943	TRBV30*01	94.118	17	1	0	0	1	17	201	217	0.24	25.2
+V	M00393:54:000000000-B84BB:1:1109:6392:21943	TRBV30*02	94.118	17	1	0	0	1	17	201	217	0.24	25.2
+V	M00393:54:000000000-B84BB:1:1109:6392:21943	TRBV30*04	94.118	17	1	0	0	1	17	195	211	0.24	25.2
+V	M00393:54:000000000-B84BB:1:1109:6392:21943	TRBV30*05	94.118	17	1	0	0	1	17	201	217	0.24	25.2
+V	M00393:54:000000000-B84BB:1:1109:6392:21943	TRBV15*01	100.000	13	0	0	0	38	50	195	207	2.1	22.1
+D	M00393:54:000000000-B84BB:1:1109:6392:21943	TRBD1*01	100.000	5	0	0	0	19	23	3	7	4.3	10.4
+J	M00393:54:000000000-B84BB:1:1109:6392:21943	TRBJ2-2P*01	100.000	9	0	0	0	30	38	22	30	2.0	18.3
+J	M00393:54:000000000-B84BB:1:1109:6392:21943	TRBJ2-2*01	91.667	12	1	0	0	77	88	24	35	8.1	16.4
+J	M00393:54:000000000-B84BB:1:1109:6392:21943	TRBJ2-6*01	100.000	8	0	0	0	46	53	28	35	8.1	16.4
+J	M00393:54:000000000-B84BB:1:1109:6392:21943	TRBJ2-2P*01	100.000	7	0	0	0	30	36	14	20	32	14.4
+J	M00393:54:000000000-B84BB:1:1109:6392:21943	TRBJ2-7*01	100.000	7	0	0	0	81	87	31	37	32	14.4
+# IGBLASTN 2.6.1+
+# Query: M00393:54:000000000-B84BB:1:1112:15886:9521 1:N:0:GGACTCCT
+# Database: /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_V.fa /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_D.fa /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_J.fa
+# Domain classification requested: imgt
+
+# V-(D)-J rearrangement summary for query sequence (Top V gene match, Top D gene match, Top J gene match, Chain type, stop codon, V-J frame, Productive, Strand).  Multiple equivalent top matches, if present, are separated by a comma.
+TRBV30*01,TRBV30*02,TRBV30*04,TRBV30*05	TRBD1*01	TRBJ2-2P*01	VB	No	N/A	N/A	+
+
+# V-(D)-J junction details based on top germline gene matches (V end, V-D junction, D region, D-J junction, J start).  Note that possible overlapping nucleotides at VDJ junction (i.e, nucleotides that could be assigned to either rearranging gene) are indicated in parentheses (i.e., (TACT)) but are not included under the V, D, or J gene itself
+CCAGC	T	GACAG	CACTCA	CTGGG	
+
+# Alignment summary between query and top germline V gene hit (from, to, length, matches, mismatches, gaps, percent identity)
+FR3-IMGT	1	17	17	16	1	0	94.1
+Total	N/A	N/A	17	16	1	0	94.1
+
+# Hit table (the first field indicates the chain type of the hit)
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, gaps, q. start, q. end, s. start, s. end, evalue, bit score
+# 11 hits found
+V	M00393:54:000000000-B84BB:1:1112:15886:9521	TRBV30*01	94.118	17	1	0	0	1	17	201	217	0.24	25.2
+V	M00393:54:000000000-B84BB:1:1112:15886:9521	TRBV30*02	94.118	17	1	0	0	1	17	201	217	0.24	25.2
+V	M00393:54:000000000-B84BB:1:1112:15886:9521	TRBV30*04	94.118	17	1	0	0	1	17	195	211	0.24	25.2
+V	M00393:54:000000000-B84BB:1:1112:15886:9521	TRBV30*05	94.118	17	1	0	0	1	17	201	217	0.24	25.2
+V	M00393:54:000000000-B84BB:1:1112:15886:9521	TRBV15*01	100.000	13	0	0	0	38	50	195	207	2.1	22.1
+D	M00393:54:000000000-B84BB:1:1112:15886:9521	TRBD1*01	100.000	5	0	0	0	19	23	3	7	4.3	10.4
+J	M00393:54:000000000-B84BB:1:1112:15886:9521	TRBJ2-2P*01	100.000	9	0	0	0	30	38	22	30	2.0	18.3
+J	M00393:54:000000000-B84BB:1:1112:15886:9521	TRBJ2-2*01	91.667	12	1	0	0	77	88	24	35	8.1	16.4
+J	M00393:54:000000000-B84BB:1:1112:15886:9521	TRBJ2-6*01	100.000	8	0	0	0	46	53	28	35	8.1	16.4
+J	M00393:54:000000000-B84BB:1:1112:15886:9521	TRBJ2-2P*01	100.000	7	0	0	0	30	36	14	20	32	14.4
+J	M00393:54:000000000-B84BB:1:1112:15886:9521	TRBJ2-7*01	100.000	7	0	0	0	81	87	31	37	32	14.4
+# IGBLASTN 2.6.1+
+# Query: M00393:54:000000000-B84BB:1:1112:21026:19300 1:N:0:GGACTCCT
+# Database: /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_V.fa /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_D.fa /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_J.fa
+# Domain classification requested: imgt
+
+# V-(D)-J rearrangement summary for query sequence (Top V gene match, Top D gene match, Top J gene match, Chain type, stop codon, V-J frame, Productive, Strand).  Multiple equivalent top matches, if present, are separated by a comma.
+TRBV30*01,TRBV30*02,TRBV30*04,TRBV30*05	TRBD1*01	TRBJ2-2P*01	VB	No	N/A	N/A	+
+
+# V-(D)-J junction details based on top germline gene matches (V end, V-D junction, D region, D-J junction, J start).  Note that possible overlapping nucleotides at VDJ junction (i.e, nucleotides that could be assigned to either rearranging gene) are indicated in parentheses (i.e., (TACT)) but are not included under the V, D, or J gene itself
+CCAGC	T	GACAG	CACTCA	CTGGG	
+
+# Alignment summary between query and top germline V gene hit (from, to, length, matches, mismatches, gaps, percent identity)
+FR3-IMGT	1	17	17	16	1	0	94.1
+Total	N/A	N/A	17	16	1	0	94.1
+
+# Hit table (the first field indicates the chain type of the hit)
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, gaps, q. start, q. end, s. start, s. end, evalue, bit score
+# 11 hits found
+V	M00393:54:000000000-B84BB:1:1112:21026:19300	TRBV30*01	94.118	17	1	0	0	1	17	201	217	0.24	25.2
+V	M00393:54:000000000-B84BB:1:1112:21026:19300	TRBV30*02	94.118	17	1	0	0	1	17	201	217	0.24	25.2
+V	M00393:54:000000000-B84BB:1:1112:21026:19300	TRBV30*04	94.118	17	1	0	0	1	17	195	211	0.24	25.2
+V	M00393:54:000000000-B84BB:1:1112:21026:19300	TRBV30*05	94.118	17	1	0	0	1	17	201	217	0.24	25.2
+V	M00393:54:000000000-B84BB:1:1112:21026:19300	TRBV15*01	100.000	13	0	0	0	38	50	195	207	2.1	22.1
+D	M00393:54:000000000-B84BB:1:1112:21026:19300	TRBD1*01	100.000	5	0	0	0	19	23	3	7	4.3	10.4
+J	M00393:54:000000000-B84BB:1:1112:21026:19300	TRBJ2-2P*01	100.000	9	0	0	0	30	38	22	30	2.0	18.3
+J	M00393:54:000000000-B84BB:1:1112:21026:19300	TRBJ2-2*01	91.667	12	1	0	0	77	88	24	35	8.1	16.4
+J	M00393:54:000000000-B84BB:1:1112:21026:19300	TRBJ2-6*01	100.000	8	0	0	0	46	53	28	35	8.1	16.4
+J	M00393:54:000000000-B84BB:1:1112:21026:19300	TRBJ2-2P*01	100.000	7	0	0	0	30	36	14	20	32	14.4
+J	M00393:54:000000000-B84BB:1:1112:21026:19300	TRBJ2-7*01	100.000	7	0	0	0	81	87	31	37	32	14.4
+# IGBLASTN 2.6.1+
+# Query: M00393:54:000000000-B84BB:1:1111:21625:20611 1:N:0:GGACTCCT
+# Database: /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_V.fa /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_D.fa /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_J.fa
+# Domain classification requested: imgt
+
+# V-(D)-J rearrangement summary for query sequence (Top V gene match, Top D gene match, Top J gene match, Chain type, stop codon, V-J frame, Productive, Strand).  Multiple equivalent top matches, if present, are separated by a comma.
+TRBV15*01,TRBV15*02,TRBV15*03	TRBD2*02	TRBJ2-2*01	VB	No	N/A	N/A	+
+
+# V-(D)-J junction details based on top germline gene matches (V end, V-D junction, D region, D-J junction, J start).  Note that possible overlapping nucleotides at VDJ junction (i.e, nucleotides that could be assigned to either rearranging gene) are indicated in parentheses (i.e., (TACT)) but are not included under the V, D, or J gene itself
+GGCCG	GCAC	GGAGG	TGGTCAAGGCTAAAGCC	GGAGC	
+
+# Alignment summary between query and top germline V gene hit (from, to, length, matches, mismatches, gaps, percent identity)
+FR3-IMGT	1	24	24	24	0	0	100
+Total	N/A	N/A	24	24	0	0	100
+
+# Hit table (the first field indicates the chain type of the hit)
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, gaps, q. start, q. end, s. start, s. end, evalue, bit score
+# 10 hits found
+V	M00393:54:000000000-B84BB:1:1111:21625:20611	TRBV15*01	100.000	24	0	0	0	1	24	184	207	1.45e-05	39.2
+V	M00393:54:000000000-B84BB:1:1111:21625:20611	TRBV15*02	100.000	24	0	0	0	1	24	184	207	1.45e-05	39.2
+V	M00393:54:000000000-B84BB:1:1111:21625:20611	TRBV15*03	100.000	24	0	0	0	1	24	184	207	1.45e-05	39.2
+V	M00393:54:000000000-B84BB:1:1111:21625:20611	TRBV24-1*01	67.647	34	11	0	0	118	151	38	71	6.2	20.5
+V	M00393:54:000000000-B84BB:1:1111:21625:20611	TRBV24_OR9-2*01	67.647	34	11	0	0	118	151	38	71	6.2	20.5
+D	M00393:54:000000000-B84BB:1:1111:21625:20611	TRBD2*02	100.000	5	0	0	0	29	33	11	15	4.3	10.4
+J	M00393:54:000000000-B84BB:1:1111:21625:20611	TRBJ2-2*01	91.667	12	1	0	0	51	62	24	35	8.1	16.4
+J	M00393:54:000000000-B84BB:1:1111:21625:20611	TRBJ2-4*01	100.000	7	0	0	0	86	92	22	28	32	14.4
+J	M00393:54:000000000-B84BB:1:1111:21625:20611	TRBJ2-7*01	100.000	7	0	0	0	55	61	31	37	32	14.4
+J	M00393:54:000000000-B84BB:1:1111:21625:20611	TRBJ2-7*02	100.000	7	0	0	0	55	61	31	37	32	14.4
+# IGBLASTN 2.6.1+
+# Query: M00393:54:000000000-B84BB:1:1114:18746:12730 1:N:0:GGACTCCT
+# Database: /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_V.fa /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_D.fa /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_J.fa
+# Domain classification requested: imgt
+
+# V-(D)-J rearrangement summary for query sequence (Top V gene match, Top D gene match, Top J gene match, Chain type, stop codon, V-J frame, Productive, Strand).  Multiple equivalent top matches, if present, are separated by a comma.
+TRBV30*01,TRBV30*02,TRBV30*04,TRBV30*05	TRBD1*01	TRBJ2-2P*01	VB	No	N/A	N/A	+
+
+# V-(D)-J junction details based on top germline gene matches (V end, V-D junction, D region, D-J junction, J start).  Note that possible overlapping nucleotides at VDJ junction (i.e, nucleotides that could be assigned to either rearranging gene) are indicated in parentheses (i.e., (TACT)) but are not included under the V, D, or J gene itself
+CCAGC	T	GACAG	CACTCA	CTGGG	
+
+# Alignment summary between query and top germline V gene hit (from, to, length, matches, mismatches, gaps, percent identity)
+FR3-IMGT	1	17	17	16	1	0	94.1
+Total	N/A	N/A	17	16	1	0	94.1
+
+# Hit table (the first field indicates the chain type of the hit)
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, gaps, q. start, q. end, s. start, s. end, evalue, bit score
+# 11 hits found
+V	M00393:54:000000000-B84BB:1:1114:18746:12730	TRBV30*01	94.118	17	1	0	0	1	17	201	217	0.24	25.2
+V	M00393:54:000000000-B84BB:1:1114:18746:12730	TRBV30*02	94.118	17	1	0	0	1	17	201	217	0.24	25.2
+V	M00393:54:000000000-B84BB:1:1114:18746:12730	TRBV30*04	94.118	17	1	0	0	1	17	195	211	0.24	25.2
+V	M00393:54:000000000-B84BB:1:1114:18746:12730	TRBV30*05	94.118	17	1	0	0	1	17	201	217	0.24	25.2
+V	M00393:54:000000000-B84BB:1:1114:18746:12730	TRBV15*01	100.000	13	0	0	0	38	50	195	207	2.1	22.1
+D	M00393:54:000000000-B84BB:1:1114:18746:12730	TRBD1*01	100.000	5	0	0	0	19	23	3	7	4.3	10.4
+J	M00393:54:000000000-B84BB:1:1114:18746:12730	TRBJ2-2P*01	100.000	9	0	0	0	30	38	22	30	2.0	18.3
+J	M00393:54:000000000-B84BB:1:1114:18746:12730	TRBJ2-2*01	91.667	12	1	0	0	77	88	24	35	8.1	16.4
+J	M00393:54:000000000-B84BB:1:1114:18746:12730	TRBJ2-6*01	100.000	8	0	0	0	46	53	28	35	8.1	16.4
+J	M00393:54:000000000-B84BB:1:1114:18746:12730	TRBJ2-2P*01	100.000	7	0	0	0	30	36	14	20	32	14.4
+J	M00393:54:000000000-B84BB:1:1114:18746:12730	TRBJ2-7*01	100.000	7	0	0	0	81	87	31	37	32	14.4
+# IGBLASTN 2.6.1+
+# Query: M00393:54:000000000-B84BB:1:1114:11333:14024 1:N:0:GGACTCCT
+# Database: /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_V.fa /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_D.fa /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_J.fa
+# Domain classification requested: imgt
+
+# V-(D)-J rearrangement summary for query sequence (Top V gene match, Top D gene match, Top J gene match, Chain type, stop codon, V-J frame, Productive, Strand).  Multiple equivalent top matches, if present, are separated by a comma.
+TRBV15*01,TRBV15*02,TRBV15*03	TRBD2*02	TRBJ2-2*01	VB	No	N/A	N/A	+
+
+# V-(D)-J junction details based on top germline gene matches (V end, V-D junction, D region, D-J junction, J start).  Note that possible overlapping nucleotides at VDJ junction (i.e, nucleotides that could be assigned to either rearranging gene) are indicated in parentheses (i.e., (TACT)) but are not included under the V, D, or J gene itself
+GGCCG	GCAC	GGAGG	TGGTCAAGGCTAAAGCC	GGAGC	
+
+# Alignment summary between query and top germline V gene hit (from, to, length, matches, mismatches, gaps, percent identity)
+FR3-IMGT	1	24	24	24	0	0	100
+Total	N/A	N/A	24	24	0	0	100
+
+# Hit table (the first field indicates the chain type of the hit)
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, gaps, q. start, q. end, s. start, s. end, evalue, bit score
+# 10 hits found
+V	M00393:54:000000000-B84BB:1:1114:11333:14024	TRBV15*01	100.000	24	0	0	0	1	24	184	207	1.45e-05	39.2
+V	M00393:54:000000000-B84BB:1:1114:11333:14024	TRBV15*02	100.000	24	0	0	0	1	24	184	207	1.45e-05	39.2
+V	M00393:54:000000000-B84BB:1:1114:11333:14024	TRBV15*03	100.000	24	0	0	0	1	24	184	207	1.45e-05	39.2
+V	M00393:54:000000000-B84BB:1:1114:11333:14024	TRBV24-1*01	67.647	34	11	0	0	118	151	38	71	6.2	20.5
+V	M00393:54:000000000-B84BB:1:1114:11333:14024	TRBV24_OR9-2*01	67.647	34	11	0	0	118	151	38	71	6.2	20.5
+D	M00393:54:000000000-B84BB:1:1114:11333:14024	TRBD2*02	100.000	5	0	0	0	29	33	11	15	4.3	10.4
+J	M00393:54:000000000-B84BB:1:1114:11333:14024	TRBJ2-2*01	91.667	12	1	0	0	51	62	24	35	8.1	16.4
+J	M00393:54:000000000-B84BB:1:1114:11333:14024	TRBJ2-4*01	100.000	7	0	0	0	86	92	22	28	32	14.4
+J	M00393:54:000000000-B84BB:1:1114:11333:14024	TRBJ2-7*01	100.000	7	0	0	0	55	61	31	37	32	14.4
+J	M00393:54:000000000-B84BB:1:1114:11333:14024	TRBJ2-7*02	100.000	7	0	0	0	55	61	31	37	32	14.4
+# IGBLASTN 2.6.1+
+# Query: M00393:54:000000000-B84BB:1:1114:7425:16324 1:N:0:GTACTCCT
+# Database: /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_V.fa /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_D.fa /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_J.fa
+# Domain classification requested: imgt
+
+# V-(D)-J rearrangement summary for query sequence (Top V gene match, Top D gene match, Top J gene match, Chain type, stop codon, V-J frame, Productive, Strand).  Multiple equivalent top matches, if present, are separated by a comma.
+TRBV30*01,TRBV30*02,TRBV30*04,TRBV30*05	TRBD1*01	TRBJ2-2P*01	VB	No	N/A	N/A	+
+
+# V-(D)-J junction details based on top germline gene matches (V end, V-D junction, D region, D-J junction, J start).  Note that possible overlapping nucleotides at VDJ junction (i.e, nucleotides that could be assigned to either rearranging gene) are indicated in parentheses (i.e., (TACT)) but are not included under the V, D, or J gene itself
+CCAGC	T	GACAG	CACTCA	CTGGG	
+
+# Alignment summary between query and top germline V gene hit (from, to, length, matches, mismatches, gaps, percent identity)
+FR3-IMGT	1	17	17	16	1	0	94.1
+Total	N/A	N/A	17	16	1	0	94.1
+
+# Hit table (the first field indicates the chain type of the hit)
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, gaps, q. start, q. end, s. start, s. end, evalue, bit score
+# 11 hits found
+V	M00393:54:000000000-B84BB:1:1114:7425:16324	TRBV30*01	94.118	17	1	0	0	1	17	201	217	0.24	25.2
+V	M00393:54:000000000-B84BB:1:1114:7425:16324	TRBV30*02	94.118	17	1	0	0	1	17	201	217	0.24	25.2
+V	M00393:54:000000000-B84BB:1:1114:7425:16324	TRBV30*04	94.118	17	1	0	0	1	17	195	211	0.24	25.2
+V	M00393:54:000000000-B84BB:1:1114:7425:16324	TRBV30*05	94.118	17	1	0	0	1	17	201	217	0.24	25.2
+V	M00393:54:000000000-B84BB:1:1114:7425:16324	TRBV15*01	100.000	13	0	0	0	38	50	195	207	2.1	22.1
+D	M00393:54:000000000-B84BB:1:1114:7425:16324	TRBD1*01	100.000	5	0	0	0	19	23	3	7	4.3	10.4
+J	M00393:54:000000000-B84BB:1:1114:7425:16324	TRBJ2-2P*01	100.000	9	0	0	0	30	38	22	30	2.0	18.3
+J	M00393:54:000000000-B84BB:1:1114:7425:16324	TRBJ2-2*01	91.667	12	1	0	0	77	88	24	35	8.1	16.4
+J	M00393:54:000000000-B84BB:1:1114:7425:16324	TRBJ2-6*01	100.000	8	0	0	0	46	53	28	35	8.1	16.4
+J	M00393:54:000000000-B84BB:1:1114:7425:16324	TRBJ2-2P*01	100.000	7	0	0	0	30	36	14	20	32	14.4
+J	M00393:54:000000000-B84BB:1:1114:7425:16324	TRBJ2-7*01	100.000	7	0	0	0	81	87	31	37	32	14.4
+# IGBLASTN 2.6.1+
+# Query: M00393:54:000000000-B84BB:1:2108:4995:18402 1:N:0:GGACTCCT
+# Database: /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_V.fa /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_D.fa /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_J.fa
+# Domain classification requested: imgt
+
+# Note that your query represents the minus strand of a V gene and has been converted to the plus strand. The sequence positions refer to the converted sequence. 
+
+# V-(D)-J rearrangement summary for query sequence (Top V gene match, Top D gene match, Top J gene match, Chain type, stop codon, V-J frame, Productive, Strand).  Multiple equivalent top matches, if present, are separated by a comma.
+TRBV25-1*01	N/A	N/A	VB	No	N/A	N/A	-
+
+# V-(D)-J junction details based on top germline gene matches (V end, V-D junction, D region, D-J junction, J start).  Note that possible overlapping nucleotides at VDJ junction (i.e, nucleotides that could be assigned to either rearranging gene) are indicated in parentheses (i.e., (TACT)) but are not included under the V, D, or J gene itself
+GTCTG	N/A	N/A	N/A	N/A	
+
+# Alignment summary between query and top germline V gene hit (from, to, length, matches, mismatches, gaps, percent identity)
+FR3-IMGT	132	159	28	21	7	0	75
+Total	N/A	N/A	28	21	7	0	75
+
+# Hit table (the first field indicates the chain type of the hit)
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, gaps, q. start, q. end, s. start, s. end, evalue, bit score
+# 5 hits found
+V	reversed|M00393:54:000000000-B84BB:1:2108:4995:18402	TRBV25-1*01	75.000	28	7	0	0	132	159	214	241	0.71	23.7
+V	reversed|M00393:54:000000000-B84BB:1:2108:4995:18402	TRBV23-1*01	100.000	13	0	0	0	147	159	28	16	2.1	22.1
+V	reversed|M00393:54:000000000-B84BB:1:2108:4995:18402	TRBV27*01	92.857	14	1	0	0	144	157	226	239	6.2	20.5
+V	reversed|M00393:54:000000000-B84BB:1:2108:4995:18402	TRBV23_OR9-2*01	100.000	12	0	0	0	148	159	27	16	6.2	20.5
+V	reversed|M00393:54:000000000-B84BB:1:2108:4995:18402	TRBV23_OR9-2*02	100.000	12	0	0	0	148	159	27	16	6.2	20.5
+# IGBLASTN 2.6.1+
+# Query: M00393:54:000000000-B84BB:1:2108:18176:20340 1:N:0:GGACTCCT
+# Database: /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_V.fa /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_D.fa /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_J.fa
+# Domain classification requested: imgt
+
+# V-(D)-J rearrangement summary for query sequence (Top V gene match, Top D gene match, Top J gene match, Chain type, stop codon, V-J frame, Productive, Strand).  Multiple equivalent top matches, if present, are separated by a comma.
+TRBV30*01,TRBV30*02,TRBV30*04,TRBV30*05	TRBD1*01	TRBJ2-2P*01	VB	No	N/A	N/A	+
+
+# V-(D)-J junction details based on top germline gene matches (V end, V-D junction, D region, D-J junction, J start).  Note that possible overlapping nucleotides at VDJ junction (i.e, nucleotides that could be assigned to either rearranging gene) are indicated in parentheses (i.e., (TACT)) but are not included under the V, D, or J gene itself
+CCAGC	T	GACAG	CACTCA	CTGGG	
+
+# Alignment summary between query and top germline V gene hit (from, to, length, matches, mismatches, gaps, percent identity)
+FR3-IMGT	1	17	17	16	1	0	94.1
+Total	N/A	N/A	17	16	1	0	94.1
+
+# Hit table (the first field indicates the chain type of the hit)
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, gaps, q. start, q. end, s. start, s. end, evalue, bit score
+# 11 hits found
+V	M00393:54:000000000-B84BB:1:2108:18176:20340	TRBV30*01	94.118	17	1	0	0	1	17	201	217	0.24	25.2
+V	M00393:54:000000000-B84BB:1:2108:18176:20340	TRBV30*02	94.118	17	1	0	0	1	17	201	217	0.24	25.2
+V	M00393:54:000000000-B84BB:1:2108:18176:20340	TRBV30*04	94.118	17	1	0	0	1	17	195	211	0.24	25.2
+V	M00393:54:000000000-B84BB:1:2108:18176:20340	TRBV30*05	94.118	17	1	0	0	1	17	201	217	0.24	25.2
+V	M00393:54:000000000-B84BB:1:2108:18176:20340	TRBV15*01	100.000	13	0	0	0	38	50	195	207	2.1	22.1
+D	M00393:54:000000000-B84BB:1:2108:18176:20340	TRBD1*01	100.000	5	0	0	0	19	23	3	7	4.3	10.4
+J	M00393:54:000000000-B84BB:1:2108:18176:20340	TRBJ2-2P*01	100.000	9	0	0	0	30	38	22	30	2.0	18.3
+J	M00393:54:000000000-B84BB:1:2108:18176:20340	TRBJ2-2*01	91.667	12	1	0	0	77	88	24	35	8.1	16.4
+J	M00393:54:000000000-B84BB:1:2108:18176:20340	TRBJ2-6*01	100.000	8	0	0	0	46	53	28	35	8.1	16.4
+J	M00393:54:000000000-B84BB:1:2108:18176:20340	TRBJ2-2P*01	100.000	7	0	0	0	30	36	14	20	32	14.4
+J	M00393:54:000000000-B84BB:1:2108:18176:20340	TRBJ2-7*01	100.000	7	0	0	0	81	87	31	37	32	14.4
+# IGBLASTN 2.6.1+
+# Query: M00393:54:000000000-B84BB:1:2107:15407:26147 1:N:0:GGACTCCT
+# Database: /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_V.fa /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_D.fa /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_J.fa
+# Domain classification requested: imgt
+
+# V-(D)-J rearrangement summary for query sequence (Top V gene match, Top D gene match, Top J gene match, Chain type, stop codon, V-J frame, Productive, Strand).  Multiple equivalent top matches, if present, are separated by a comma.
+TRBV30*01,TRBV30*02,TRBV30*04,TRBV30*05	N/A	TRBJ2-2P*01	VB	No	N/A	N/A	+
+
+# V-(D)-J junction details based on top germline gene matches (V end, V-D junction, D region, D-J junction, J start).  Note that possible overlapping nucleotides at VDJ junction (i.e, nucleotides that could be assigned to either rearranging gene) are indicated in parentheses (i.e., (TACT)) but are not included under the V, D, or J gene itself
+CCAGC	N/A	N/A	TGACCGCACTCA	CTGGG	
+
+# Alignment summary between query and top germline V gene hit (from, to, length, matches, mismatches, gaps, percent identity)
+FR3-IMGT	1	17	17	16	1	0	94.1
+Total	N/A	N/A	17	16	1	0	94.1
+
+# Hit table (the first field indicates the chain type of the hit)
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, gaps, q. start, q. end, s. start, s. end, evalue, bit score
+# 10 hits found
+V	M00393:54:000000000-B84BB:1:2107:15407:26147	TRBV30*01	94.118	17	1	0	0	1	17	201	217	0.24	25.2
+V	M00393:54:000000000-B84BB:1:2107:15407:26147	TRBV30*02	94.118	17	1	0	0	1	17	201	217	0.24	25.2
+V	M00393:54:000000000-B84BB:1:2107:15407:26147	TRBV30*04	94.118	17	1	0	0	1	17	195	211	0.24	25.2
+V	M00393:54:000000000-B84BB:1:2107:15407:26147	TRBV30*05	94.118	17	1	0	0	1	17	201	217	0.24	25.2
+V	M00393:54:000000000-B84BB:1:2107:15407:26147	TRAV13-1*01	72.414	29	8	0	0	39	67	38	66	2.1	22.1
+J	M00393:54:000000000-B84BB:1:2107:15407:26147	TRBJ2-2P*01	100.000	9	0	0	0	30	38	22	30	2.0	18.3
+J	M00393:54:000000000-B84BB:1:2107:15407:26147	TRBJ2-2*01	91.667	12	1	0	0	77	88	24	35	8.1	16.4
+J	M00393:54:000000000-B84BB:1:2107:15407:26147	TRBJ2-6*01	100.000	8	0	0	0	46	53	28	35	8.1	16.4
+J	M00393:54:000000000-B84BB:1:2107:15407:26147	TRBJ2-2P*01	100.000	7	0	0	0	30	36	14	20	32	14.4
+J	M00393:54:000000000-B84BB:1:2107:15407:26147	TRBJ2-7*01	100.000	7	0	0	0	81	87	31	37	32	14.4
+# IGBLASTN 2.6.1+
+# Query: M00393:54:000000000-B84BB:1:2110:13331:11471 1:N:0:GGACTCCT
+# Database: /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_V.fa /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_D.fa /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_J.fa
+# Domain classification requested: imgt
+
+# V-(D)-J rearrangement summary for query sequence (Top V gene match, Top D gene match, Top J gene match, Chain type, stop codon, V-J frame, Productive, Strand).  Multiple equivalent top matches, if present, are separated by a comma.
+TRBV15*01,TRBV15*02,TRBV15*03	TRBD2*02	TRBJ2-2*01	VB	No	N/A	N/A	+
+
+# V-(D)-J junction details based on top germline gene matches (V end, V-D junction, D region, D-J junction, J start).  Note that possible overlapping nucleotides at VDJ junction (i.e, nucleotides that could be assigned to either rearranging gene) are indicated in parentheses (i.e., (TACT)) but are not included under the V, D, or J gene itself
+GGCCG	GCAC	GGAGG	TGGTCAAGGCTAAAGCC	GGAGC	
+
+# Alignment summary between query and top germline V gene hit (from, to, length, matches, mismatches, gaps, percent identity)
+FR3-IMGT	1	24	24	24	0	0	100
+Total	N/A	N/A	24	24	0	0	100
+
+# Hit table (the first field indicates the chain type of the hit)
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, gaps, q. start, q. end, s. start, s. end, evalue, bit score
+# 10 hits found
+V	M00393:54:000000000-B84BB:1:2110:13331:11471	TRBV15*01	100.000	24	0	0	0	1	24	184	207	1.45e-05	39.2
+V	M00393:54:000000000-B84BB:1:2110:13331:11471	TRBV15*02	100.000	24	0	0	0	1	24	184	207	1.45e-05	39.2
+V	M00393:54:000000000-B84BB:1:2110:13331:11471	TRBV15*03	100.000	24	0	0	0	1	24	184	207	1.45e-05	39.2
+V	M00393:54:000000000-B84BB:1:2110:13331:11471	TRBV24-1*01	67.647	34	11	0	0	118	151	38	71	6.2	20.5
+V	M00393:54:000000000-B84BB:1:2110:13331:11471	TRBV24_OR9-2*01	67.647	34	11	0	0	118	151	38	71	6.2	20.5
+D	M00393:54:000000000-B84BB:1:2110:13331:11471	TRBD2*02	100.000	5	0	0	0	29	33	11	15	4.3	10.4
+J	M00393:54:000000000-B84BB:1:2110:13331:11471	TRBJ2-2*01	91.667	12	1	0	0	51	62	24	35	8.1	16.4
+J	M00393:54:000000000-B84BB:1:2110:13331:11471	TRBJ2-4*01	100.000	7	0	0	0	86	92	22	28	32	14.4
+J	M00393:54:000000000-B84BB:1:2110:13331:11471	TRBJ2-7*01	100.000	7	0	0	0	55	61	31	37	32	14.4
+J	M00393:54:000000000-B84BB:1:2110:13331:11471	TRBJ2-7*02	100.000	7	0	0	0	55	61	31	37	32	14.4
+# IGBLASTN 2.6.1+
+# Query: M00393:54:000000000-B84BB:1:2110:9503:16183 1:N:0:GGACTCCT
+# Database: /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_V.fa /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_D.fa /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_J.fa
+# Domain classification requested: imgt
+
+# V-(D)-J rearrangement summary for query sequence (Top V gene match, Top D gene match, Top J gene match, Chain type, stop codon, V-J frame, Productive, Strand).  Multiple equivalent top matches, if present, are separated by a comma.
+TRBV30*01,TRBV30*02,TRBV30*04,TRBV30*05	TRBD1*01	TRBJ2-2P*01	VB	No	N/A	N/A	+
+
+# V-(D)-J junction details based on top germline gene matches (V end, V-D junction, D region, D-J junction, J start).  Note that possible overlapping nucleotides at VDJ junction (i.e, nucleotides that could be assigned to either rearranging gene) are indicated in parentheses (i.e., (TACT)) but are not included under the V, D, or J gene itself
+CCAGC	T	GACAG	CACTCA	CTGGG	
+
+# Alignment summary between query and top germline V gene hit (from, to, length, matches, mismatches, gaps, percent identity)
+FR3-IMGT	1	17	17	16	1	0	94.1
+Total	N/A	N/A	17	16	1	0	94.1
+
+# Hit table (the first field indicates the chain type of the hit)
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, gaps, q. start, q. end, s. start, s. end, evalue, bit score
+# 11 hits found
+V	M00393:54:000000000-B84BB:1:2110:9503:16183	TRBV30*01	94.118	17	1	0	0	1	17	201	217	0.24	25.2
+V	M00393:54:000000000-B84BB:1:2110:9503:16183	TRBV30*02	94.118	17	1	0	0	1	17	201	217	0.24	25.2
+V	M00393:54:000000000-B84BB:1:2110:9503:16183	TRBV30*04	94.118	17	1	0	0	1	17	195	211	0.24	25.2
+V	M00393:54:000000000-B84BB:1:2110:9503:16183	TRBV30*05	94.118	17	1	0	0	1	17	201	217	0.24	25.2
+V	M00393:54:000000000-B84BB:1:2110:9503:16183	TRBV15*01	100.000	13	0	0	0	38	50	195	207	2.1	22.1
+D	M00393:54:000000000-B84BB:1:2110:9503:16183	TRBD1*01	100.000	5	0	0	0	19	23	3	7	4.3	10.4
+J	M00393:54:000000000-B84BB:1:2110:9503:16183	TRBJ2-2P*01	100.000	9	0	0	0	30	38	22	30	2.0	18.3
+J	M00393:54:000000000-B84BB:1:2110:9503:16183	TRBJ2-2*01	91.667	12	1	0	0	77	88	24	35	8.1	16.4
+J	M00393:54:000000000-B84BB:1:2110:9503:16183	TRBJ2-6*01	100.000	8	0	0	0	46	53	28	35	8.1	16.4
+J	M00393:54:000000000-B84BB:1:2110:9503:16183	TRBJ2-2P*01	100.000	7	0	0	0	30	36	14	20	32	14.4
+J	M00393:54:000000000-B84BB:1:2110:9503:16183	TRBJ2-7*01	100.000	7	0	0	0	81	87	31	37	32	14.4
+# IGBLASTN 2.6.1+
+# Query: M00393:54:000000000-B84BB:1:2110:14026:18765 1:N:0:GGACTCCT
+# Database: /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_V.fa /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_D.fa /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_J.fa
+# Domain classification requested: imgt
+
+# V-(D)-J rearrangement summary for query sequence (Top V gene match, Top D gene match, Top J gene match, Chain type, stop codon, V-J frame, Productive, Strand).  Multiple equivalent top matches, if present, are separated by a comma.
+TRBV15*01,TRBV15*02,TRBV15*03	TRBD2*02	TRBJ2-2*01	VB	No	N/A	N/A	+
+
+# V-(D)-J junction details based on top germline gene matches (V end, V-D junction, D region, D-J junction, J start).  Note that possible overlapping nucleotides at VDJ junction (i.e, nucleotides that could be assigned to either rearranging gene) are indicated in parentheses (i.e., (TACT)) but are not included under the V, D, or J gene itself
+GGCCG	GCAC	GGAGG	TGGTCAAGGCTAAAGCC	GGAGC	
+
+# Alignment summary between query and top germline V gene hit (from, to, length, matches, mismatches, gaps, percent identity)
+FR3-IMGT	1	24	24	24	0	0	100
+Total	N/A	N/A	24	24	0	0	100
+
+# Hit table (the first field indicates the chain type of the hit)
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, gaps, q. start, q. end, s. start, s. end, evalue, bit score
+# 10 hits found
+V	M00393:54:000000000-B84BB:1:2110:14026:18765	TRBV15*01	100.000	24	0	0	0	1	24	184	207	1.45e-05	39.2
+V	M00393:54:000000000-B84BB:1:2110:14026:18765	TRBV15*02	100.000	24	0	0	0	1	24	184	207	1.45e-05	39.2
+V	M00393:54:000000000-B84BB:1:2110:14026:18765	TRBV15*03	100.000	24	0	0	0	1	24	184	207	1.45e-05	39.2
+V	M00393:54:000000000-B84BB:1:2110:14026:18765	TRBV24-1*01	67.647	34	11	0	0	118	151	38	71	6.2	20.5
+V	M00393:54:000000000-B84BB:1:2110:14026:18765	TRBV24_OR9-2*01	67.647	34	11	0	0	118	151	38	71	6.2	20.5
+D	M00393:54:000000000-B84BB:1:2110:14026:18765	TRBD2*02	100.000	5	0	0	0	29	33	11	15	4.3	10.4
+J	M00393:54:000000000-B84BB:1:2110:14026:18765	TRBJ2-2*01	91.667	12	1	0	0	51	62	24	35	8.1	16.4
+J	M00393:54:000000000-B84BB:1:2110:14026:18765	TRBJ2-4*01	100.000	7	0	0	0	86	92	22	28	32	14.4
+J	M00393:54:000000000-B84BB:1:2110:14026:18765	TRBJ2-7*01	100.000	7	0	0	0	55	61	31	37	32	14.4
+J	M00393:54:000000000-B84BB:1:2110:14026:18765	TRBJ2-7*02	100.000	7	0	0	0	55	61	31	37	32	14.4
+# IGBLASTN 2.6.1+
+# Query: M00393:54:000000000-B84BB:1:2109:11537:8681 1:N:0:GGACTCCT
+# Database: /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_V.fa /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_D.fa /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_J.fa
+# Domain classification requested: imgt
+
+# V-(D)-J rearrangement summary for query sequence (Top V gene match, Top D gene match, Top J gene match, Chain type, stop codon, V-J frame, Productive, Strand).  Multiple equivalent top matches, if present, are separated by a comma.
+TRBV30*01,TRBV30*02,TRBV30*04,TRBV30*05	TRBD1*01	TRBJ2-2P*01	VB	No	N/A	N/A	+
+
+# V-(D)-J junction details based on top germline gene matches (V end, V-D junction, D region, D-J junction, J start).  Note that possible overlapping nucleotides at VDJ junction (i.e, nucleotides that could be assigned to either rearranging gene) are indicated in parentheses (i.e., (TACT)) but are not included under the V, D, or J gene itself
+CCAGC	T	GACAG	CACTCA	CTGGG	
+
+# Alignment summary between query and top germline V gene hit (from, to, length, matches, mismatches, gaps, percent identity)
+FR3-IMGT	1	17	17	16	1	0	94.1
+Total	N/A	N/A	17	16	1	0	94.1
+
+# Hit table (the first field indicates the chain type of the hit)
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, gaps, q. start, q. end, s. start, s. end, evalue, bit score
+# 11 hits found
+V	M00393:54:000000000-B84BB:1:2109:11537:8681	TRBV30*01	94.118	17	1	0	0	1	17	201	217	0.24	25.2
+V	M00393:54:000000000-B84BB:1:2109:11537:8681	TRBV30*02	94.118	17	1	0	0	1	17	201	217	0.24	25.2
+V	M00393:54:000000000-B84BB:1:2109:11537:8681	TRBV30*04	94.118	17	1	0	0	1	17	195	211	0.24	25.2
+V	M00393:54:000000000-B84BB:1:2109:11537:8681	TRBV30*05	94.118	17	1	0	0	1	17	201	217	0.24	25.2
+V	M00393:54:000000000-B84BB:1:2109:11537:8681	TRBV15*01	100.000	13	0	0	0	38	50	195	207	2.1	22.1
+D	M00393:54:000000000-B84BB:1:2109:11537:8681	TRBD1*01	100.000	5	0	0	0	19	23	3	7	4.3	10.4
+J	M00393:54:000000000-B84BB:1:2109:11537:8681	TRBJ2-2P*01	100.000	9	0	0	0	30	38	22	30	2.0	18.3
+J	M00393:54:000000000-B84BB:1:2109:11537:8681	TRBJ2-2*01	91.667	12	1	0	0	77	88	24	35	8.1	16.4
+J	M00393:54:000000000-B84BB:1:2109:11537:8681	TRBJ2-6*01	100.000	8	0	0	0	46	53	28	35	8.1	16.4
+J	M00393:54:000000000-B84BB:1:2109:11537:8681	TRBJ2-2P*01	100.000	7	0	0	0	30	36	14	20	32	14.4
+J	M00393:54:000000000-B84BB:1:2109:11537:8681	TRBJ2-7*01	100.000	7	0	0	0	81	87	31	37	32	14.4
+# IGBLASTN 2.6.1+
+# Query: M00393:54:000000000-B84BB:1:2112:17062:5381 1:N:0:GGACTCCT
+# Database: /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_V.fa /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_D.fa /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_J.fa
+# Domain classification requested: imgt
+
+# V-(D)-J rearrangement summary for query sequence (Top V gene match, Top D gene match, Top J gene match, Chain type, stop codon, V-J frame, Productive, Strand).  Multiple equivalent top matches, if present, are separated by a comma.
+TRBV30*01,TRBV30*02,TRBV30*04,TRBV30*05	TRBD1*01,TRBD2*02,TRBD2*02	TRBJ2-2*01	VB	No	N/A	N/A	+
+
+# V-(D)-J junction details based on top germline gene matches (V end, V-D junction, D region, D-J junction, J start).  Note that possible overlapping nucleotides at VDJ junction (i.e, nucleotides that could be assigned to either rearranging gene) are indicated in parentheses (i.e., (TACT)) but are not included under the V, D, or J gene itself
+CCAGC	T	GACAG	CACTCACTGGGCGGCTCCAGGAGGCCGGCACGGAGGTGGTCAAGGCTAAAGCC	GGAGC	
+
+# Alignment summary between query and top germline V gene hit (from, to, length, matches, mismatches, gaps, percent identity)
+FR3-IMGT	3	17	15	14	1	0	93.3
+Total	N/A	N/A	15	14	1	0	93.3
+
+# Hit table (the first field indicates the chain type of the hit)
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, gaps, q. start, q. end, s. start, s. end, evalue, bit score
+# 13 hits found
+V	M00393:54:000000000-B84BB:1:2112:17062:5381	TRBV30*01	93.333	15	1	0	0	3	17	203	217	2.1	22.1
+V	M00393:54:000000000-B84BB:1:2112:17062:5381	TRBV30*02	93.333	15	1	0	0	3	17	203	217	2.1	22.1
+V	M00393:54:000000000-B84BB:1:2112:17062:5381	TRBV30*04	93.333	15	1	0	0	3	17	197	211	2.1	22.1
+V	M00393:54:000000000-B84BB:1:2112:17062:5381	TRBV30*05	93.333	15	1	0	0	3	17	203	217	2.1	22.1
+V	M00393:54:000000000-B84BB:1:2112:17062:5381	TRBV7-8*01	80.000	20	4	0	0	22	41	193	174	6.2	20.5
+D	M00393:54:000000000-B84BB:1:2112:17062:5381	TRBD1*01	100.000	5	0	0	0	19	23	3	7	4.3	10.4
+D	M00393:54:000000000-B84BB:1:2112:17062:5381	TRBD2*02	100.000	5	0	0	0	43	47	11	15	4.3	10.4
+D	M00393:54:000000000-B84BB:1:2112:17062:5381	TRBD2*02	100.000	5	0	0	0	55	59	11	15	4.3	10.4
+J	M00393:54:000000000-B84BB:1:2112:17062:5381	TRBJ2-2*01	91.667	12	1	0	0	77	88	24	35	8.1	16.4
+J	M00393:54:000000000-B84BB:1:2112:17062:5381	TRBJ2-2P*01	100.000	8	0	0	0	30	37	22	29	8.1	16.4
+J	M00393:54:000000000-B84BB:1:2112:17062:5381	TRBJ2-5*01	100.000	8	0	0	0	34	41	32	39	8.1	16.4
+J	M00393:54:000000000-B84BB:1:2112:17062:5381	TRBJ2-6*01	100.000	8	0	0	0	46	53	28	35	8.1	16.4
+J	M00393:54:000000000-B84BB:1:2112:17062:5381	TRBJ2-2P*01	100.000	7	0	0	0	30	36	14	20	32	14.4
+# IGBLASTN 2.6.1+
+# Query: M00393:54:000000000-B84BB:1:2111:25570:5527 1:N:0:GGACTCCT
+# Database: /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_V.fa /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_D.fa /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_J.fa
+# Domain classification requested: imgt
+
+# V-(D)-J rearrangement summary for query sequence (Top V gene match, Top D gene match, Top J gene match, Chain type, stop codon, V-J frame, Productive, Strand).  Multiple equivalent top matches, if present, are separated by a comma.
+TRBV15*01,TRBV15*02,TRBV15*03	TRBD2*02	TRBJ2-2*01	VB	No	N/A	N/A	+
+
+# V-(D)-J junction details based on top germline gene matches (V end, V-D junction, D region, D-J junction, J start).  Note that possible overlapping nucleotides at VDJ junction (i.e, nucleotides that could be assigned to either rearranging gene) are indicated in parentheses (i.e., (TACT)) but are not included under the V, D, or J gene itself
+GGCCG	GCAC	GGAGG	TGGTCAAGGCTAAAGCC	GGAGC	
+
+# Alignment summary between query and top germline V gene hit (from, to, length, matches, mismatches, gaps, percent identity)
+FR3-IMGT	1	24	24	24	0	0	100
+Total	N/A	N/A	24	24	0	0	100
+
+# Hit table (the first field indicates the chain type of the hit)
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, gaps, q. start, q. end, s. start, s. end, evalue, bit score
+# 10 hits found
+V	M00393:54:000000000-B84BB:1:2111:25570:5527	TRBV15*01	100.000	24	0	0	0	1	24	184	207	1.45e-05	39.2
+V	M00393:54:000000000-B84BB:1:2111:25570:5527	TRBV15*02	100.000	24	0	0	0	1	24	184	207	1.45e-05	39.2
+V	M00393:54:000000000-B84BB:1:2111:25570:5527	TRBV15*03	100.000	24	0	0	0	1	24	184	207	1.45e-05	39.2
+V	M00393:54:000000000-B84BB:1:2111:25570:5527	TRBV24-1*01	67.647	34	11	0	0	118	151	38	71	6.2	20.5
+V	M00393:54:000000000-B84BB:1:2111:25570:5527	TRBV24_OR9-2*01	67.647	34	11	0	0	118	151	38	71	6.2	20.5
+D	M00393:54:000000000-B84BB:1:2111:25570:5527	TRBD2*02	100.000	5	0	0	0	29	33	11	15	4.3	10.4
+J	M00393:54:000000000-B84BB:1:2111:25570:5527	TRBJ2-2*01	91.667	12	1	0	0	51	62	24	35	8.1	16.4
+J	M00393:54:000000000-B84BB:1:2111:25570:5527	TRBJ2-4*01	100.000	7	0	0	0	86	92	22	28	32	14.4
+J	M00393:54:000000000-B84BB:1:2111:25570:5527	TRBJ2-7*01	100.000	7	0	0	0	55	61	31	37	32	14.4
+J	M00393:54:000000000-B84BB:1:2111:25570:5527	TRBJ2-7*02	100.000	7	0	0	0	55	61	31	37	32	14.4
+# IGBLASTN 2.6.1+
+# Query: M00393:54:000000000-B84BB:1:2114:5741:10546 1:N:0:GGACTCCT
+# Database: /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_V.fa /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_D.fa /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_J.fa
+# Domain classification requested: imgt
+
+# V-(D)-J rearrangement summary for query sequence (Top V gene match, Top D gene match, Top J gene match, Chain type, stop codon, V-J frame, Productive, Strand).  Multiple equivalent top matches, if present, are separated by a comma.
+TRBV15*01,TRBV15*02,TRBV15*03	TRBD2*02	TRBJ2-2*01	VB	No	N/A	N/A	+
+
+# V-(D)-J junction details based on top germline gene matches (V end, V-D junction, D region, D-J junction, J start).  Note that possible overlapping nucleotides at VDJ junction (i.e, nucleotides that could be assigned to either rearranging gene) are indicated in parentheses (i.e., (TACT)) but are not included under the V, D, or J gene itself
+GGCCG	GCAC	GGAGG	TGGTCAAGGCTAAAGCC	GGAGC	
+
+# Alignment summary between query and top germline V gene hit (from, to, length, matches, mismatches, gaps, percent identity)
+FR3-IMGT	1	24	24	24	0	0	100
+Total	N/A	N/A	24	24	0	0	100
+
+# Hit table (the first field indicates the chain type of the hit)
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, gaps, q. start, q. end, s. start, s. end, evalue, bit score
+# 10 hits found
+V	M00393:54:000000000-B84BB:1:2114:5741:10546	TRBV15*01	100.000	24	0	0	0	1	24	184	207	1.45e-05	39.2
+V	M00393:54:000000000-B84BB:1:2114:5741:10546	TRBV15*02	100.000	24	0	0	0	1	24	184	207	1.45e-05	39.2
+V	M00393:54:000000000-B84BB:1:2114:5741:10546	TRBV15*03	100.000	24	0	0	0	1	24	184	207	1.45e-05	39.2
+V	M00393:54:000000000-B84BB:1:2114:5741:10546	TRBV24-1*01	67.647	34	11	0	0	118	151	38	71	6.2	20.5
+V	M00393:54:000000000-B84BB:1:2114:5741:10546	TRBV24_OR9-2*01	67.647	34	11	0	0	118	151	38	71	6.2	20.5
+D	M00393:54:000000000-B84BB:1:2114:5741:10546	TRBD2*02	100.000	5	0	0	0	29	33	11	15	4.3	10.4
+J	M00393:54:000000000-B84BB:1:2114:5741:10546	TRBJ2-2*01	91.667	12	1	0	0	51	62	24	35	8.1	16.4
+J	M00393:54:000000000-B84BB:1:2114:5741:10546	TRBJ2-4*01	100.000	7	0	0	0	86	92	22	28	32	14.4
+J	M00393:54:000000000-B84BB:1:2114:5741:10546	TRBJ2-7*01	100.000	7	0	0	0	55	61	31	37	32	14.4
+J	M00393:54:000000000-B84BB:1:2114:5741:10546	TRBJ2-7*02	100.000	7	0	0	0	55	61	31	37	32	14.4
+# IGBLASTN 2.6.1+
+# Query: M00393:54:000000000-B84BB:1:2113:17631:3897 1:N:0:GGACTCCT
+# Database: /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_V.fa /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_D.fa /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_J.fa
+# Domain classification requested: imgt
+
+# V-(D)-J rearrangement summary for query sequence (Top V gene match, Top D gene match, Top J gene match, Chain type, stop codon, V-J frame, Productive, Strand).  Multiple equivalent top matches, if present, are separated by a comma.
+TRBV30*01,TRBV30*02,TRBV30*04,TRBV30*05	TRBD1*01	TRBJ2-2P*01	VB	No	N/A	N/A	+
+
+# V-(D)-J junction details based on top germline gene matches (V end, V-D junction, D region, D-J junction, J start).  Note that possible overlapping nucleotides at VDJ junction (i.e, nucleotides that could be assigned to either rearranging gene) are indicated in parentheses (i.e., (TACT)) but are not included under the V, D, or J gene itself
+CCAGC	T	GACAG	CACTCA	CTGGG	
+
+# Alignment summary between query and top germline V gene hit (from, to, length, matches, mismatches, gaps, percent identity)
+FR3-IMGT	1	17	17	16	1	0	94.1
+Total	N/A	N/A	17	16	1	0	94.1
+
+# Hit table (the first field indicates the chain type of the hit)
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, gaps, q. start, q. end, s. start, s. end, evalue, bit score
+# 11 hits found
+V	M00393:54:000000000-B84BB:1:2113:17631:3897	TRBV30*01	94.118	17	1	0	0	1	17	201	217	0.24	25.2
+V	M00393:54:000000000-B84BB:1:2113:17631:3897	TRBV30*02	94.118	17	1	0	0	1	17	201	217	0.24	25.2
+V	M00393:54:000000000-B84BB:1:2113:17631:3897	TRBV30*04	94.118	17	1	0	0	1	17	195	211	0.24	25.2
+V	M00393:54:000000000-B84BB:1:2113:17631:3897	TRBV30*05	94.118	17	1	0	0	1	17	201	217	0.24	25.2
+V	M00393:54:000000000-B84BB:1:2113:17631:3897	TRBV15*01	100.000	13	0	0	0	38	50	195	207	2.1	22.1
+D	M00393:54:000000000-B84BB:1:2113:17631:3897	TRBD1*01	100.000	5	0	0	0	19	23	3	7	4.3	10.4
+J	M00393:54:000000000-B84BB:1:2113:17631:3897	TRBJ2-2P*01	100.000	9	0	0	0	30	38	22	30	2.0	18.3
+J	M00393:54:000000000-B84BB:1:2113:17631:3897	TRBJ2-2*01	91.667	12	1	0	0	77	88	24	35	8.1	16.4
+J	M00393:54:000000000-B84BB:1:2113:17631:3897	TRBJ2-6*01	100.000	8	0	0	0	46	53	28	35	8.1	16.4
+J	M00393:54:000000000-B84BB:1:2113:17631:3897	TRBJ2-2P*01	100.000	7	0	0	0	30	36	14	20	32	14.4
+J	M00393:54:000000000-B84BB:1:2113:17631:3897	TRBJ2-7*01	100.000	7	0	0	0	81	87	31	37	32	14.4
+# IGBLASTN 2.6.1+
+# Query: M00393:54:000000000-B84BB:1:2113:17571:24427 1:N:0:GGACTCCT
+# Database: /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_V.fa /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_D.fa /home/labs/amit/diklag/PycharmProjects/VDJ_proj/resources/Hsap/igblast_dbs/TCR_J.fa
+# Domain classification requested: imgt
+
+# V-(D)-J rearrangement summary for query sequence (Top V gene match, Top D gene match, Top J gene match, Chain type, stop codon, V-J frame, Productive, Strand).  Multiple equivalent top matches, if present, are separated by a comma.
+TRBV30*01,TRBV30*02,TRBV30*04,TRBV30*05	TRBD1*01	TRBJ2-2P*01	VB	No	N/A	N/A	+
+
+# V-(D)-J junction details based on top germline gene matches (V end, V-D junction, D region, D-J junction, J start).  Note that possible overlapping nucleotides at VDJ junction (i.e, nucleotides that could be assigned to either rearranging gene) are indicated in parentheses (i.e., (TACT)) but are not included under the V, D, or J gene itself
+CCAGC	T	GACAG	CACTCA	CTGGG	
+
+# Alignment summary between query and top germline V gene hit (from, to, length, matches, mismatches, gaps, percent identity)
+FR3-IMGT	1	17	17	16	1	0	94.1
+Total	N/A	N/A	17	16	1	0	94.1
+
+# Hit table (the first field indicates the chain type of the hit)
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, gaps, q. start, q. end, s. start, s. end, evalue, bit score
+# 11 hits found
+V	M00393:54:000000000-B84BB:1:2113:17571:24427	TRBV30*01	94.118	17	1	0	0	1	17	201	217	0.24	25.2
+V	M00393:54:000000000-B84BB:1:2113:17571:24427	TRBV30*02	94.118	17	1	0	0	1	17	201	217	0.24	25.2
+V	M00393:54:000000000-B84BB:1:2113:17571:24427	TRBV30*04	94.118	17	1	0	0	1	17	195	211	0.24	25.2
+V	M00393:54:000000000-B84BB:1:2113:17571:24427	TRBV30*05	94.118	17	1	0	0	1	17	201	217	0.24	25.2
+V	M00393:54:000000000-B84BB:1:2113:17571:24427	TRBV15*01	100.000	13	0	0	0	38	50	195	207	2.1	22.1
+D	M00393:54:000000000-B84BB:1:2113:17571:24427	TRBD1*01	100.000	5	0	0	0	19	23	3	7	4.3	10.4
+J	M00393:54:000000000-B84BB:1:2113:17571:24427	TRBJ2-2P*01	100.000	9	0	0	0	30	38	22	30	2.0	18.3
+J	M00393:54:000000000-B84BB:1:2113:17571:24427	TRBJ2-2*01	91.667	12	1	0	0	77	88	24	35	8.1	16.4
+J	M00393:54:000000000-B84BB:1:2113:17571:24427	TRBJ2-6*01	100.000	8	0	0	0	46	53	28	35	8.1	16.4
+J	M00393:54:000000000-B84BB:1:2113:17571:24427	TRBJ2-2P*01	100.000	7	0	0	0	30	36	14	20	32	14.4
+J	M00393:54:000000000-B84BB:1:2113:17571:24427	TRBJ2-7*01	100.000	7	0	0	0	81	87	31	37	32	14.4
+
+Total queries = 33
+Total identifiable CDR3 = 0
+Total unique clonotypes = 0
+
+# BLAST processed 33 queries
