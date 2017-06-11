@@ -141,13 +141,13 @@ def parse_IgBLAST(receptor, loci, output_dir, cell_name, raw_seq_dir, species,
             all_locus_data[locus] = None
 
 
-    find_possible_alignments(all_locus_data, locus_names, cell_name,
+    cell = find_possible_alignments(all_locus_data, locus_names, cell_name,
                                     IMGT_seqs, output_dir, species, seq_method,
                                     invariant_seqs, loci_for_segments, receptor,
                                     loci, max_junc_len)
-    '''
+
     return (cell)
-    '''
+
 
 def split_igblast_file(filename):
     # code adapted from http://stackoverflow.com/questions/19575702/pythonhow-to-split-file-into-chunks-by-the-occurrence-of-the-header-word

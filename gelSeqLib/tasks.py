@@ -226,7 +226,7 @@ class Cell_Task(Task):
         for d in data_dirs:
             io_func.makeOutputDir("{}/{}".format(self.output_dir, d))
 
-        self.ig_blast()
+        cell = self.ig_blast()
 
     def ig_blast(self):
         igblastn = self.get_binary('igblastn')
@@ -248,7 +248,7 @@ class Cell_Task(Task):
             warnings.simplefilter("ignore")
             # cell = io.parse_IgBLAST(self.receptor_name, self.loci, self.output_dir, self.cell_name, imgt_seq_location,
             # self.species, self.seq_method, self.invariant_sequences)
-            io_func.parse_IgBLAST(self.receptor_name, self.loci,
+            cell = io_func.parse_IgBLAST(self.receptor_name, self.loci,
                                     self.output_dir, self.cell_name,imgt_seq_location,
                                     self.species, 'imgt',
                                     50)
@@ -257,7 +257,7 @@ class Cell_Task(Task):
                 self.die_with_empty_cell(self.cell_name, self.output_dir,
                                          self.species)
             '''
-        #return cell
+        return cell
 
 
 

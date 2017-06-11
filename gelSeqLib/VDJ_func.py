@@ -25,7 +25,7 @@ import networkx as nx
 from Bio.Alphabet import IUPAC
 from Bio.Seq import Seq
 from Bio import SeqIO
-
+from gelSeqLib import core
 
 def process_chunk(chunk):
     store_VDJ_rearrangement_summary = False
@@ -183,7 +183,7 @@ def find_possible_alignments(sample_dict, locus_names, cell_name, IMGT_seqs,
                             query_name, species, loci_for_segments)
 
                     if len(junc_string) < max_junc_string_length:
-                        rec = Recombinant(contig_name=query_name,
+                        rec = core.Recombinant(contig_name=query_name,
                                           locus=returned_locus,
                                           identifier=identifier,
                                           all_poss_identifiers=all_poss_identifiers,
@@ -200,8 +200,8 @@ def find_possible_alignments(sample_dict, locus_names, cell_name, IMGT_seqs,
                                           imgt_reconstructed_seq=imgt_reconstructed_seq,
                                           has_D=has_D)
                         recombinants[locus].append(rec)
-                    '''
-    '''
+
+
     if recombinants:
         for locus, rs in six.iteritems(recombinants):
             # Adding code to collapse sequences with very low Levenshtein distances caused by confusion between
@@ -209,11 +209,11 @@ def find_possible_alignments(sample_dict, locus_names, cell_name, IMGT_seqs,
             # IgBlast.
             recombinants[locus] = collapse_close_sequences(rs, locus)
 
-        cell = Cell(cell_name, recombinants, species=species, receptor=receptor,
+        cell = core.Cell(cell_name, recombinants, species=species, receptor=receptor,
                     loci=loci)
 
     else:
-        cell = Cell(cell_name, None, species=species,
+        cell = core.Cell(cell_name, None, species=species,
                     invariant_seqs=invariant_seqs, receptor=receptor, loci=loci)
 
     return (cell)
