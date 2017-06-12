@@ -87,8 +87,8 @@ def process_chunk(chunk):
             store_hit_table = True
     return (query_name, return_dict)
 
-def find_possible_alignments(sample_dict, locus_names, cell_name, IMGT_seqs,
-                             output_dir, species, seq_method,
+
+def find_possible_alignments(sample_dict, locus_names, cell_name, IMGT_seqs, output_dir, species, seq_method,
                              invariant_seqs, loci_for_segments, receptor, loci,
                              max_junc_string_length):
     alignment_dict = defaultdict(dict)

@@ -6,6 +6,12 @@ from Bio.Alphabet import generic_dna
 from Bio.Seq import Seq
 import pdb
 
+class Basic_Cell(object):
+    def __init__(self, cell_name, barcode_df, species="Hsap"):
+        self.name = cell_name
+        self.species = species
+        self.barcode_df = barcode_df
+
 class Cell(object):
     """Class to describe T cells containing A and B loci"""
 

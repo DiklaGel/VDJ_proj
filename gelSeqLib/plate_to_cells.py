@@ -144,7 +144,7 @@ def group_to_cells(high_confidence_barcodes, map_cell_to_barcode):
         if cell_barcode in checked_cells.keys(): # if we already pass this barcode
             continue
         if len(map_cell_to_barcode['Cell_barcode'].str.contains(cell_barcode)[map_cell_to_barcode['Cell_barcode'].str.contains(cell_barcode)
-                                                                             == True]) > 0:
+                                                                             == True]) > 0: #if the cell barcode is "real"
             checked_cells[cell_barcode].append(umi_barcode)
             cell_barcode_mapping[cell_barcode].append(cell_barcode)
         else: # if the cell barcode is not a "real" barcode, probably there exsit some "real" barcode with hamming distance of 1

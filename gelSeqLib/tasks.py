@@ -2,10 +2,13 @@ import argparse
 import os
 import sys
 import warnings
+import pickle
+
 from configparser import ConfigParser
 
 from gelSeqLib import plate_to_cells,VDJ_func, io_func
 from gelSeqLib import base_dir, wells_cells_file
+
 
 
 class Task:
@@ -87,7 +90,7 @@ class Plate_Task(Task):
             self.parser.add_argument('--species', '-s',
                                 help='Species to use for reconstruction',
                                 choices=self.get_available_species(),
-                                default='Mmus')
+                                default='Hsap')
 
             self.parser.add_argument('fastq1', metavar="<FASTQ1>",
                                 help='first fastq file - read1')
@@ -169,7 +172,7 @@ class Cell_Task(Task):
             self.parser.add_argument('--species', '-s',
                                      help='Species to use for reconstruction',
                                      choices=self.get_available_species(),
-                                     default='Mmus')
+                                     default='Hsap')
 
             self.parser.add_argument('fasta', metavar="<FASTA>",
                                      help='fasta file')
@@ -228,6 +231,22 @@ class Cell_Task(Task):
 
         cell = self.ig_blast()
 
+        self.print_cell_summary(
+            cell,
+            "{output_dir}/unfiltered_{receptor}_seqs/unfiltered_{receptor}s.txt".format(
+                output_dir=self.output_dir,
+                receptor=self.receptor_name),
+            self.receptor_name, self.loci)
+
+        with open(
+                "{output_dir}/unfiltered_{receptor}_seqs/{cell_name}.pkl".format(
+                    output_dir=self.output_dir,
+                    cell_name=cell.name,
+                    receptor=self.receptor_name), 'wb') as pf:
+            pickle.dump(cell, pf, protocol=0)
+
+
+
     def ig_blast(self):
         igblastn = self.get_binary('igblastn')
 
@@ -260,6 +279,37 @@ class Cell_Task(Task):
         return cell
 
 
+
+    def print_cell_summary(self, cell, output_file, receptor_name, loci):
+        out_file = open(output_file, 'w')
+        out_file.write(
+            '------------------\n{name}\n------------------\n'.format(
+                name=cell.name))
+
+        # summarise the productive/total recombinants
+        for l in loci:
+            out_file.write(
+                '{receptor}_{locus} recombinants: {summary}\n'.format(
+                    receptor=receptor_name, locus=l,
+                    summary=cell.summarise_productivity(receptor_name, l)))
+
+        out_file.write('\n\n')
+
+        for l in loci:
+            out_file.write(
+                "#{receptor}_{locus}#\n".format(receptor=receptor_name,
+                                                locus=l))
+            rs = cell.recombinants[receptor_name][l]
+            if rs is None:
+                out_file.write(
+                    "No {receptor}_{locus} recombinants found\n\n".format(
+                        receptor=receptor_name, locus=l))
+            else:
+                for r in rs:
+                    out_file.write(r.get_summary())
+                    out_file.write("\n\n")
+
+        out_file.close()
 
 
 
