@@ -299,6 +299,66 @@ class Cell(object):
                     if len(recs) > max_r:
                         return (True)
 
+    def choose_recombinants(self):
+        for receptor, locus_dict in six.iteritems(self.recombinants):
+            for locus, recombinants in six.iteritems(locus_dict):
+                if recombinants is not None:
+                    if len(recombinants) > 2:
+                        V_ranks = Counter()
+                        D_ranks = Counter()
+                        J_ranks = Counter()
+                        cdr3_ranks = Counter()
+                        for rec in recombinants:
+                            for seq in rec.summary[0].split(","):
+                                V_ranks.update({str(seq): 1})
+                            for seq in rec.summary[1].split(","):
+                                D_ranks.update({str(seq): 1})
+                            for seq in rec.summary[2].split(","):
+                                J_ranks.update({str(seq): 1})
+                            cdr3_ranks.update({rec.cdr3._data: 1})
+                        for x, y in {'V': V_ranks, 'D': D_ranks,
+                                     'J': J_ranks, 'CDR3': cdr3_ranks}.items():
+                            print('{x}_counter:\t{y}\n'.format(x=x, y=y))
+
+                        V_most_common = [x[0] for x in
+                                         V_ranks.most_common(2)]
+                        D_most_common = [x[0] for x in
+                                         D_ranks.most_common(2)]
+                        J_most_common = [x[0] for x in
+                                         J_ranks.most_common(2)]
+                        CDR3_most_common = [x[0] for x in
+                                         cdr3_ranks.most_common(2)]
+
+                        print('hello')
+                        for x, y in {'V': V_most_common, 'D': D_most_common,
+                                     'J': J_most_common, 'CDR3': CDR3_most_common}.items():
+                            print('{x}_most_common:\t{y}\n'.format(x=x, y=str(y)))
+
+                        to_remove = []
+                        set_common = V_most_common + D_most_common + J_most_common
+                        for rec in recombinants:
+                            if not(self.are_intersects(rec.summary[0].split(','),V_most_common) and self.are_intersects(rec.summary[1].split(','),D_most_common)\
+                                    and self.are_intersects(rec.summary[2].split(','),J_most_common)):
+                                to_remove.append(rec)
+                            else:
+                                hit_to_remove = []
+                                for hit in rec.hit_table:
+                                    if hit[2] not in set_common:
+                                        hit_to_remove.append(hit)
+                                for hit in hit_to_remove:
+                                    self.recombinants[receptor][locus][self.recombinants[receptor][locus].index(rec)].hit_table.remove(hit)
+
+                        for rec in to_remove:
+                            self.recombinants[receptor][locus].remove(rec)
+
+
+
+    def common_elements(self,list1, list2):
+        return list(set(list1) & set(list2))
+
+    def are_intersects(self, list1, list2):
+        return self.common_elements(list1,list2) != []
+
 
 class Recombinant(object):
     """Class to describe a recombined TCR locus as determined from the single-cell pipeline"""
@@ -370,6 +430,8 @@ class Recombinant(object):
                               "J segment:\t{J_segment}\n".format(
                 V_segment=V_segment, D_segment=D_segment, J_segment=J_segment)
         summary_string += segments_string
+        summary_string += "dna_seq:\t{dna_seq}\nOriginal fasta seq:\t{fasta_seq}\nCDR3:\t{cdr3}\n".format(dna_seq=str(self.dna_seq).upper(),
+                                                                                                          fasta_seq=self.fasta_seq,cdr3=self.cdr3)
         summary_string += "ID:\t{}\n".format(self.identifier)
         summary_string += "TPM:\t{TPM}\nProductive:\t{productive}\nStop codon:" \
                           "\t{stop_codon}\nIn frame:\t{in_frame}\n\n".format(
@@ -382,4 +444,5 @@ class Recombinant(object):
         for line in self.hit_table:
             summary_string = summary_string + "\t".join(line) + "\n"
         return (summary_string)
+
 

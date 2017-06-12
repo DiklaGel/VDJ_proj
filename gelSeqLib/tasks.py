@@ -245,6 +245,22 @@ class Cell_Task(Task):
                     receptor=self.receptor_name), 'wb') as pf:
             pickle.dump(cell, pf, protocol=0)
 
+        cell.choose_recombinants()
+
+        self.print_cell_summary(
+            cell,
+            "{output_dir}/filtered_{receptor}_seqs/filtered_{receptor}s.txt".format(
+                output_dir=self.output_dir,
+                receptor=self.receptor_name),
+            self.receptor_name, self.loci)
+
+        with open(
+                "{output_dir}/filtered_{receptor}_seqs/{cell_name}.pkl".format(
+                    output_dir=self.output_dir,
+                    cell_name=cell.name,
+                    receptor=self.receptor_name), 'wb') as pf:
+            pickle.dump(cell, pf, protocol=0)
+
 
 
     def ig_blast(self):
@@ -277,7 +293,6 @@ class Cell_Task(Task):
                                          self.species)
             '''
         return cell
-
 
 
     def print_cell_summary(self, cell, output_file, receptor_name, loci):

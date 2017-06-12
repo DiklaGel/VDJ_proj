@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1f3e8759-58e1-4dbd-80d5-980aa4a2fe39" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gelSeq.conf" afterPath="$PROJECT_DIR$/gelSeq.conf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gelSeqLib/VDJ_func.py" afterPath="$PROJECT_DIR$/gelSeqLib/VDJ_func.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gelSeqLib/core.py" afterPath="$PROJECT_DIR$/gelSeqLib/core.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gelSeqLib/plate_to_cells.py" afterPath="$PROJECT_DIR$/gelSeqLib/plate_to_cells.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gelSeqLib/tasks.py" afterPath="$PROJECT_DIR$/gelSeqLib/tasks.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,22 +22,13 @@
       <file leaf-file-name="tasks.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gelSeqLib/tasks.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3">
-              <caret line="282" column="8" lean-forward="false" selection-start-line="282" selection-start-column="8" selection-end-line="282" selection-end-column="8" />
+            <state relative-caret-position="320">
+              <caret line="263" column="0" lean-forward="true" selection-start-line="263" selection-start-column="0" selection-end-line="263" selection-end-column="0" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
-                <element signature="e#10334#11724#0" expanded="false" />
+                <element signature="e#10938#12328#0" expanded="false" />
+                <element signature="e#12413#13507#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="unfiltered_TCRs.txt" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/plates/103_S10_L001/E4/unfiltered_TCR_seqs/unfiltered_TCRs.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4073">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -48,8 +36,8 @@
       <file leaf-file-name="VDJ_func.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gelSeqLib/VDJ_func.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="913">
-              <caret line="362" column="14" lean-forward="true" selection-start-line="362" selection-start-column="14" selection-end-line="362" selection-end-column="14" />
+            <state relative-caret-position="-523">
+              <caret line="221" column="4" lean-forward="false" selection-start-line="221" selection-start-column="4" selection-end-line="221" selection-end-column="4" />
               <folding>
                 <element signature="e#1028#1065#0" expanded="true" />
                 <element signature="e#1349#3531#0" expanded="false" />
@@ -68,22 +56,30 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="E4_TCR_TCR_B.IgBLASTOut" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/plates/103_S10_L001/E4/IgBLAST_output/E4_TCR_TCR_B.IgBLASTOut">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" column="36" lean-forward="true" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="core.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gelSeqLib/core.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="58">
-              <caret line="307" column="24" lean-forward="false" selection-start-line="307" selection-start-column="17" selection-end-line="307" selection-end-column="24" />
+            <state relative-caret-position="274">
+              <caret line="348" column="118" lean-forward="false" selection-start-line="348" selection-start-column="118" selection-end-line="348" selection-end-column="118" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
                 <element signature="e#170#326#0" expanded="false" />
-                <element signature="e#352#11926#0" expanded="false" />
                 <element signature="e#2038#2463#0" expanded="false" />
                 <element signature="e#2463#2490#0" expanded="false" />
                 <element signature="e#3754#3803#0" expanded="false" />
                 <element signature="e#4215#5595#0" expanded="false" />
                 <element signature="e#5675#7110#0" expanded="false" />
                 <element signature="e#7143#7161#0" expanded="false" />
-                <element signature="e#7203#8298#0" expanded="false" />
                 <element signature="e#8340#9461#0" expanded="false" />
                 <element signature="e#9526#9999#0" expanded="false" />
                 <element signature="e#10044#10890#0" expanded="false" />
@@ -91,7 +87,28 @@
                 <element signature="e#11235#11376#0" expanded="false" />
                 <element signature="e#11436#11632#0" expanded="false" />
                 <element signature="e#11690#11926#0" expanded="false" />
+                <element signature="e#17278#19086#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="filtered_TCRs.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plates/103_S10_L001/E4/filtered_TCR_seqs/filtered_TCRs.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-135">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="unfiltered_TCRs.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plates/103_S10_L001/E4/unfiltered_TCR_seqs/unfiltered_TCRs.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -99,8 +116,8 @@
       <file leaf-file-name="io_func.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gelSeqLib/io_func.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="32">
-              <caret line="148" column="0" lean-forward="false" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
+            <state relative-caret-position="122">
+              <caret line="32" column="23" lean-forward="false" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
               <folding>
                 <element signature="e#2144#2505#0" expanded="false" />
                 <element signature="e#2546#2646#0" expanded="false" />
@@ -121,15 +138,12 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>chec</find>
-      <find>defaul</find>
       <find>get_av</find>
       <find>io.</find>
       <find>mak</find>
       <find>io</find>
       <find>igb</find>
       <find>find</find>
-      <find>find_p</find>
       <find>len</find>
       <find>find_pos</find>
       <find>pars</find>
@@ -137,13 +151,23 @@
       <find>process</find>
       <find>get_coords</find>
       <find>reco</find>
-      <find>recom</find>
       <find>Re</find>
       <find>Recom</find>
       <find>parse</find>
       <find>IMGT_seqs</find>
-      <find>dna_seq</find>
       <find>fasta_line_for_contig</find>
+      <find>dna_seq</find>
+      <find>recom</find>
+      <find>recombina</find>
+      <find>sum</find>
+      <find>VDJ_rearrangement_summary</find>
+      <find>alignment_summary</find>
+      <find>5_CTGCTGGACTAGCGATTACGA_TRBJ2</find>
+      <find>CTGCTGGACTAGCGATTACGA</find>
+      <find>find_p</find>
+      <find>generic_dna</find>
+      <find>remove</find>
+      <find>get_fasta_line_for_contig_imgt</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -168,10 +192,11 @@
         <option value="$PROJECT_DIR$/plates/103_S10_L001/E4/IgBLAST_output/E4_TCR_TCR_B.IgBLASTOut" />
         <option value="$PROJECT_DIR$/gelSeqLib/io_func.py" />
         <option value="$PROJECT_DIR$/gelSeq.conf" />
-        <option value="$PROJECT_DIR$/gelSeqLib/core.py" />
         <option value="$PROJECT_DIR$/gelSeqLib/plate_to_cells.py" />
+        <option value="$PROJECT_DIR$/plates/103_S10_L001/E4/unfiltered_TCR_seqs/unfiltered_TCRs.txt" />
         <option value="$PROJECT_DIR$/gelSeqLib/VDJ_func.py" />
         <option value="$PROJECT_DIR$/gelSeqLib/tasks.py" />
+        <option value="$PROJECT_DIR$/gelSeqLib/core.py" />
       </list>
     </option>
   </component>
@@ -386,6 +411,58 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="E4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VDJ_proj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VDJ_proj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="103_S10_L001" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="E4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="filtered_TCR_seqs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VDJ_proj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VDJ_proj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="103_S10_L001" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="E4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IgBLAST_output" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -698,7 +775,14 @@
       <option name="project" value="LOCAL" />
       <updated>1497191036191</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="120617 12:42">
+      <created>1497260576573</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1497260576573</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -709,8 +793,8 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328594" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.328594" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15955766" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328594" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328594" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -755,7 +839,8 @@
     <MESSAGE value="08062017 16:27" />
     <MESSAGE value="110617 17:12" />
     <MESSAGE value="110617 17:23" />
-    <option name="LAST_COMMIT_MESSAGE" value="110617 17:23" />
+    <MESSAGE value="120617 12:42" />
+    <option name="LAST_COMMIT_MESSAGE" value="120617 12:42" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -776,7 +861,7 @@
           <option name="timeStamp" value="52" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="53" />
+      <option name="time" value="56" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
@@ -823,14 +908,12 @@
           <folding>
             <element signature="e#0#9#0" expanded="true" />
             <element signature="e#170#326#0" expanded="false" />
-            <element signature="e#352#11926#0" expanded="false" />
             <element signature="e#2038#2463#0" expanded="false" />
             <element signature="e#2463#2490#0" expanded="false" />
             <element signature="e#3754#3803#0" expanded="false" />
             <element signature="e#4215#5595#0" expanded="false" />
             <element signature="e#5675#7110#0" expanded="false" />
             <element signature="e#7143#7161#0" expanded="false" />
-            <element signature="e#7203#8298#0" expanded="false" />
             <element signature="e#8340#9461#0" expanded="false" />
             <element signature="e#9526#9999#0" expanded="false" />
             <element signature="e#10044#10890#0" expanded="false" />
@@ -838,6 +921,7 @@
             <element signature="e#11235#11376#0" expanded="false" />
             <element signature="e#11436#11632#0" expanded="false" />
             <element signature="e#11690#11926#0" expanded="false" />
+            <element signature="e#17278#19086#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1245,14 +1329,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plates/103_S10_L001/E4/IgBLAST_output/E4_TCR_TCR_B.IgBLASTOut">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="34" lean-forward="false" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/3.5env/lib/python3.5/warnings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="177">
@@ -1263,8 +1339,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gelSeqLib/io_func.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="148" column="0" lean-forward="false" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
+        <state relative-caret-position="122">
+          <caret line="32" column="23" lean-forward="false" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
           <folding>
             <element signature="e#2144#2505#0" expanded="false" />
             <element signature="e#2546#2646#0" expanded="false" />
@@ -1273,21 +1349,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/gelSeqLib/tasks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="263" column="0" lean-forward="true" selection-start-line="263" selection-start-column="0" selection-end-line="263" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#10938#12328#0" expanded="false" />
+            <element signature="e#12413#13507#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/gelSeqLib/core.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="307" column="24" lean-forward="false" selection-start-line="307" selection-start-column="17" selection-end-line="307" selection-end-column="24" />
+        <state relative-caret-position="274">
+          <caret line="348" column="118" lean-forward="false" selection-start-line="348" selection-start-column="118" selection-end-line="348" selection-end-column="118" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
             <element signature="e#170#326#0" expanded="false" />
-            <element signature="e#352#11926#0" expanded="false" />
             <element signature="e#2038#2463#0" expanded="false" />
             <element signature="e#2463#2490#0" expanded="false" />
             <element signature="e#3754#3803#0" expanded="false" />
             <element signature="e#4215#5595#0" expanded="false" />
             <element signature="e#5675#7110#0" expanded="false" />
             <element signature="e#7143#7161#0" expanded="false" />
-            <element signature="e#7203#8298#0" expanded="false" />
             <element signature="e#8340#9461#0" expanded="false" />
             <element signature="e#9526#9999#0" expanded="false" />
             <element signature="e#10044#10890#0" expanded="false" />
@@ -1295,14 +1381,31 @@
             <element signature="e#11235#11376#0" expanded="false" />
             <element signature="e#11436#11632#0" expanded="false" />
             <element signature="e#11690#11926#0" expanded="false" />
+            <element signature="e#17278#19086#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plates/103_S10_L001/E4/unfiltered_TCR_seqs/unfiltered_TCRs.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plates/103_S10_L001/E4/filtered_TCR_seqs/filtered_TCRs.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-135">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gelSeqLib/VDJ_func.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="913">
-          <caret line="362" column="14" lean-forward="true" selection-start-line="362" selection-start-column="14" selection-end-line="362" selection-end-column="14" />
+        <state relative-caret-position="-523">
+          <caret line="221" column="4" lean-forward="false" selection-start-line="221" selection-start-column="4" selection-end-line="221" selection-end-column="4" />
           <folding>
             <element signature="e#1028#1065#0" expanded="true" />
             <element signature="e#1349#3531#0" expanded="false" />
@@ -1320,21 +1423,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gelSeqLib/tasks.py">
+    <entry file="file://$PROJECT_DIR$/plates/103_S10_L001/E4/IgBLAST_output/E4_TCR_TCR_B.IgBLASTOut">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3">
-          <caret line="282" column="8" lean-forward="false" selection-start-line="282" selection-start-column="8" selection-end-line="282" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-            <element signature="e#10334#11724#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plates/103_S10_L001/E4/unfiltered_TCR_seqs/unfiltered_TCRs.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4073">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="195">
+          <caret line="13" column="36" lean-forward="true" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
           <folding />
         </state>
       </provider>
