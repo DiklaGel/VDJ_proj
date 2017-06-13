@@ -100,10 +100,10 @@ class Plate_Task(Task):
             self.parser.add_argument('output_dir', metavar="<OUTPUT_DIR>",
                                 help='directory for output as <output_dir>/<plate_name>')
 
-            self.vdj_parser.add_argument('--receptor_name',
+            self.parser.add_argument('--receptor_name',
                                 help="Name of receptor to reconstruct",
                                 default='TCR')
-            self.vdj_parser.add_argument('--loci',
+            self.parser.add_argument('--loci',
                                 help="Space-separated list of loci to reconstruct for receptor",
                                 default=['A', 'B'], nargs='+')
 

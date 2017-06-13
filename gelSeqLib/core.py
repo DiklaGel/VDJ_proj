@@ -329,7 +329,6 @@ class Cell(object):
                         CDR3_most_common = [x[0] for x in
                                          cdr3_ranks.most_common(2)]
 
-                        print('hello')
                         for x, y in {'V': V_most_common, 'D': D_most_common,
                                      'J': J_most_common, 'CDR3': CDR3_most_common}.items():
                             print('{x}_most_common:\t{y}\n'.format(x=x, y=str(y)))

@@ -4,6 +4,7 @@ import glob
 import os
 import re
 import subprocess
+import pandas as pd
 from collections import defaultdict
 
 import six
@@ -14,7 +15,7 @@ from gelSeqLib.VDJ_func import process_chunk, find_possible_alignments
 
 def makeOutputDir(output_dir_path):
     if not os.path.exists(output_dir_path):
-        os.mkdir(output_dir_path)
+        os.makedirs(output_dir_path)
 
 
 ########################################################################
@@ -22,16 +23,21 @@ def makeOutputDir(output_dir_path):
 # find all the lines starting with strings from list_of_strings
 def find_lines(list_of_strings,file):
     lines = list()
+    key_line_df = pd.DataFrame(columns=["barcode","line"])
     for word in list_of_strings:
-        lines += subprocess.getoutput("""gunzip -c %s | grep -n "^%s" | cut -d : -f 1  """ % (file, word)).split("\n")
-    return lines
+        current_lines = subprocess.getoutput("""gunzip -c %s | grep -n "^%s" | cut -d : -f 1  """ % (file, word)).split("\n")
+        list_add = [{"barcode": word, "line": i} for i in current_lines]
+        lines += current_lines
+        key_line_df = key_line_df.append(list_add,ignore_index=True)
+    return lines, key_line_df
 
 # create a list of reads (each read is 4 lines string)
 def get_full_reads(lines,file):
     reads = list()
     for line in lines:
-        reads.append(subprocess.getoutput(
-            """gunzip -c %s | awk 'NR>=%d && NR<=%d' """ % (file, int(line) - 1, int(line) + 2)))
+        reads_to_add=subprocess.getoutput(
+            """gunzip -c %s | awk 'NR>=%d && NR<=%d' """ % (file, int(line) - 1, int(line) + 2))
+        reads.append(reads_to_add)
     return reads
 
 # create a list of reads (each read is only one line string - only the sequence)
