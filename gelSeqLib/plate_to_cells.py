@@ -32,7 +32,7 @@ def reads_to_fasta(cell_barcodes, dir_name, fastq1, fastq2, cell_name):
     lines, barcode_line_df = io_func.find_lines(cell_barcodes, fastq2)
     # extracting the reads (list of strings) in the fastq2 file that are written in the lines we found above
     reads2 = io_func.get_full_reads(barcode_line_df['line'].tolist(), fastq1)
-    new_column = [y.split('\n')[0][1:] for y in reads2]
+    new_column = [y.split('\n')[0].split(' ')[0][1:] for y in reads2]
     barcode_line_df = barcode_line_df.assign(query_name=new_column)
     fastq_path = os.path.join(dir_name, cell_name + ".fastq")
     io_func.reads_to_fastq(reads2, fastq_path)

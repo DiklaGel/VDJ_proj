@@ -34,10 +34,16 @@ def find_lines(list_of_strings,file):
 # create a list of reads (each read is 4 lines string)
 def get_full_reads(lines,file):
     reads = list()
+    lines_to_add = [l for line in lines for l in range(int(line)-1,int(line)+3)]
+    s = ["NR==" + str(l) for l in lines_to_add]
+    s = " || ".join(s)
+    '''
     for line in lines:
         reads_to_add=subprocess.getoutput(
             """gunzip -c %s | awk 'NR>=%d && NR<=%d' """ % (file, int(line) - 1, int(line) + 2))
-        reads.append(reads_to_add)
+    '''
+    reads_to_add=subprocess.getoutput( """gunzip -c %s | awk %s""" % (file, s))
+    reads.append(reads_to_add)
     return reads
 
 # create a list of reads (each read is only one line string - only the sequence)

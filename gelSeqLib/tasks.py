@@ -3,6 +3,8 @@ import os
 import sys
 import warnings
 import pickle
+sys.path.insert(0, '/home/labs/amit/diklag/python_libs/python_lsf_wrapper/')
+from LSF import LSF, wait_for_jobs
 
 from configparser import ConfigParser
 
