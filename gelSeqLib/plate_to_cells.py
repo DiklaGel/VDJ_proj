@@ -111,6 +111,9 @@ def filter_abundant_barcodes(fastq2):
 
     return high_confidence_barcodes
 
+def gunzip_fastq(file,dest):
+    subprocess.call("""gunzip -c %s > %s  """ % (file, dest))
+
 
 def split_by_cells(high_confidence_barcodes,wells_cells_file,output_dir,fastq1,fastq2):
     cells_to_path = dict()
@@ -118,6 +121,34 @@ def split_by_cells(high_confidence_barcodes,wells_cells_file,output_dir,fastq1,f
                                       usecols=['well_coordinates', 'Cell_barcode', 'Amp_batch_ID', 'plate_ID'])
     # grouping to cells by barcodes
     checked_cells, cell_barcode_mapping = group_to_cells(high_confidence_barcodes, map_cell_to_barcode)
+    #generate a data frame with columns=["cell_name","cell_barcode","umi_barcode","query_names","lines"]
+    '''
+    plate_mapping = pd.DataFrame(columns=["cell_name","cell_barcode","umi_barcode"])
+    for cell_barcode in checked_cells.keys():
+        cell_name = map_cell_to_barcode[map_cell_to_barcode['Cell_barcode'] == cell_barcode]['well_coordinates'].tolist()[0]
+        for barcode in cell_barcode_mapping[cell_barcode]:
+            plate_mapping = plate_mapping.append([{"cell_name":cell_name,"cell_barcode": barcode,
+                                                   "umi_barcode":r["umi_barcode"]} for i,r in
+                                                  high_confidence_barcodes[high_confidence_barcodes["cell_barcode"]
+                                                                           == barcode].iterrows()])
+
+    map = pd.DataFrame(columns=["cell_name","cell_barcode","umi_barcode","query_name"])
+    dest = os.path.join(output_dir,os.path.abspath(fastq1).split(".gz")[0])
+    gunzip_fastq(fastq1,dest)
+    with open(dest) as f:
+        data = f.read()
+        i = 0
+        for line in data:
+            if i%4 == 0:
+                query_name = line[1:].split(" ")[0]
+            if i%4 == 1:
+                cell_barcode = line[0:7]
+                umi_barcode = line[7:15]
+                if ((plate_mapping["cell_barcode"] == cell_barcode) & (plate_mapping["umi_barcode"] == umi_barcode)).any():
+                    cell_name = plate_mapping[(plate_mapping["cell_barcode"] == cell_barcode) & (plate_mapping["umi_barcode"] == umi_barcode)]["cell_name"].to_list()[0]
+                    map = map.append([{"cell_name": cell_name,"cell_barcode": barcode,"umi_barcode": umi_barcode, "query_name": query_name, "fasta_line": }])
+
+    '''
 
     # generate fasta file for each cell
     for cell_barcode in checked_cells.keys():
@@ -134,7 +165,9 @@ def split_by_cells(high_confidence_barcodes,wells_cells_file,output_dir,fastq1,f
         cell_barcodes = ["".join([cell_barcodes_rows.iloc[i]["cell_barcode"], cell_barcodes_rows.iloc[i]["umi_barcode"]]) for i in range(0,len(cell_barcodes_rows))]
         fasta_path = reads_to_fasta(cell_barcodes,cell_dir+"/"+'reads',fastq1,fastq2,cell_name)
         cells_to_path[cell_name] = fasta_path
+
     return cells_to_path
+
 
 
 def group_to_cells(high_confidence_barcodes, map_cell_to_barcode):
