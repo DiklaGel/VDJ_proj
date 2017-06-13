@@ -117,7 +117,7 @@ class Plate_Task(Task):
             self.species = args.species
             self.resume_with_existing_files = args.resume_with_existing_files
             self.output_dir = args.output_dir
-            self.cell_to_path = dict()
+            # self.cell_to_path = dict()
             self.receptor_name = args.receptor_name
             self.loci = args.loci
             config_file = args.config_file
@@ -132,7 +132,7 @@ class Plate_Task(Task):
             self.resume_with_existing_files = kwargs.get(
                 'resume_with_existing_files')
             self.output_dir = kwargs.get('output_dir')
-            self.cell_to_path = dict()
+            # self.cell_to_path = dict()
             self.receptor_name = kwargs.get('receptor_name')
             self.loci = kwargs.get('loci')
 
@@ -156,7 +156,7 @@ class Plate_Task(Task):
 
     def split_to_cells(self):
         high_confidence_barcodes = plate_to_cells.filter_abundant_barcodes(self.fastq2)
-        self.cell_to_path = plate_to_cells.split_by_cells(high_confidence_barcodes, wells_cells_file, self.output_dir, self.fastq1, self.fastq2)
+        plate_to_cells.split_by_cells(high_confidence_barcodes, wells_cells_file, self.output_dir, self.fastq1, self.fastq2)
 
 
 class Cell_Task(Task):
