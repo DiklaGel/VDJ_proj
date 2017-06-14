@@ -21,7 +21,7 @@ import subprocess
 from collections import defaultdict, Counter
 import six
 import Levenshtein
-import networkx as nx
+#import networkx as nx
 from Bio.Alphabet import IUPAC
 from Bio.Seq import Seq
 from Bio import SeqIO
@@ -574,7 +574,7 @@ def collapse_close_sequences(recombinants, locus):
     return (recombinants)
 
 
-
+'''
 def make_cell_network_from_dna(cells, keep_unlinked, shape, dot, neato,
                                receptor, loci,
                                network_colours):
@@ -775,6 +775,7 @@ def get_component_groups_sizes(cells, receptor, loci):
 
     return (clonotype_sizes)
 
+'''
 
 def check_config_file(filename):
     if not os.path.isfile(filename):

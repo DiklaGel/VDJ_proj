@@ -23,13 +23,10 @@ def makeOutputDir(output_dir_path):
 # find all the lines starting with strings from list_of_strings
 def find_lines(list_of_strings,file):
     lines = list()
-    key_line_df = pd.DataFrame(columns=["barcode","line"])
     for word in list_of_strings:
         current_lines = subprocess.getoutput("""gunzip -c %s | grep -n "^%s" | cut -d : -f 1  """ % (file, word)).split("\n")
-        list_add = [{"barcode": word, "line": i} for i in current_lines]
         lines += current_lines
-        key_line_df = key_line_df.append(list_add,ignore_index=True)
-    return lines, key_line_df
+    return lines
 
 # create a list of reads (each read is 4 lines string)
 def get_full_reads(lines,file):

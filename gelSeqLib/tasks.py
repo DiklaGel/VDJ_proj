@@ -3,12 +3,13 @@ import os
 import sys
 import warnings
 import pickle
+import subprocess
 sys.path.insert(0, '/home/labs/amit/diklag/python_libs/python_lsf_wrapper/')
 from LSF import LSF, wait_for_jobs
 
 from configparser import ConfigParser
 
-from gelSeqLib import plate_to_cells,VDJ_func, io_func
+from gelSeqLib import plate_to_cells,VDJ_func, io_func, align_func
 from gelSeqLib import base_dir, wells_cells_file
 
 
@@ -252,18 +253,19 @@ class Cell_Task(Task):
         with open(
                 "{output_dir}/unfiltered_{receptor}_seqs/{cell_name}.pkl".format(
                     output_dir=self.output_dir,
-                    cell_name=cell.name,
+                    cell_name=self.cell_name,
                     receptor=self.receptor_name), 'wb') as pf:
             pickle.dump(cell, pf, protocol=0)
 
-        cell.choose_recombinants()
+        summary = cell.choose_recombinants()
 
-        self.print_cell_summary(
-            cell,
-            "{output_dir}/filtered_{receptor}_seqs/filtered_{receptor}s.txt".format(
+        filt_file = "{output_dir}/filtered_{receptor}_seqs/filtered_{receptor}s.txt".format(
                 output_dir=self.output_dir,
-                receptor=self.receptor_name),
-            self.receptor_name, self.loci)
+                receptor=self.receptor_name)
+        self.print_cell_summary(
+            cell,filt_file,self.receptor_name, self.loci)
+
+        cdr3_consensus, consensus = self.create_cdr3_consensus(cell, filt_file)
 
         with open(
                 "{output_dir}/filtered_{receptor}_seqs/{cell_name}.pkl".format(
@@ -272,7 +274,36 @@ class Cell_Task(Task):
                     receptor=self.receptor_name), 'wb') as pf:
             pickle.dump(cell, pf, protocol=0)
 
+        if len(summary[self.receptor_name]) != 0:
+            with open(
+                    "{output_dir}/filtered_{receptor}_seqs/{cell_name}.txt".format(
+                        output_dir=self.output_dir,
+                        cell_name=cell.name,
+                        receptor=self.receptor_name), 'w') as pf:
+                for locus in self.loci:
+                    pf.write("locus = " + locus + '\n')
+                    pf.write(summary[self.receptor_name][locus] +'\n')
+                    pf.write("CDR3:" + cdr3_consensus + '\n')
+                    pf.write("CDR3_freq:" + str(consensus) + '\n')
 
+    def create_cdr3_consensus(self, cell, filt_file):
+        cdr3_list = subprocess.getoutput("grep ^CDR3: %s" % (filt_file)).split("\n")
+        cdr3_list = ["> \n" + x[6:] for x in cdr3_list if "Couldn" not in x]
+        cdr3_list.sort()
+        print(cdr3_list)
+        cdr3_file = "{output_dir}/filtered_{receptor}_seqs/{cell_name}_cdr3.fasta".format(
+            output_dir=self.output_dir,
+            cell_name=cell.name,
+            receptor=self.receptor_name)
+        with open(cdr3_file, 'w') as pf:
+            for cdr3 in cdr3_list:
+                pf.write(cdr3 + '\n')
+        junk_file = open("junk_file", 'w')
+        al_file = align_func.clustalo_align(cdr3_file, junk_file)
+        os.remove("junk_file")
+        cdr3_consensus, freq = align_func.make_consensus(al_file, "fasta")
+        consensus = [(cdr3_consensus[i],freq[i]) for i in range(0,len(cdr3_consensus))]
+        return cdr3_consensus, consensus
 
     def ig_blast(self):
         igblastn = self.get_binary('igblastn')

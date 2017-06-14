@@ -27,11 +27,13 @@ def make_consensus(alignment_file, format_alignment):
     summary = SummaryInfo(alignment)
     mat = summary.pos_specific_score_matrix()
     consensus = ""
+    l = list()
     for row in mat:
-        key = max(row.items(), key=operator.itemgetter(1))[0]
+        key, freq = max(row.items(), key=operator.itemgetter(1))
         consensus = "".join([consensus,key])
+        l.append(freq/len(alignment._records))
     consensus = consensus.strip("-")
-    return consensus
+    return consensus,l
 
 # simple hamming distance
 def hamming_distance(str1,str2):

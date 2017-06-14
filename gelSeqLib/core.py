@@ -300,6 +300,7 @@ class Cell(object):
                         return (True)
 
     def choose_recombinants(self):
+        ret_str = defaultdict(dict)
         for receptor, locus_dict in six.iteritems(self.recombinants):
             for locus, recombinants in six.iteritems(locus_dict):
                 if recombinants is not None:
@@ -315,10 +316,9 @@ class Cell(object):
                                 D_ranks.update({str(seq): 1})
                             for seq in rec.summary[2].split(","):
                                 J_ranks.update({str(seq): 1})
-                            cdr3_ranks.update({rec.cdr3._data: 1})
-                        for x, y in {'V': V_ranks, 'D': D_ranks,
-                                     'J': J_ranks, 'CDR3': cdr3_ranks}.items():
-                            print('{x}_counter:\t{y}\n'.format(x=x, y=y))
+                            #if type(rec.cdr3) is Seq:
+                                #cdr3_ranks.update({rec.cdr3._data: 1})
+
 
                         V_most_common = [x[0] for x in
                                          V_ranks.most_common(2)]
@@ -326,12 +326,20 @@ class Cell(object):
                                          D_ranks.most_common(2)]
                         J_most_common = [x[0] for x in
                                          J_ranks.most_common(2)]
-                        CDR3_most_common = [x[0] for x in
-                                         cdr3_ranks.most_common(2)]
+                        #CDR3_most_common = [x[0] for x in
+                                         #cdr3_ranks.most_common(2)]
 
-                        for x, y in {'V': V_most_common, 'D': D_most_common,
-                                     'J': J_most_common, 'CDR3': CDR3_most_common}.items():
-                            print('{x}_most_common:\t{y}\n'.format(x=x, y=str(y)))
+                        ret_str[receptor][locus] = ""
+
+                        ret_str[receptor][locus] += 'V:\t'
+                        for seq in V_most_common:
+                            ret_str[receptor][locus] += seq + " " + str(V_ranks[seq]/len(recombinants)) + '\t'
+                        ret_str[receptor][locus] += '\nD:\t'
+                        for seq in D_most_common:
+                            ret_str[receptor][locus] += seq + " " + str(D_ranks[seq]/len(recombinants))  + '\t'
+                        ret_str[receptor][locus] += '\nJ:\t'
+                        for seq in J_most_common:
+                            ret_str[receptor][locus] += seq + " " + str(J_ranks[seq]/len(recombinants)) + '\t'
 
                         to_remove = []
                         set_common = V_most_common + D_most_common + J_most_common
@@ -349,6 +357,7 @@ class Cell(object):
 
                         for rec in to_remove:
                             self.recombinants[receptor][locus].remove(rec)
+        return ret_str
 
 
 
