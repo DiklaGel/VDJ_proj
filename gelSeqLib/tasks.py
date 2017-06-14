@@ -108,6 +108,10 @@ class Plate_Task(Task):
             self.parser.add_argument('--loci',
                                 help="Space-separated list of loci to reconstruct for receptor",
                                 default=['A', 'B'], nargs='+')
+            self.parser.add_argument('--full',
+                                help="Continue the full process - after splitting to cells, create new job for each cell",
+                                action="store_true")
+
 
             args = self.parser.parse_args(sys.argv[2:])
             self.plate_name = args.plate_name
@@ -120,6 +124,7 @@ class Plate_Task(Task):
             # self.cell_to_path = dict()
             self.receptor_name = args.receptor_name
             self.loci = args.loci
+            self.full = args.full
             config_file = args.config_file
 
 
@@ -135,7 +140,7 @@ class Plate_Task(Task):
             # self.cell_to_path = dict()
             self.receptor_name = kwargs.get('receptor_name')
             self.loci = kwargs.get('loci')
-
+            self.full = kwargs.get('full')
             config_file = kwargs.get('config_file')
 
         self.config = self.read_config(config_file)
@@ -153,9 +158,13 @@ class Plate_Task(Task):
         # Perform core functions
         self.split_to_cells()
 
+        #if self.full:
+
+
 
     def split_to_cells(self):
         high_confidence_barcodes = plate_to_cells.filter_abundant_barcodes(self.fastq2)
+        high_confidence_barcodes.to_csv(self.output_dir+"/high_conf.csv")
         plate_to_cells.split_by_cells(high_confidence_barcodes, wells_cells_file, self.output_dir, self.fastq1, self.fastq2)
 
 

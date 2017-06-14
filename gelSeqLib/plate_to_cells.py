@@ -25,12 +25,13 @@ def threshold(groups):
     return i
 
 
+################--old functions--#################
 
 def reads_to_fasta(cell_barcodes, dir_name, fastq1, fastq2, cell_name):
     io_func.makeOutputDir(dir_name)
     # finding the lines (list of numbers) in the fastq2 file that start with those 15-mers
     lines, barcode_line_df = io_func.find_lines(cell_barcodes, fastq2)
-    # extracting the reads (list of strings) in the fastq2 file that are written in the lines we found above
+    # extracting the reads (list of strings) in the fastq1 file that are written in the lines we found above
     reads2 = io_func.get_full_reads(barcode_line_df['line'].tolist(), fastq1)
     new_column = [y.split('\n')[0].split(' ')[0][1:] for y in reads2]
     barcode_line_df = barcode_line_df.assign(query_name=new_column)
@@ -88,7 +89,7 @@ def filter_real_reads(consensus, other_significant_barcode,dir_name, fastq1, fas
     print(cell_name + " average score against consesnsus = " + str(avg),flush=True)
     print(cell_name + " min score against consesnsus = " + str(min),flush=True)
     print(cell_name + " max score against consesnsus = " + str(max),flush=True)
-
+################################################
 
 def filter_abundant_barcodes(fastq2):
     # reading all 15-mers in the current plate (current fastq2 - fastq file of read2), sorting them by frequency
@@ -126,65 +127,40 @@ def split_by_cells(high_confidence_barcodes,wells_cells_file,output_dir,fastq1,f
     plate_mapping = pd.DataFrame(columns=["cell_name","cell_barcode","umi_barcode"])
     for cell_barcode in checked_cells.keys():
         cell_name = map_cell_to_barcode[map_cell_to_barcode['Cell_barcode'] == cell_barcode]['well_coordinates'].tolist()[0]
-        print(cell_name)
-        print(cell_barcode_mapping[cell_barcode])
         for barcode in cell_barcode_mapping[cell_barcode]:
-            plate_mapping = plate_mapping.append([{"cell_name":cell_name,"cell_barcode": barcode,
-                                                   "umi_barcode":r["umi_barcode"]} for i,r in
-                                                  high_confidence_barcodes[high_confidence_barcodes["cell_barcode"]
-                                                                           == barcode].iterrows()])
+            plate_mapping = plate_mapping.append([{"cell_name": cell_name,"cell_barcode": barcode,"umi_barcode": r}
+                                                  for r in high_confidence_barcodes[high_confidence_barcodes["cell_barcode"]==barcode]["umi_barcode"].__iter__()])
             map[barcode] = cell_name
-    print(len(high_confidence_barcodes[high_confidence_barcodes['cell_barcode'] == 'GTAACTG']))
-    print(len(checked_cells.keys()))
-    print(map)
-    fastq1_dest = os.path.join(output_dir,os.path.basename(fastq1).split(".gz")[0])
-    gunzip_fastq(fastq1,fastq1_dest)
-    fastq2_dest = os.path.join(output_dir,os.path.basename(fastq2).split(".gz")[0])
-    gunzip_fastq(fastq2,fastq2_dest)
+    high_conf = pd.merge(plate_mapping,high_confidence_barcodes,on=["cell_barcode","umi_barcode"])
+    high_conf.to_csv(output_dir + "/final_high_conf.csv")
+    create_fasta_per_cell(fastq1, fastq2, high_confidence_barcodes, map, output_dir)
 
-    with open(fastq1_dest) as f1 , open(fastq2_dest) as f2:
+
+
+def create_fasta_per_cell(fastq1, fastq2, high_confidence_barcodes, map, output_dir):
+    fastq1_dest = os.path.join(output_dir, os.path.basename(fastq1).split(".gz")[0])
+    gunzip_fastq(fastq1, fastq1_dest)
+    fastq2_dest = os.path.join(output_dir, os.path.basename(fastq2).split(".gz")[0])
+    gunzip_fastq(fastq2, fastq2_dest)
+    with open(fastq1_dest) as f1, open(fastq2_dest) as f2:
         r1 = f1.readlines()
         r2 = f2.readlines()
-        for line in range(1, len(r1),4):
-            cell_barcode = r1[line][0:7]
-            umi_barcode = r1[line][7:15]
-            if cell_barcode in map.keys() and map[cell_barcode] == 'H14':
-                print(line)
-                print(((high_confidence_barcodes["cell_barcode"] == cell_barcode) & (high_confidence_barcodes["umi_barcode"] == umi_barcode)).any())
-            if cell_barcode in map.keys() and  ((high_confidence_barcodes["cell_barcode"] == cell_barcode) & (high_confidence_barcodes["umi_barcode"] == umi_barcode)).any():
-                #cell_name = plate_mapping[((plate_mapping["cell_barcode"] == cell_barcode) & (plate_mapping["umi_barcode"] == umi_barcode))]["cell_name"].iloc[0]
+        for line in range(1, len(r1), 4):
+            cell_barcode = r2[line][0:7]
+            umi_barcode = r2[line][7:15]
+            if cell_barcode in map.keys() and ((high_confidence_barcodes["cell_barcode"] == cell_barcode) & (
+                high_confidence_barcodes["umi_barcode"] == umi_barcode)).any():
                 cell_name = map[cell_barcode]
                 cell_dir = os.path.join(output_dir, cell_name)
                 io_func.makeOutputDir(cell_dir + "/reads")
                 cell_fasta_file = output_dir + "/" + cell_name + "/reads/" + cell_name + ".fasta"
-                with open(cell_fasta_file,'a') as fa:
-                    fasta_line = r2[line]
-                    query_line = ">" + r2[line-1][1:-1] + " " + cell_barcode + umi_barcode + "\n"
+                with open(cell_fasta_file, 'a') as fa:
+                    fasta_line = r1[line]
+                    query_line = ">" + r1[line - 1][1:-1] + " " + cell_barcode + umi_barcode + "\n"
                     fa.write(query_line)
                     fa.write(fasta_line)
-    #os.remove(fastq1_dest)
-    #os.remove(fastq2_dest)
-
-    '''
-
-    # generate fasta file for each cell
-    for cell_barcode in checked_cells.keys():
-        # extracting the rows of the current cell
-        cell_barcodes_rows = pd.DataFrame()
-        for barcode in cell_barcode_mapping[cell_barcode]:
-            cell_barcodes_rows = pd.concat([cell_barcodes_rows,high_confidence_barcodes[high_confidence_barcodes["cell_barcode"] == barcode]])
-        cell_name = map_cell_to_barcode[map_cell_to_barcode['Cell_barcode'] == cell_barcode]['well_coordinates'].tolist()[0]
-
-        cell_dir = os.path.join(output_dir,cell_name)
-        io_func.makeOutputDir(cell_dir + "/reads")
-
-        cell_barcodes_rows = cell_barcodes_rows.sort_values(by= "num", ascending=False)
-        cell_barcodes = ["".join([cell_barcodes_rows.iloc[i]["cell_barcode"], cell_barcodes_rows.iloc[i]["umi_barcode"]]) for i in range(0,len(cell_barcodes_rows))]
-        fasta_path = reads_to_fasta(cell_barcodes,cell_dir+"/"+'reads',fastq1,fastq2,cell_name)
-        cells_to_path[cell_name] = fasta_path
-
-    return cells_to_path
-'''
+    os.remove(fastq1_dest)
+    os.remove(fastq2_dest)
 
 
 def group_to_cells(high_confidence_barcodes, map_cell_to_barcode):
@@ -217,51 +193,3 @@ def group_to_cells(high_confidence_barcodes, map_cell_to_barcode):
                     break
     return checked_cells, cell_barcode_mapping
 
-'''
-def cell_to_tcr(dir_name):
-    output_dir = os.path.join(dir_name,"IgBLAST_output")
-    io_func.makeOutputDir(output_dir)
-    for file in os.listdir(dir_name):
-        if "fasta" in file:
-            run_igblast(os.path.join(dir_name,file),output_dir)
-
-def run_igblast(fasta_file,output_dir):
-    print("##Running IgBLAST##")
-    igblast = "/apps/RH7U2/gnu/ncbi-igblast/1.7.0/bin/igblastn"
-
-    igblast_index_location = "/home/labs/amit/diklag/tracer/resources/Hsap/igblast_dbs"
-    imgt_seq_location = "/home/labs/amit/diklag/tracer/resources/Hsap/raw_seqs"
-
-    file_name = os.path.basename(fasta_file).split(".")[0]
-    igblast_out = "{output_dir}/{cell_name}.IgBLASTOut".format(
-        output_dir=output_dir, cell_name=file_name)
-
-    ig_seqtype = 'TCR'
-
-    databases = {}
-    for segment in ['V', 'D', 'J']:
-        databases[segment] = "{}/{}_{}.fa".format(igblast_index_location, ig_seqtype,
-                                                  segment)
-
-    # Lines below suppress Igblast warning about not having an auxliary file.
-    # Taken from
-    # http://stackoverflow.com/questions/11269575/how-to-hide-output-of-subprocess-in-python-2-7
-    DEVNULL = open(os.devnull, 'wb')
-
-    command = [igblast, '-germline_db_V', databases['V'],
-               '-germline_db_D', databases['D'],
-               '-germline_db_J', databases['J'], '-domain_system',
-               'imgt', '-organism', 'human',
-               '-ig_seqtype', ig_seqtype, '-show_translation',
-               '-num_alignments_V', '5',
-               '-num_alignments_D', '5', '-num_alignments_J', '5',
-               '-outfmt', '7', '-query', fasta_file]
-
-
-    with open(igblast_out, 'w') as out:
-        # print(" ").join(pipes.quote(s) for s in command)
-        subprocess.check_call(command, stdout=out, stderr=DEVNULL)
-
-    DEVNULL.close()
-
-'''
