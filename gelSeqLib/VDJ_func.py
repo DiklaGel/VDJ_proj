@@ -813,8 +813,13 @@ def run_IgBlast(igblast, fasta, receptor, loci, output_dir, cell_name, species,i
     locus_names = copy.copy(initial_locus_names)
     if should_resume:
         for locus in initial_locus_names:
+            '''
             igblast_out = "{output_dir}/IgBLAST_output/{cell_name}_{receptor}_{locus}.IgBLASTOut".format(
                 output_dir=output_dir, cell_name=cell_name,
+                receptor=receptor, locus=locus)
+            '''
+            igblast_out = "{output_dir}/{cell_name}_{receptor}_{locus}.IgBLASTOut".format(
+                output_dir=output_dir,
                 receptor=receptor, locus=locus)
             if (os.path.isfile(igblast_out) and os.path.getsize(
                     igblast_out) > 0):
@@ -849,7 +854,7 @@ def run_IgBlast(igblast, fasta, receptor, loci, output_dir, cell_name, species,i
                    '-num_alignments_V', '2',
                    '-num_alignments_D', '2', '-num_alignments_J', '2',
                    '-outfmt', '7', '-query', fasta]
-        igblast_out = "{output_dir}/IgBLAST_output/{cell_name}_{receptor}_{locus}.IgBLASTOut".format(
+        igblast_out = "{output_dir}/{cell_name}_{receptor}_{locus}.IgBLASTOut".format(
                 output_dir=output_dir, cell_name=cell_name,
                 receptor=receptor, locus=locus)
         with open(igblast_out, 'w') as out:

@@ -134,12 +134,11 @@ def split_by_cells(high_confidence_barcodes,wells_cells_file,output_dir,fastq1,f
     high_conf = pd.merge(plate_mapping,high_confidence_barcodes,on=["cell_barcode","umi_barcode"])
     final_output = pd.DataFrame([{"cell_name":cell_name, "#reads":
         (high_conf[(high_conf["cell_name"] == cell_name)]["num"].sum()),
-                                  "umi distribution":[count for count in [high_conf[((high_conf["cell_name"] == cell_name) & (high_conf["umi_barcode"] == umi))]["num"].sum() for umi in pd.unique(high_conf[(high_conf["cell_name"] == cell_name)]["umi_barcode"])]]}
-                                 for cell_name in pd.unique(high_conf["cell_name"])],columns=["cell_name","#reads","#umi"])
+                                  "#umi distribution":[count for count in [high_conf[((high_conf["cell_name"] == cell_name) & (high_conf["umi_barcode"] == umi))]["num"].sum() for umi in pd.unique(high_conf[(high_conf["cell_name"] == cell_name)]["umi_barcode"])]]}
+                                 for cell_name in pd.unique(high_conf["cell_name"])],columns=["cell_name","#umi distribution"])
     final_output.to_csv(output_dir + "/final_output.csv")
     high_conf.to_csv(output_dir + "/final_high_conf.csv")
     create_fasta_per_cell(fastq1, fastq2, high_confidence_barcodes, map, output_dir)
-
 
 
 def create_fasta_per_cell(fastq1, fastq2, high_confidence_barcodes, map, output_dir):
@@ -156,9 +155,10 @@ def create_fasta_per_cell(fastq1, fastq2, high_confidence_barcodes, map, output_
             if cell_barcode in map.keys() and ((high_confidence_barcodes["cell_barcode"] == cell_barcode) & (
                 high_confidence_barcodes["umi_barcode"] == umi_barcode)).any():
                 cell_name = map[cell_barcode]
-                cell_dir = os.path.join(output_dir, cell_name)
-                io_func.makeOutputDir(cell_dir + "/reads")
-                cell_fasta_file = output_dir + "/" + cell_name + "/reads/" + cell_name + ".fasta"
+                #cell_dir = os.path.join(output_dir, cell_name)
+                #io_func.makeOutputDir(cell_dir + "/reads")
+                #cell_fasta_file = output_dir + "/" + cell_name + "/reads/" + cell_name + ".fasta"
+                cell_fasta_file = output_dir + "/" + cell_name + ".fasta"
                 with open(cell_fasta_file, 'a') as fa:
                     fasta_line = r1[line]
                     query_line = ">" + r1[line - 1][1:-1] + " " + cell_barcode + umi_barcode + "\n"

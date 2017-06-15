@@ -136,7 +136,7 @@ def parse_IgBLAST(receptor, loci, output_dir, cell_name, raw_seq_dir, species,
     locus_names = ["_".join([receptor, x]) for x in loci]
     all_locus_data = defaultdict(dict)
     for locus in locus_names:
-        file = "{output_dir}/IgBLAST_output/{cell_name}_{receptor}_{locus}.IgBLASTOut".format(
+        file = "{output_dir}/{cell_name}_{receptor}_{locus}.IgBLASTOut".format(
                 output_dir=output_dir, cell_name=cell_name,
                 receptor=receptor, locus=locus)
         if os.path.isfile(file):

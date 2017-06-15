@@ -1,6 +1,7 @@
 import argparse
 import os
 import sys
+import glob
 import warnings
 import pickle
 import subprocess
@@ -158,9 +159,13 @@ class Plate_Task(Task):
 
         # Perform core functions
         self.split_to_cells()
+        mapper = [_CELLrun(self.output_dir + "/" + fasta.replace('.fasta',''), self.output_dir + "/" + fasta, self.output_dir)
+                  for fasta in os.listdir(self.output_dir) if ".fasta" in fasta]
+        for job in mapper:
+            job.submit_command(cpu_cores=5, memory=3000, queue="new-short")
+        wait_for_jobs(mapper)
 
-        #if self.full:
-
+        # if self.full:
 
 
     def split_to_cells(self):
@@ -227,6 +232,7 @@ class Cell_Task(Task):
         # self.locus_names = ["TCRA", "TCRB"]
 
     def run(self, **kwargs):
+        '''
         if not os.path.exists(self.output_dir+'/reads'):
             print("dir {}/reads not exists ".format(self.output_dir))
             return
@@ -235,20 +241,21 @@ class Cell_Task(Task):
                          receptor=self.receptor_name)]
         for d in data_dirs:
             io_func.makeOutputDir("{}/{}".format(self.output_dir, d))
-
+        '''
         cell = self.ig_blast()
 
         summary = cell.choose_recombinants()
-
+        '''
         filt_file = "{output_dir}/filtered_{receptor}_seqs/filtered_{receptor}s.txt".format(
                 output_dir=self.output_dir,
                 receptor=self.receptor_name)
+        '''
         #self.print_cell_summary(cell,filt_file,self.receptor_name, self.loci)
 
         #cdr3_consensus, consensus = self.create_cdr3_consensus(cell, filt_file)
 
         with open(
-                "{output_dir}/filtered_{receptor}_seqs/{cell_name}.pkl".format(
+                "{output_dir}/{cell_name}.pkl".format(
                     output_dir=self.output_dir,
                     cell_name=cell.name,
                     receptor=self.receptor_name), 'wb') as pf:
@@ -256,7 +263,7 @@ class Cell_Task(Task):
 
         if len(summary[self.receptor_name]) != 0:
             for locus in self.loci:
-                summary[self.receptor_name][locus].to_csv("{output_dir}/filtered_{receptor}_seqs/{cell_name}_{locus}.csv".format(
+                summary[self.receptor_name][locus].to_csv("{output_dir}/{cell_name}_{receptor}_{locus}.csv".format(
                             output_dir=self.output_dir,
                             cell_name=cell.name,
                             receptor=self.receptor_name, locus=locus))
@@ -278,7 +285,7 @@ class Cell_Task(Task):
         cdr3_list = ["> \n" + x[6:] for x in cdr3_list if "Couldn" not in x]
         cdr3_list.sort()
         print(cdr3_list)
-        cdr3_file = "{output_dir}/filtered_{receptor}_seqs/{cell_name}_cdr3.fasta".format(
+        cdr3_file = "{output_dir}/{cell_name}_cdr3.fasta".format(
             output_dir=self.output_dir,
             cell_name=cell.name,
             receptor=self.receptor_name)
@@ -364,6 +371,26 @@ class Cell_Task(Task):
 
         out_file.close()
 
+
+class _CELLrun(LSF):
+    def __init__(self, name, fasta, output_dir,loci='B',receptor_name='TCR', species= 'Hsap',resume_with_existing_files=False):
+        """\
+        name        - cell name
+        fasta       - fasta path of the cell's reads
+        output_dir  - dir of plate of origin
+        species     - cell species (Human=Hsap, Mouse = Mmus)
+
+        """
+
+        # build the alignment comand
+        cell_cmd = "python3.5 gelseq.py cell -s "+ species +" --loci=" + loci + " --receptor_name=" + receptor_name +\
+                   " --resume_with_existing_files=" + resume_with_existing_files + " " + fasta + " " + name + " " + output_dir
+
+        self.cmd = cell_cmd
+
+        # add error and log files for the lsf output
+        self.cmd = " -o " + fasta.replace(".fasta", ".log") + " " + self.cmd
+        self.cmd = " -e "+ fasta.replace(".fasta", ".err") + " " + self.cmd
 
 
 
