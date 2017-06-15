@@ -154,12 +154,11 @@ class Plate_Task(Task):
         root_output_dir = os.path.abspath(self.output_dir)
         io_func.makeOutputDir(root_output_dir)
         self.output_dir = root_output_dir + "/" + self.plate_name
-
         io_func.makeOutputDir(self.output_dir)
 
         # Perform core functions
-        self.split_to_cells()
-        mapper = [_CELLrun(self.output_dir + "/" + fasta.replace('.fasta',''), self.output_dir + "/" + fasta, self.output_dir)
+        #self.split_to_cells()
+        mapper = [_CELLrun(fasta.replace('.fasta',''), self.output_dir + "/" + fasta, self.output_dir)
                   for fasta in os.listdir(self.output_dir) if ".fasta" in fasta]
         for job in mapper:
             job.submit_command(cpu_cores=5, memory=3000, queue="new-short")
@@ -373,7 +372,7 @@ class Cell_Task(Task):
 
 
 class _CELLrun(LSF):
-    def __init__(self, name, fasta, output_dir,loci='B',receptor_name='TCR', species= 'Hsap',resume_with_existing_files=False):
+    def __init__(self, name, fasta, output_dir,loci='B',receptor_name='TCR', species= 'Hsap'):
         """\
         name        - cell name
         fasta       - fasta path of the cell's reads
@@ -383,8 +382,7 @@ class _CELLrun(LSF):
         """
 
         # build the alignment comand
-        cell_cmd = "python3.5 gelseq.py cell -s "+ species +" --loci=" + loci + " --receptor_name=" + receptor_name +\
-                   " --resume_with_existing_files=" + resume_with_existing_files + " " + fasta + " " + name + " " + output_dir
+        cell_cmd = "python3.5 /home/labs/amit/diklag/PycharmProjects/VDJ_proj/gelSeq.py cell -s "+ species +" --loci=" + loci + " --receptor_name=" + receptor_name + " " + fasta + " " + name + " " + output_dir
 
         self.cmd = cell_cmd
 

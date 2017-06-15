@@ -347,20 +347,7 @@ class Cell(object):
                                                                                                    cdr3_ranks.most_common(3)]}],
                                                                  columns=["V","V counts", "D","D counts","J","J counts",
                                                                           "CDR3","CDR3 counts"])
-                        '''
-                        ret_str[receptor][locus] = ""
-                        ret_str[receptor][locus] += 'V:\t'
-                        for seq in V_most_common:
-                            ret_str[receptor][locus] += seq + " " + str(V_ranks[seq]/len(recombinants)) + '\t'
-                        ret_str[receptor][locus] += '\nD:\t'
-                        for seq in D_most_common:
-                            ret_str[receptor][locus] += seq + " " + str(D_ranks[seq]/len(recombinants))  + '\t'
-                        ret_str[receptor][locus] += '\nJ:\t'
-                        for seq in J_most_common:
-                            ret_str[receptor][locus] += seq + " " + str(J_ranks[seq]/len(recombinants)) + '\t'
-                        for seq in CDR3_most_common:
-                            ret_str[receptor][locus] += seq + " " + str(cdr3_ranks[seq]/len(recombinants)) + '\t'
-                        '''
+
                         to_remove = []
                         set_common = V_most_common + D_most_common + J_most_common
                         for rec in recombinants:

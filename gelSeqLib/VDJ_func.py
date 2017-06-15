@@ -162,7 +162,7 @@ def find_possible_alignments(sample_dict, locus_names, cell_name, IMGT_seqs, out
 
                     # get original sequence from fasta file - needed for summary of reconstructed lengths.
                     # Only use the VDJ portion found by IgBLAST
-                    fasta_file = "{output_dir}/reads/{cell_name}.fasta".format(
+                    fasta_file = "{output_dir}/{cell_name}.fasta".format(
                         output_dir=output_dir, cell_name=cell_name)
                     with open(fasta_file, 'rU') as fa:
                         for record in SeqIO.parse(fa, 'fasta'):
@@ -844,7 +844,7 @@ def run_IgBlast(igblast, fasta, receptor, loci, output_dir, cell_name, species,i
     # http://stackoverflow.com/questions/11269575/how-to-hide-output-of-subprocess-in-python-2-7
     DEVNULL = open(os.devnull, 'wb')
 
-    for locus in locus_names:
+    for locus in loci:
         print("##{}##".format(locus))
         command = [igblast, '-germline_db_V', databases['V'],
                    '-germline_db_D', databases['D'],
