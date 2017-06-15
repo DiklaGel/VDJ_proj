@@ -5,6 +5,7 @@ import six
 from Bio.Alphabet import generic_dna
 from Bio.Seq import Seq
 import pdb
+import pandas as pd
 
 class Basic_Cell(object):
     def __init__(self, cell_name, barcode_df, species="Hsap"):
@@ -22,6 +23,8 @@ class Cell(object):
         self.bgcolor = None
         self.recombinants = self._process_recombinants(recombinants, receptor,
                                                        loci)
+        self.pre_filtering_reads = self.get_len()
+        self.after_filtering_reads = defaultdict(dict)
         self.is_empty = self._check_is_empty()
         self.species = species
         # self.cdr3_comparisons = {'A': None, 'B': None, 'mean_both': None}
@@ -34,6 +37,12 @@ class Cell(object):
 
 
         # self.is_inkt = self._check_if_inkt()
+    def get_len(self):
+        len_dict = defaultdict(dict)
+        for receptor in self.recombinants.keys():
+            for locus in  self.recombinants[receptor].keys():
+                len_dict[receptor][locus] = len(self.recombinants[receptor][locus])
+        return len_dict
 
     def _process_recombinants(self, recombinants, receptor, loci):
         recombinant_dict = defaultdict(dict)
@@ -301,6 +310,7 @@ class Cell(object):
 
     def choose_recombinants(self):
         ret_str = defaultdict(dict)
+        ret_dict = defaultdict(dict)
         for receptor, locus_dict in six.iteritems(self.recombinants):
             for locus, recombinants in six.iteritems(locus_dict):
                 if recombinants is not None:
@@ -316,21 +326,29 @@ class Cell(object):
                                 D_ranks.update({str(seq): 1})
                             for seq in rec.summary[2].split(","):
                                 J_ranks.update({str(seq): 1})
-                            #if type(rec.cdr3) is Seq:
-                                #cdr3_ranks.update({rec.cdr3._data: 1})
-
+                            cdr3_ranks.update({rec.cdr3[1]: 1})
 
                         V_most_common = [x[0] for x in
-                                         V_ranks.most_common(2)]
+                                         V_ranks.most_common(3)]
                         D_most_common = [x[0] for x in
-                                         D_ranks.most_common(2)]
+                                         D_ranks.most_common(3)]
                         J_most_common = [x[0] for x in
-                                         J_ranks.most_common(2)]
-                        #CDR3_most_common = [x[0] for x in
-                                         #cdr3_ranks.most_common(2)]
+                                         J_ranks.most_common(3)]
+                        CDR3_most_common = [x[0] for x in
+                                         cdr3_ranks.most_common(3)]
 
+                        ret_dict[receptor][locus] = pd.DataFrame([{"cell_name": self.name ,"V": [x[0] for x in V_ranks.most_common(3)],
+                                                                   "V counts": [x[1] for x in V_ranks.most_common(3)],
+                                    "D": [x[0] for x in D_ranks.most_common(3)],"D counts": [x[1] for x in
+                                         D_ranks.most_common(3)],
+                                    "J": [x[0] for x in J_ranks.most_common(3)],"J counts": [x[1] for x in
+                                         J_ranks.most_common(3)],
+                                    "CDR3": [x[0] for x in cdr3_ranks.most_common(3)],"CDR3 counts": [x[1] for x in
+                                                                                                   cdr3_ranks.most_common(3)]}],
+                                                                 columns=["V","V counts", "D","D counts","J","J counts",
+                                                                          "CDR3","CDR3 counts"])
+                        '''
                         ret_str[receptor][locus] = ""
-
                         ret_str[receptor][locus] += 'V:\t'
                         for seq in V_most_common:
                             ret_str[receptor][locus] += seq + " " + str(V_ranks[seq]/len(recombinants)) + '\t'
@@ -340,7 +358,9 @@ class Cell(object):
                         ret_str[receptor][locus] += '\nJ:\t'
                         for seq in J_most_common:
                             ret_str[receptor][locus] += seq + " " + str(J_ranks[seq]/len(recombinants)) + '\t'
-
+                        for seq in CDR3_most_common:
+                            ret_str[receptor][locus] += seq + " " + str(cdr3_ranks[seq]/len(recombinants)) + '\t'
+                        '''
                         to_remove = []
                         set_common = V_most_common + D_most_common + J_most_common
                         for rec in recombinants:
@@ -357,7 +377,8 @@ class Cell(object):
 
                         for rec in to_remove:
                             self.recombinants[receptor][locus].remove(rec)
-        return ret_str
+        self.after_filtering_reads = self.get_len()
+        return ret_dict
 
 
 
@@ -375,7 +396,7 @@ class Recombinant(object):
                  productive, stop_codon, in_frame, TPM,
                  dna_seq, hit_table, summary, junction_details, best_VJ_names,
                  alignment_summary, fasta_seq,
-                 imgt_reconstructed_seq, has_D):
+                 imgt_reconstructed_seq, has_D,cdr3):
         self.contig_name = contig_name
         self.locus = locus
         self.identifier = identifier
@@ -383,7 +404,8 @@ class Recombinant(object):
         self.productive = productive
         self.TPM = TPM
         self.dna_seq = dna_seq
-        self.cdr3 = self._get_cdr3(dna_seq)
+        #self.cdr3 = self._get_cdr3(dna_seq)
+        self.cdr3 = cdr3
         self.hit_table = hit_table
         self.summary = summary
         self.junction_details = junction_details

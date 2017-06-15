@@ -231,41 +231,21 @@ class Cell_Task(Task):
             print("dir {}/reads not exists ".format(self.output_dir))
             return
 
-
-        data_dirs = ['IgBLAST_output',
-                     'unfiltered_{receptor}_seqs'.format(
-                         receptor=self.receptor_name),
-                     'expression_quantification',
-                     'filtered_{receptor}_seqs'.format(
+        data_dirs = ['IgBLAST_output','filtered_{receptor}_seqs'.format(
                          receptor=self.receptor_name)]
         for d in data_dirs:
             io_func.makeOutputDir("{}/{}".format(self.output_dir, d))
 
         cell = self.ig_blast()
 
-        self.print_cell_summary(
-            cell,
-            "{output_dir}/unfiltered_{receptor}_seqs/unfiltered_{receptor}s.txt".format(
-                output_dir=self.output_dir,
-                receptor=self.receptor_name),
-            self.receptor_name, self.loci)
-
-        with open(
-                "{output_dir}/unfiltered_{receptor}_seqs/{cell_name}.pkl".format(
-                    output_dir=self.output_dir,
-                    cell_name=self.cell_name,
-                    receptor=self.receptor_name), 'wb') as pf:
-            pickle.dump(cell, pf, protocol=0)
-
         summary = cell.choose_recombinants()
 
         filt_file = "{output_dir}/filtered_{receptor}_seqs/filtered_{receptor}s.txt".format(
                 output_dir=self.output_dir,
                 receptor=self.receptor_name)
-        self.print_cell_summary(
-            cell,filt_file,self.receptor_name, self.loci)
+        #self.print_cell_summary(cell,filt_file,self.receptor_name, self.loci)
 
-        cdr3_consensus, consensus = self.create_cdr3_consensus(cell, filt_file)
+        #cdr3_consensus, consensus = self.create_cdr3_consensus(cell, filt_file)
 
         with open(
                 "{output_dir}/filtered_{receptor}_seqs/{cell_name}.pkl".format(
@@ -275,16 +255,23 @@ class Cell_Task(Task):
             pickle.dump(cell, pf, protocol=0)
 
         if len(summary[self.receptor_name]) != 0:
-            with open(
-                    "{output_dir}/filtered_{receptor}_seqs/{cell_name}.txt".format(
-                        output_dir=self.output_dir,
-                        cell_name=cell.name,
-                        receptor=self.receptor_name), 'w') as pf:
-                for locus in self.loci:
-                    pf.write("locus = " + locus + '\n')
-                    pf.write(summary[self.receptor_name][locus] +'\n')
-                    pf.write("CDR3:" + cdr3_consensus + '\n')
-                    pf.write("CDR3_freq:" + str(consensus) + '\n')
+            for locus in self.loci:
+                summary[self.receptor_name][locus].to_csv("{output_dir}/filtered_{receptor}_seqs/{cell_name}_{locus}.csv".format(
+                            output_dir=self.output_dir,
+                            cell_name=cell.name,
+                            receptor=self.receptor_name, locus=locus))
+                '''
+                with open(
+                        "{output_dir}/filtered_{receptor}_seqs/{cell_name}_{locus}".format(
+                            output_dir=self.output_dir,
+                            cell_name=cell.name,
+                            receptor=self.receptor_name, locus=locus), 'w') as pf:
+                        pf.write(str(summary[self.receptor_name][locus]))
+                        pf.write("locus = " + locus + '\n')
+                        pf.write(summary[self.receptor_name][locus] +'\n')
+                        pf.write("CDR3:" + cdr3_consensus + '\n')
+                        pf.write("CDR3_freq:" + str(consensus) + '\n')
+                        '''
 
     def create_cdr3_consensus(self, cell, filt_file):
         cdr3_list = subprocess.getoutput("grep ^CDR3: %s" % (filt_file)).split("\n")
@@ -301,7 +288,9 @@ class Cell_Task(Task):
         junk_file = open("junk_file", 'w')
         al_file = align_func.clustalo_align(cdr3_file, junk_file)
         os.remove("junk_file")
+        os.remove(cdr3_file)
         cdr3_consensus, freq = align_func.make_consensus(al_file, "fasta")
+        os.remove(al_file)
         consensus = [(cdr3_consensus[i],freq[i]) for i in range(0,len(cdr3_consensus))]
         return cdr3_consensus, consensus
 
@@ -311,14 +300,14 @@ class Cell_Task(Task):
         # Reference data locations
         igblast_index_location = self.get_index_location('igblast_dbs')
         imgt_seq_location = self.get_index_location('raw_seqs')
-
+        aux_file_location = self.get_index_location('gl.aux')
         igblast_seqtype = self.config.get('IgBlast_options', 'igblast_seqtype')
 
         # IgBlast of assembled contigs
         VDJ_func.run_IgBlast(igblastn, self.fasta, self.receptor_name, self.loci,
                                 self.output_dir, self.cell_name, self.species,
                                 igblast_index_location,
-                                igblast_seqtype,self.resume_with_existing_files)
+                                igblast_seqtype,aux_file_location,self.resume_with_existing_files)
         print()
 
         with warnings.catch_warnings():
@@ -362,6 +351,13 @@ class Cell_Task(Task):
                     "No {receptor}_{locus} recombinants found\n\n".format(
                         receptor=receptor_name, locus=l))
             else:
+                a = cell.pre_filtering_reads[receptor_name][l]
+                out_file.write("# records before filtering: %d \n" % a)
+
+                if cell.after_filtering_reads is not None and len(cell.after_filtering_reads) != 0 :
+                    b = cell.after_filtering_reads[receptor_name][l]
+                    out_file.write("# records after filtering: %d \n" % b)
+
                 for r in rs:
                     out_file.write(r.get_summary())
                     out_file.write("\n\n")

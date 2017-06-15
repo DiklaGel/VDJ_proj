@@ -132,6 +132,11 @@ def split_by_cells(high_confidence_barcodes,wells_cells_file,output_dir,fastq1,f
                                                   for r in high_confidence_barcodes[high_confidence_barcodes["cell_barcode"]==barcode]["umi_barcode"].__iter__()])
             map[barcode] = cell_name
     high_conf = pd.merge(plate_mapping,high_confidence_barcodes,on=["cell_barcode","umi_barcode"])
+    final_output = pd.DataFrame([{"cell_name":cell_name, "#reads":
+        (high_conf[(high_conf["cell_name"] == cell_name)]["num"].sum()),
+                                  "umi distribution":[count for count in [high_conf[((high_conf["cell_name"] == cell_name) & (high_conf["umi_barcode"] == umi))]["num"].sum() for umi in pd.unique(high_conf[(high_conf["cell_name"] == cell_name)]["umi_barcode"])]]}
+                                 for cell_name in pd.unique(high_conf["cell_name"])],columns=["cell_name","#reads","#umi"])
+    final_output.to_csv(output_dir + "/final_output.csv")
     high_conf.to_csv(output_dir + "/final_high_conf.csv")
     create_fasta_per_cell(fastq1, fastq2, high_confidence_barcodes, map, output_dir)
 

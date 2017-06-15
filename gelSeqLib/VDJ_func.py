@@ -32,11 +32,17 @@ def process_chunk(chunk):
     store_junction_details = False
     store_alignment_summary = False
     store_hit_table = False
+    store_sub_region = False
     alignment_summary = []
     hit_table = []
     looking_for_end = False
     return_dict = defaultdict(list)
     for line_x in chunk:
+        if store_sub_region:
+            sub_region_details = line_x.split("\t")
+            for i in sub_region_details:
+                return_dict['sub_region_details'].append(i)
+            store_sub_region = False
 
         if store_VDJ_rearrangement_summary:
             VDJ_rearrangement_summary = line_x.split("\t")
@@ -73,6 +79,9 @@ def process_chunk(chunk):
             #query_length = line_x.split(" ")[3]
             #return_dict['query_length'] = int(query_length.split("=")[1])
             return_dict['query_name'] = query_name
+
+        elif line_x.startswith('# Sub-region sequence details'):
+            store_sub_region = True
 
         elif line_x.startswith('# V-(D)-J rearrangement summary'):
             store_VDJ_rearrangement_summary = True
@@ -181,6 +190,7 @@ def find_possible_alignments(sample_dict, locus_names, cell_name, IMGT_seqs, out
                             rearrangement_summary, junction_list, good_hits,
                             returned_locus, IMGT_seqs, cell_name,
                             query_name, species, loci_for_segments)
+                    cdr3 = data_for_locus[query_name]['sub_region_details']
 
                     if len(junc_string) < max_junc_string_length:
                         rec = core.Recombinant(contig_name=query_name,
@@ -198,17 +208,19 @@ def find_possible_alignments(sample_dict, locus_names, cell_name, IMGT_seqs, out
                                           alignment_summary=alignment_summary,
                                           fasta_seq=fasta_seq,
                                           imgt_reconstructed_seq=imgt_reconstructed_seq,
-                                          has_D=has_D)
+                                          has_D=has_D,
+                                               cdr3=cdr3)
                         recombinants[locus].append(rec)
 
 
     if recombinants:
+        '''
         for locus, rs in six.iteritems(recombinants):
             # Adding code to collapse sequences with very low Levenshtein distances caused by confusion between
             # TRAVxD and TRAVx segments with different alignment lengths from
             # IgBlast.
             recombinants[locus] = collapse_close_sequences(rs, locus)
-
+        '''
         cell = core.Cell(cell_name, recombinants, species=species, receptor=receptor,
                     loci=loci)
 
@@ -568,7 +580,8 @@ def collapse_close_sequences(recombinants, locus):
     for r in recombinants:
         if not r.contig_name in filtered_contig_names:
             recombinants_to_delete.append(r)
-
+    print("recombinants_to_delete")
+    print(str(recombinants_to_delete))
     [recombinants.remove(r) for r in recombinants_to_delete]
 
     return (recombinants)
@@ -786,7 +799,7 @@ def check_config_file(filename):
 
 
 def run_IgBlast(igblast, fasta, receptor, loci, output_dir, cell_name, species,index_location,
-                ig_seqtype,should_resume):
+                ig_seqtype,aux_file_location,should_resume):
     print("##Running IgBLAST##")
 
     species_mapper = {
@@ -795,6 +808,7 @@ def run_IgBlast(igblast, fasta, receptor, loci, output_dir, cell_name, species,i
     }
 
     igblast_species = species_mapper[species]
+
     initial_locus_names = ["_".join([receptor, x]) for x in loci]
     locus_names = copy.copy(initial_locus_names)
     if should_resume:
@@ -831,9 +845,9 @@ def run_IgBlast(igblast, fasta, receptor, loci, output_dir, cell_name, species,i
                    '-germline_db_D', databases['D'],
                    '-germline_db_J', databases['J'], '-domain_system',
                    'imgt', '-organism', igblast_species,
-                   '-ig_seqtype', ig_seqtype, '-show_translation',
-                   '-num_alignments_V', '5',
-                   '-num_alignments_D', '5', '-num_alignments_J', '5',
+                   '-ig_seqtype', ig_seqtype,'-auxiliary_data',aux_file_location, '-show_translation',
+                   '-num_alignments_V', '2',
+                   '-num_alignments_D', '2', '-num_alignments_J', '2',
                    '-outfmt', '7', '-query', fasta]
         igblast_out = "{output_dir}/IgBLAST_output/{cell_name}_{receptor}_{locus}.IgBLASTOut".format(
                 output_dir=output_dir, cell_name=cell_name,
