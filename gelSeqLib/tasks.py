@@ -5,6 +5,7 @@ import glob
 import warnings
 import pickle
 import subprocess
+import pandas as pd
 sys.path.insert(0, '/home/labs/amit/diklag/python_libs/python_lsf_wrapper/')
 from LSF import LSF, wait_for_jobs
 
@@ -157,15 +158,21 @@ class Plate_Task(Task):
         io_func.makeOutputDir(self.output_dir)
 
         # Perform core functions
-        #self.split_to_cells()
+        self.split_to_cells()
         mapper = [_CELLrun(fasta.replace('.fasta',''), self.output_dir + "/" + fasta, self.output_dir)
                   for fasta in os.listdir(self.output_dir) if ".fasta" in fasta]
         for job in mapper:
             job.submit_command(cpu_cores=5, memory=3000, queue="new-short")
         wait_for_jobs(mapper)
+        df1 = pd.read_csv(self.output_dir + "/final_output.csv")
+        list_csv = [self.output_dir + "/" + file for file in os.listdir(self.output_dir) if ".csv" in file and name not in file for name in ["output","high","final"] ]
+        df2 = pd.DataFrame(columns=["cell_name","V","V counts", "D","D counts","J","J counts",
+                                                                          "CDR3","CDR3 counts"])
+        for file in list_csv:
+            df2 = df2.append(pd.read_csv(file), ignore_index=True)
 
-        # if self.full:
-
+        df1 = pd.merge(df1,df2,on="cell_name")
+        df1.to_csv(self.output_dir + "/final_table.csv")
 
     def split_to_cells(self):
         high_confidence_barcodes = plate_to_cells.filter_abundant_barcodes(self.fastq2)
@@ -329,6 +336,7 @@ class Cell_Task(Task):
                 self.die_with_empty_cell(self.cell_name, self.output_dir,
                                          self.species)
             '''
+
         return cell
 
 

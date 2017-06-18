@@ -223,7 +223,6 @@ def find_possible_alignments(sample_dict, locus_names, cell_name, IMGT_seqs, out
         '''
         cell = core.Cell(cell_name, recombinants, species=species, receptor=receptor,
                     loci=loci)
-
     else:
         cell = core.Cell(cell_name, None, species=species,
                     invariant_seqs=invariant_seqs, receptor=receptor, loci=loci)
@@ -404,7 +403,6 @@ def process_hit_table(query_name, query_data, locus):
 
     for entry in hit_table:
         if not entry == "":
-
             entry = entry.split("\t")
             segment = entry[2]
             if segment_locus_pattern.search(segment):
@@ -844,8 +842,7 @@ def run_IgBlast(igblast, fasta, receptor, loci, output_dir, cell_name, species,i
     # http://stackoverflow.com/questions/11269575/how-to-hide-output-of-subprocess-in-python-2-7
     DEVNULL = open(os.devnull, 'wb')
 
-    for locus in loci:
-        print("##{}##".format(locus))
+    for locus in locus_names:
         command = [igblast, '-germline_db_V', databases['V'],
                    '-germline_db_D', databases['D'],
                    '-germline_db_J', databases['J'], '-domain_system',
@@ -854,9 +851,8 @@ def run_IgBlast(igblast, fasta, receptor, loci, output_dir, cell_name, species,i
                    '-num_alignments_V', '2',
                    '-num_alignments_D', '2', '-num_alignments_J', '2',
                    '-outfmt', '7', '-query', fasta]
-        igblast_out = "{output_dir}/{cell_name}_{receptor}_{locus}.IgBLASTOut".format(
-                output_dir=output_dir, cell_name=cell_name,
-                receptor=receptor, locus=locus)
+        igblast_out = "{output_dir}/{cell_name}_{locus}.IgBLASTOut".format(
+                output_dir=output_dir, cell_name=cell_name,locus=locus)
         with open(igblast_out, 'w') as out:
             # print(" ").join(pipes.quote(s) for s in command)
             subprocess.check_call(command, stdout=out, stderr=DEVNULL)

@@ -136,15 +136,13 @@ def parse_IgBLAST(receptor, loci, output_dir, cell_name, raw_seq_dir, species,
     locus_names = ["_".join([receptor, x]) for x in loci]
     all_locus_data = defaultdict(dict)
     for locus in locus_names:
-        file = "{output_dir}/{cell_name}_{receptor}_{locus}.IgBLASTOut".format(
+        file = "{output_dir}/{cell_name}_{locus}.IgBLASTOut".format(
                 output_dir=output_dir, cell_name=cell_name,
                 receptor=receptor, locus=locus)
         if os.path.isfile(file):
             igblast_result_chunks = split_igblast_file(file)
-
             for chunk in igblast_result_chunks:
                 (query_name, chunk_details) = process_chunk(chunk)
-
                 all_locus_data[locus][query_name] = chunk_details
         else:
             all_locus_data[locus] = None
@@ -155,6 +153,12 @@ def parse_IgBLAST(receptor, loci, output_dir, cell_name, raw_seq_dir, species,
                                     invariant_seqs, loci_for_segments, receptor,
                                     loci, max_junc_len)
 
+    for locus in locus_names:
+        file = "{output_dir}/{cell_name}_{locus}.IgBLASTOut".format(
+            output_dir=output_dir, cell_name=cell_name,
+            receptor=receptor, locus=locus)
+        if os.path.isfile(file):
+            os.remove(file)
     return (cell)
 
 

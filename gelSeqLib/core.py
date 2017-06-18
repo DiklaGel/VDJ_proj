@@ -309,7 +309,6 @@ class Cell(object):
                         return (True)
 
     def choose_recombinants(self):
-        ret_str = defaultdict(dict)
         ret_dict = defaultdict(dict)
         for receptor, locus_dict in six.iteritems(self.recombinants):
             for locus, recombinants in six.iteritems(locus_dict):
@@ -326,16 +325,8 @@ class Cell(object):
                                 D_ranks.update({str(seq): 1})
                             for seq in rec.summary[2].split(","):
                                 J_ranks.update({str(seq): 1})
-                            cdr3_ranks.update({rec.cdr3[1]: 1})
-
-                        V_most_common = [x[0] for x in
-                                         V_ranks.most_common(3)]
-                        D_most_common = [x[0] for x in
-                                         D_ranks.most_common(3)]
-                        J_most_common = [x[0] for x in
-                                         J_ranks.most_common(3)]
-                        CDR3_most_common = [x[0] for x in
-                                         cdr3_ranks.most_common(3)]
+                            if rec.cdr3 is not None and len(rec.cdr3) != 0:
+                                cdr3_ranks.update({rec.cdr3[1]: 1})
 
                         ret_dict[receptor][locus] = pd.DataFrame([{"cell_name": self.name ,"V": [x[0] for x in V_ranks.most_common(3)],
                                                                    "V counts": [x[1] for x in V_ranks.most_common(3)],
@@ -345,10 +336,21 @@ class Cell(object):
                                          J_ranks.most_common(3)],
                                     "CDR3": [x[0] for x in cdr3_ranks.most_common(3)],"CDR3 counts": [x[1] for x in
                                                                                                    cdr3_ranks.most_common(3)]}],
-                                                                 columns=["V","V counts", "D","D counts","J","J counts",
+                                                                 columns=["cell_name","V","V counts", "D","D counts","J","J counts",
                                                                           "CDR3","CDR3 counts"])
+                        print(str(ret_dict[receptor][locus]))
+                        '''
+                        V_most_common = [x[0] for x in
+                                         V_ranks.most_common(3)]
+                        D_most_common = [x[0] for x in
+                                         D_ranks.most_common(3)]
+                        J_most_common = [x[0] for x in
+                                         J_ranks.most_common(3)]
+                        CDR3_most_common = [x[0] for x in
+                                         cdr3_ranks.most_common(3)]
 
                         to_remove = []
+
                         set_common = V_most_common + D_most_common + J_most_common
                         for rec in recombinants:
                             if not(self.are_intersects(rec.summary[0].split(','),V_most_common) and self.are_intersects(rec.summary[1].split(','),D_most_common)\
@@ -364,7 +366,10 @@ class Cell(object):
 
                         for rec in to_remove:
                             self.recombinants[receptor][locus].remove(rec)
+                        '''
         self.after_filtering_reads = self.get_len()
+        print("ret_dict")
+        print(str(ret_dict))
         return ret_dict
 
 
