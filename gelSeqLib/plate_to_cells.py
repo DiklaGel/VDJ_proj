@@ -119,23 +119,31 @@ def gunzip_fastq(file,dest):
 def split_by_cells(high_confidence_barcodes,wells_cells_file,output_dir,fastq1,fastq2):
     cells_to_path = dict()
     map_cell_to_barcode = pd.read_csv(wells_cells_file, delimiter='\t',
-                                      usecols=['well_coordinates', 'Cell_barcode', 'Amp_batch_ID', 'plate_ID'])
+                                      usecols=['Well_ID','well_coordinates', 'Cell_barcode', 'Amp_batch_ID', 'plate_ID'])
     # grouping to cells by barcodes
     checked_cells, cell_barcode_mapping = group_to_cells(high_confidence_barcodes, map_cell_to_barcode)
     #generate a data frame with columns=["cell_name","cell_barcode","umi_barcode","query_names","lines"]
     map = dict()
-    plate_mapping = pd.DataFrame(columns=["cell_name","cell_barcode","umi_barcode"])
+    plate_mapping = pd.DataFrame(columns=["well_id","cell_name","cell_barcode","umi_barcode"])
     for cell_barcode in checked_cells.keys():
         cell_name = map_cell_to_barcode[map_cell_to_barcode['Cell_barcode'] == cell_barcode]['well_coordinates'].tolist()[0]
+        well_id = map_cell_to_barcode[map_cell_to_barcode['Cell_barcode'] == cell_barcode]['Well_ID'].tolist()[0]
         for barcode in cell_barcode_mapping[cell_barcode]:
-            plate_mapping = plate_mapping.append([{"cell_name": cell_name,"cell_barcode": barcode,"umi_barcode": r}
-                                                  for r in high_confidence_barcodes[high_confidence_barcodes["cell_barcode"]==barcode]["umi_barcode"].__iter__()])
+            to_append = [{"well_id":well_id,"cell_name": cell_name,"cell_barcode": barcode,"umi_barcode": r}
+                                                  for r in high_confidence_barcodes[high_confidence_barcodes["cell_barcode"]==barcode]["umi_barcode"].__iter__()]
+            for i in range (len(to_append),0,-1):
+                    for j in range(0,i):
+                        if align_func.hamming_distance(to_append[i]["umi_barcode"],to_append[j]["umi_barcode"]) <=1:
+                            to_append[i]["umi_barcode"] = to_append[j]["umi_barcode"]
+                            break
+            plate_mapping = plate_mapping.append(to_append)
             map[barcode] = cell_name
     high_conf = pd.merge(plate_mapping,high_confidence_barcodes,on=["cell_barcode","umi_barcode"])
-    final_output = pd.DataFrame([{"cell_name":cell_name, "#reads":
-        (high_conf[(high_conf["cell_name"] == cell_name)]["num"].sum()),
+    final_output = pd.DataFrame([{"well_id":well_id,"cell_name":high_conf[(high_conf["well_id"] == well_id)]["cell_name"].tolist()[0], "#reads":
+        (high_conf[(high_conf["well_id"] == well_id)]["num"].sum()),
                                   "#umi distribution":[count for count in [high_conf[((high_conf["cell_name"] == cell_name) & (high_conf["umi_barcode"] == umi))]["num"].sum() for umi in pd.unique(high_conf[(high_conf["cell_name"] == cell_name)]["umi_barcode"])]]}
-                                 for cell_name in pd.unique(high_conf["cell_name"])],columns=["cell_name","#umi distribution"])
+                                 for cell_name in pd.unique(high_conf["cell_name"])],columns=["cell_name","#reads","#umi distribution"])
+
     final_output.to_csv(output_dir + "/final_output.csv")
     high_conf.to_csv(output_dir + "/final_high_conf.csv")
     create_fasta_per_cell(fastq1, fastq2, high_confidence_barcodes, map, output_dir)

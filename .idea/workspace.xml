@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1f3e8759-58e1-4dbd-80d5-980aa4a2fe39" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gelSeqLib/VDJ_func.py" afterPath="$PROJECT_DIR$/gelSeqLib/VDJ_func.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gelSeqLib/core.py" afterPath="$PROJECT_DIR$/gelSeqLib/core.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gelSeqLib/io_func.py" afterPath="$PROJECT_DIR$/gelSeqLib/io_func.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gelSeqLib/plate_to_cells.py" afterPath="$PROJECT_DIR$/gelSeqLib/plate_to_cells.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gelSeqLib/tasks.py" afterPath="$PROJECT_DIR$/gelSeqLib/tasks.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,39 +22,22 @@
       <file leaf-file-name="tasks.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gelSeqLib/tasks.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="329" column="31" lean-forward="false" selection-start-line="329" selection-start-column="31" selection-end-line="329" selection-end-column="31" />
+            <state relative-caret-position="402">
+              <caret line="167" column="0" lean-forward="true" selection-start-line="167" selection-start-column="0" selection-end-line="167" selection-end-column="0" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
                 <element signature="e#404#2650#0" expanded="false" />
-                <element signature="e#12857#13754#0" expanded="false" />
+                <element signature="e#12877#13774#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VDJ_func.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gelSeqLib/VDJ_func.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1290">
-              <caret line="99" column="4" lean-forward="false" selection-start-line="99" selection-start-column="4" selection-end-line="99" selection-end-column="4" />
-              <folding>
-                <element signature="e#1028#1065#0" expanded="true" />
-                <element signature="e#10661#14757#0" expanded="false" />
-                <element signature="e#14802#15260#0" expanded="false" />
-                <element signature="e#15294#15633#0" expanded="false" />
-                <marker date="1497539168229" expanded="false" signature="24494:27951" ph="..." />
-                <marker date="1497539168229" expanded="false" signature="29803:32395" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="io_func.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="io_func.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gelSeqLib/io_func.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="160" column="26" lean-forward="false" selection-start-line="160" selection-start-column="26" selection-end-line="160" selection-end-column="26" />
+            <state relative-caret-position="-1237">
+              <caret line="103" column="33" lean-forward="false" selection-start-line="103" selection-start-column="28" selection-end-line="103" selection-end-column="33" />
               <folding>
                 <element signature="e#2483#2844#0" expanded="false" />
                 <element signature="e#2885#2985#0" expanded="false" />
@@ -66,51 +47,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="core.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gelSeqLib/core.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="87">
-              <caret line="322" column="26" lean-forward="false" selection-start-line="322" selection-start-column="26" selection-end-line="322" selection-end-column="26" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-                <element signature="e#2443#2868#0" expanded="false" />
-                <element signature="e#2868#2895#0" expanded="false" />
-                <element signature="e#4159#4208#0" expanded="false" />
-                <element signature="e#4620#6000#0" expanded="false" />
-                <element signature="e#6080#7515#0" expanded="false" />
-                <element signature="e#7548#7566#0" expanded="false" />
-                <element signature="e#7608#8703#0" expanded="false" />
-                <element signature="e#8745#9866#0" expanded="false" />
-                <element signature="e#9931#10404#0" expanded="false" />
-                <element signature="e#10449#11295#0" expanded="false" />
-                <element signature="e#11367#11573#0" expanded="false" />
-                <element signature="e#11640#11781#0" expanded="false" />
-                <element signature="e#11841#12037#0" expanded="false" />
-                <element signature="e#12095#12331#0" expanded="false" />
-                <element signature="e#18643#20451#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="run_plate.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/testing_dir/run_plate.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="1" lean-forward="false" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="172" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="plate_to_cells.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="plate_to_cells.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gelSeqLib/plate_to_cells.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1890">
-              <caret line="134" column="16" lean-forward="false" selection-start-line="134" selection-start-column="4" selection-end-line="134" selection-end-column="16" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="203">
+              <caret line="149" column="0" lean-forward="true" selection-start-line="149" selection-start-column="0" selection-end-line="149" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -128,7 +70,6 @@
     <findStrings>
       <find>IGBLASTN</find>
       <find>collap</find>
-      <find>parse</find>
       <find>process_hi</find>
       <find>process_h</find>
       <find>cdr3</find>
@@ -144,7 +85,6 @@
       <find>reads</find>
       <find>ret_dict</find>
       <find>locus</find>
-      <find>final</find>
       <find>&quot;reads</find>
       <find>recom</find>
       <find>run</find>
@@ -153,9 +93,11 @@
       <find>{cell_name}</find>
       <find>per</find>
       <find>perf</find>
-      <find>final_output</find>
       <find>from_</find>
       <find>choos</find>
+      <find>parse</find>
+      <find>final_output</find>
+      <find>final</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -189,20 +131,20 @@
         <option value="$USER_HOME$/python_libs/python_lsf_wrapper/uria.py" />
         <option value="$USER_HOME$/python_libs/python_lsf_wrapper/LSF.py" />
         <option value="$PROJECT_DIR$/gelSeq.py" />
-        <option value="$PROJECT_DIR$/gelSeqLib/plate_to_cells.py" />
         <option value="$PROJECT_DIR$/plates/108_S12_L001/A9.log" />
         <option value="$PROJECT_DIR$/testing_dir/run_plate.sh" />
         <option value="$PROJECT_DIR$/gelSeqLib/VDJ_func.py" />
         <option value="$PROJECT_DIR$/gelSeqLib/core.py" />
-        <option value="$PROJECT_DIR$/gelSeqLib/tasks.py" />
         <option value="$PROJECT_DIR$/gelSeqLib/io_func.py" />
+        <option value="$PROJECT_DIR$/gelSeqLib/tasks.py" />
+        <option value="$PROJECT_DIR$/gelSeqLib/plate_to_cells.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="9" />
     <option name="y" value="31" />
-    <option name="width" value="1365" />
+    <option name="width" value="1362" />
     <option name="height" value="705" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -344,20 +286,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="VDJ_proj" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="VDJ_proj" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="VDJ_proj" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plates" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -767,19 +695,26 @@
       <option name="project" value="LOCAL" />
       <updated>1497533616948</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="18062017 12:41&#10;&#10;">
+      <created>1497778902286</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1497778902286</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="9" y="31" width="1365" height="705" extended-state="0" />
-    <editor active="true" />
+    <frame x="9" y="31" width="1362" height="705" extended-state="0" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2827839" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22834067" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Debug Logs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27962086" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2764613" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Execute Anonymous" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3222749" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -841,7 +776,8 @@
     <MESSAGE value="15062017 13:48&#10;" />
     <MESSAGE value="15062017 15:39&#10;&#10;" />
     <MESSAGE value="15062017 16:33&#10;&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="15062017 16:33&#10;&#10;" />
+    <MESSAGE value="18062017 12:41&#10;&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="18062017 12:41&#10;&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1060,16 +996,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gelSeqLib/plate_to_cells.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1890">
-          <caret line="134" column="16" lean-forward="false" selection-start-line="134" selection-start-column="4" selection-end-line="134" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gelSeqLib/core.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="87">
@@ -1095,27 +1021,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gelSeqLib/tasks.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="329" column="31" lean-forward="false" selection-start-line="329" selection-start-column="31" selection-end-line="329" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-            <element signature="e#404#2650#0" expanded="false" />
-            <element signature="e#12857#13754#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gelSeqLib/io_func.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="160" column="26" lean-forward="false" selection-start-line="160" selection-start-column="26" selection-end-line="160" selection-end-column="26" />
+        <state relative-caret-position="-1237">
+          <caret line="103" column="33" lean-forward="false" selection-start-line="103" selection-start-column="28" selection-end-line="103" selection-end-column="33" />
           <folding>
             <element signature="e#2483#2844#0" expanded="false" />
             <element signature="e#2885#2985#0" expanded="false" />
             <element signature="e#3034#3202#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gelSeqLib/tasks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="167" column="0" lean-forward="true" selection-start-line="167" selection-start-column="0" selection-end-line="167" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#404#2650#0" expanded="false" />
+            <element signature="e#12877#13774#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gelSeqLib/plate_to_cells.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="149" column="0" lean-forward="true" selection-start-line="149" selection-start-column="0" selection-end-line="149" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
