@@ -163,7 +163,7 @@ class Plate_Task(Task):
         mapper = [_CELLrun(fasta.replace('.fasta',''), self.output_dir + "/" + fasta, self.output_dir)
                   for fasta in os.listdir(self.output_dir) if ".fasta" in fasta]
         for job in mapper:
-            job.submit_command(cpu_cores=5, memory=3000, queue="new-short")
+            job.submit_command(cpu_cores=5, memory=300, queue="new-short")
         wait_for_jobs(mapper)
 
         df1 = pd.read_csv(self.output_dir + "/final_output.csv")

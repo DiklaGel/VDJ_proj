@@ -131,18 +131,23 @@ def split_by_cells(high_confidence_barcodes,wells_cells_file,output_dir,fastq1,f
         for barcode in cell_barcode_mapping[cell_barcode]:
             to_append = [{"well_id":well_id,"cell_name": cell_name,"cell_barcode": barcode,"umi_barcode": r}
                                                   for r in high_confidence_barcodes[high_confidence_barcodes["cell_barcode"]==barcode]["umi_barcode"].__iter__()]
-            for i in range (len(to_append),0,-1):
-                    for j in range(0,i):
-                        if align_func.hamming_distance(to_append[i]["umi_barcode"],to_append[j]["umi_barcode"]) <=1:
-                            to_append[i]["umi_barcode"] = to_append[j]["umi_barcode"]
-                            break
             plate_mapping = plate_mapping.append(to_append)
             map[barcode] = cell_name
     high_conf = pd.merge(plate_mapping,high_confidence_barcodes,on=["cell_barcode","umi_barcode"])
+
+    for cell_name in pd.unique(high_conf["cell_name"]):
+        df = high_conf[high_conf["cell_name"] == cell_name].sort_values(by="num", ascending=True)
+        for i in range(0, len(df)-1):
+            for j in range(len(df) - 1, i, -1):
+                if align_func.hamming_distance(df.loc[i]["umi_barcode"], df.loc[j]["umi_barcode"]) <= 1:
+                    high_conf[i,"umi_barcode"] = df.loc[j]["umi_barcode"]
+                    break
+
     final_output = pd.DataFrame([{"well_id":well_id,"cell_name":high_conf[(high_conf["well_id"] == well_id)]["cell_name"].tolist()[0], "#reads":
         (high_conf[(high_conf["well_id"] == well_id)]["num"].sum()),
                                   "#umi distribution":[count for count in [high_conf[((high_conf["cell_name"] == cell_name) & (high_conf["umi_barcode"] == umi))]["num"].sum() for umi in pd.unique(high_conf[(high_conf["cell_name"] == cell_name)]["umi_barcode"])]]}
                                  for cell_name in pd.unique(high_conf["cell_name"])],columns=["cell_name","#reads","#umi distribution"])
+
 
     final_output.to_csv(output_dir + "/final_output.csv")
     high_conf.to_csv(output_dir + "/final_high_conf.csv")
