@@ -133,24 +133,39 @@ def split_by_cells(high_confidence_barcodes,wells_cells_file,output_dir,fastq1,f
                                                   for r in high_confidence_barcodes[high_confidence_barcodes["cell_barcode"]==barcode]["umi_barcode"].__iter__()]
             plate_mapping = plate_mapping.append(to_append)
             map[barcode] = cell_name
-    high_conf = pd.merge(plate_mapping,high_confidence_barcodes,on=["cell_barcode","umi_barcode"])
+    high_conf = pd.merge(plate_mapping,high_confidence_barcodes, on=["cell_barcode","umi_barcode"], sort=False)
 
-    for cell_name in pd.unique(high_conf["cell_name"]):
-        df = high_conf[high_conf["cell_name"] == cell_name].sort_values(by="num", ascending=True)
-        for i in range(0, len(df)-1):
-            for j in range(len(df) - 1, i, -1):
-                if align_func.hamming_distance(df.loc[i]["umi_barcode"], df.loc[j]["umi_barcode"]) <= 1:
-                    high_conf[i,"umi_barcode"] = df.loc[j]["umi_barcode"]
-                    break
-
-    final_output = pd.DataFrame([{"well_id":well_id,"cell_name":high_conf[(high_conf["well_id"] == well_id)]["cell_name"].tolist()[0], "#reads":
-        (high_conf[(high_conf["well_id"] == well_id)]["num"].sum()),
-                                  "#umi distribution":[count for count in [high_conf[((high_conf["cell_name"] == cell_name) & (high_conf["umi_barcode"] == umi))]["num"].sum() for umi in pd.unique(high_conf[(high_conf["cell_name"] == cell_name)]["umi_barcode"])]]}
-                                 for cell_name in pd.unique(high_conf["cell_name"])],columns=["cell_name","#reads","#umi distribution"])
-
-
-    final_output.to_csv(output_dir + "/final_output.csv")
     high_conf.to_csv(output_dir + "/final_high_conf.csv")
+
+    final_output = pd.DataFrame(columns=["well_id","cell_name","#reads","#umi distribution"])
+    groups = high_conf.groupby("cell_name")
+    for cell_name, cell_group in groups:
+        cell_group = cell_group.sort_values("num",ascending=False)
+        well_id = cell_group.iloc[0]["well_id"]
+        ind = cell_group.index
+        for i in range(len(cell_group) - 1, 0, -1):
+            a = cell_group.iloc[i]["umi_barcode"]
+            for j in range(0, i):
+                b = cell_group.iloc[j]["umi_barcode"]
+                if align_func.hamming_distance(a, b) <= 2:
+                    cell_group.at[ind.values[i], "umi_barcode"] = cell_group.iloc[j]["umi_barcode"]
+                    break
+        final_output = final_output.append([{"well_id": well_id, "cell_name": cell_name,
+                      "#reads": cell_group["num"].sum(),
+                      "#umi distribution":[count for count
+                                           in [cell_group[cell_group["umi_barcode"] == umi]["num"].sum() for umi in pd.unique(cell_group["umi_barcode"])]]}],ignore_index=True)
+        '''
+
+        for i in range(0,len(group)):
+            for j in range(len(group) - 1, i, -1):
+                a = group.loc[i]["umi_barcode"]
+                b =  group.loc[j]["umi_barcode"]
+                if align_func.hamming_distance(a,b) <= 1:
+                    group[j,"umi_barcode"] = group.loc[i]["umi_barcode"]
+        final_output.append({"well_id":well_id, "cell_name":cell_name, "#reads":group["num"].sum(), "#umi distribution":
+            [count for count in group[group["umi_barcode"] == umi]["num"].sum() for umi in pd.unique(group["umi_barcode"])]})
+        '''
+    final_output.to_csv(output_dir + "/final_output.csv")
     create_fasta_per_cell(fastq1, fastq2, high_confidence_barcodes, map, output_dir)
 
 
