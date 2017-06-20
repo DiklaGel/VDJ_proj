@@ -338,7 +338,6 @@ class Cell(object):
                                                                                                    cdr3_ranks.most_common(3)]}],
                                                                  columns=["cell_name","V","V counts", "D","D counts","J","J counts",
                                                                           "CDR3","CDR3 counts"])
-                        print(str(ret_dict[receptor][locus]))
                         '''
                         V_most_common = [x[0] for x in
                                          V_ranks.most_common(3)]

@@ -7,7 +7,7 @@ import pickle
 import subprocess
 import pandas as pd
 sys.path.insert(0, '/home/labs/amit/diklag/python_libs/python_lsf_wrapper/')
-from LSF import LSF, wait_for_jobs
+from LSF import LSF, wait_for_jobs,count_jobs
 
 from configparser import ConfigParser
 
@@ -158,23 +158,27 @@ class Plate_Task(Task):
         io_func.makeOutputDir(self.output_dir)
 
         # Perform core functions
-
+        '''
         self.split_to_cells()
         mapper = [_CELLrun(fasta.replace('.fasta',''), self.output_dir + "/" + fasta, self.output_dir)
                   for fasta in os.listdir(self.output_dir) if ".fasta" in fasta]
         for job in mapper:
             job.submit_command(cpu_cores=5, memory=300, queue="new-short")
+            count_jobs(mapper[0:mapper.index(job) + 1])
         wait_for_jobs(mapper)
-
+        '''
         df1 = pd.read_csv(self.output_dir + "/final_output.csv")
         list_csv = [self.output_dir + "/" + file for file in os.listdir(self.output_dir) if ".csv" in file and "output" not in file and "high" not in file]
         df2 = pd.DataFrame(columns=["cell_name","V","V counts", "D","D counts","J","J counts",
                                                                           "CDR3","CDR3 counts"])
         for file in list_csv:
             df2 = df2.append(pd.read_csv(file), ignore_index=True)
-
-        df1 = pd.merge(df1,df2,on="cell_name",how="inner",ignore_index=True)
+        for file in list_csv:
+            os.remove(file)
+        df1 = pd.merge(df1,df2,on="cell_name",how="inner",left_index=False,right_index=False)
+        df1 = df1[['well_id','cell_name','#reads','#umi distribution','V','V counts','J','J counts','D','D counts','CDR3', 'CDR3 counts']]
         df1.to_csv(self.output_dir + "/final_table.csv")
+
 
     def split_to_cells(self):
         high_confidence_barcodes = plate_to_cells.filter_abundant_barcodes(self.fastq2)
