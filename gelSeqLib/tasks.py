@@ -158,32 +158,45 @@ class Plate_Task(Task):
         io_func.makeOutputDir(self.output_dir)
 
         # Perform core functions
-        '''
-        self.split_to_cells()
+
+        # self.split_to_cells()
         mapper = [_CELLrun(fasta.replace('.fasta',''), self.output_dir + "/" + fasta, self.output_dir)
                   for fasta in os.listdir(self.output_dir) if ".fasta" in fasta]
         for job in mapper:
             job.submit_command(cpu_cores=5, memory=300, queue="new-short")
-            count_jobs(mapper[0:mapper.index(job) + 1])
+            # count_jobs(mapper[0:mapper.index(job) + 1])
         wait_for_jobs(mapper)
-        '''
+
         df1 = pd.read_csv(self.output_dir + "/final_output.csv")
         list_csv = [self.output_dir + "/" + file for file in os.listdir(self.output_dir) if ".csv" in file and "output" not in file and "high" not in file]
-        df2 = pd.DataFrame(columns=["cell_name","V","V counts", "D","D counts","J","J counts",
-                                                                          "CDR3","CDR3 counts"])
+        df2 = pd.DataFrame(columns=["cell_name","V first","V first counts",
+                                                                          "V second","V second counts",
+                                                                          "D first","D first counts",
+                                                                          "D second","D second counts",
+                                                                          "J first", "J first counts",
+                                                                          "J second", "J second counts",
+                                                                          "CDR3 first", "CDR3 first counts",
+                                                                          "CDR3 second", "CDR3 second counts"])
         for file in list_csv:
             df2 = df2.append(pd.read_csv(file), ignore_index=True)
-        for file in list_csv:
-            os.remove(file)
+        #for file in list_csv:
+            #os.remove(file)
         df1 = pd.merge(df1,df2,on="cell_name",how="inner",left_index=False,right_index=False)
-        df1 = df1[['well_id','cell_name','#reads','#umi distribution','V','V counts','J','J counts','D','D counts','CDR3', 'CDR3 counts']]
+        df1 = df1[['well_id','cell_name','#reads','#umi distribution',"V first","V first counts",
+                                                                          "V second","V second counts",
+                                                                          "D first","D first counts",
+                                                                          "D second","D second counts",
+                                                                          "J first", "J first counts",
+                                                                          "J second", "J second counts",
+                                                                          "CDR3 first", "CDR3 first counts",
+                                                                          "CDR3 second", "CDR3 second counts"]]
         df1.to_csv(self.output_dir + "/final_table.csv")
 
 
     def split_to_cells(self):
         high_confidence_barcodes = plate_to_cells.filter_abundant_barcodes(self.fastq2)
         high_confidence_barcodes.to_csv(self.output_dir+"/high_conf.csv")
-        plate_to_cells.split_by_cells(high_confidence_barcodes, wells_cells_file, self.output_dir, self.fastq1, self.fastq2)
+        plate_to_cells.split_by_cells(self.plate_name,high_confidence_barcodes, wells_cells_file, self.output_dir, self.fastq1, self.fastq2)
 
 
 class Cell_Task(Task):
@@ -254,17 +267,12 @@ class Cell_Task(Task):
         for d in data_dirs:
             io_func.makeOutputDir("{}/{}".format(self.output_dir, d))
         '''
+        self.collapse_uniq_seqs()
+
         cell = self.ig_blast()
 
         summary = cell.choose_recombinants()
-        '''
-        filt_file = "{output_dir}/filtered_{receptor}_seqs/filtered_{receptor}s.txt".format(
-                output_dir=self.output_dir,
-                receptor=self.receptor_name)
-        '''
-        #self.print_cell_summary(cell,filt_file,self.receptor_name, self.loci)
 
-        #cdr3_consensus, consensus = self.create_cdr3_consensus(cell, filt_file)
 
         with open(
                 "{output_dir}/{cell_name}.pkl".format(
@@ -279,39 +287,19 @@ class Cell_Task(Task):
                             output_dir=self.output_dir,
                             cell_name=cell.name,
                             receptor=self.receptor_name, locus=locus))
-                '''
-                with open(
-                        "{output_dir}/filtered_{receptor}_seqs/{cell_name}_{locus}".format(
-                            output_dir=self.output_dir,
-                            cell_name=cell.name,
-                            receptor=self.receptor_name, locus=locus), 'w') as pf:
-                        pf.write(str(summary[self.receptor_name][locus]))
-                        pf.write("locus = " + locus + '\n')
-                        pf.write(summary[self.receptor_name][locus] +'\n')
-                        pf.write("CDR3:" + cdr3_consensus + '\n')
-                        pf.write("CDR3_freq:" + str(consensus) + '\n')
-                        '''
 
-    def create_cdr3_consensus(self, cell, filt_file):
-        cdr3_list = subprocess.getoutput("grep ^CDR3: %s" % (filt_file)).split("\n")
-        cdr3_list = ["> \n" + x[6:] for x in cdr3_list if "Couldn" not in x]
-        cdr3_list.sort()
-        print(cdr3_list)
-        cdr3_file = "{output_dir}/{cell_name}_cdr3.fasta".format(
-            output_dir=self.output_dir,
-            cell_name=cell.name,
-            receptor=self.receptor_name)
-        with open(cdr3_file, 'w') as pf:
-            for cdr3 in cdr3_list:
-                pf.write(cdr3 + '\n')
-        junk_file = open("junk_file", 'w')
-        al_file = align_func.clustalo_align(cdr3_file, junk_file)
-        os.remove("junk_file")
-        os.remove(cdr3_file)
-        cdr3_consensus, freq = align_func.make_consensus(al_file, "fasta")
-        os.remove(al_file)
-        consensus = [(cdr3_consensus[i],freq[i]) for i in range(0,len(cdr3_consensus))]
-        return cdr3_consensus, consensus
+
+    def collapse_uniq_seqs(self):
+        new_fasta =".".join(self.fasta.split(".")[0:len(self.fasta.split(".")) -1]) + "_collapsed.fasta"
+        temp_uniq = subprocess.getoutput("""cat %s | awk 'NR%s==0' | sort | uniq -c | sort -n""" % (self.fasta,"%2")).split("\n")
+        with open(new_fasta,'w') as fasta_file:
+            for row in temp_uniq:
+                query_name = ">" + row.strip().split(" ")[0] + "\n"
+                seq = row.strip().split(" ")[1] + "\n"
+                fasta_file.write(query_name)
+                fasta_file.write(seq)
+        self.fasta = new_fasta
+
 
     def ig_blast(self):
         igblastn = self.get_binary('igblastn')

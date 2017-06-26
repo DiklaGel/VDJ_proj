@@ -24,7 +24,6 @@ class Cell(object):
         self.recombinants = self._process_recombinants(recombinants, receptor,
                                                        loci)
         self.pre_filtering_reads = self.get_len()
-        self.after_filtering_reads = defaultdict(dict)
         self.is_empty = self._check_is_empty()
         self.species = species
         # self.cdr3_comparisons = {'A': None, 'B': None, 'mean_both': None}
@@ -320,53 +319,40 @@ class Cell(object):
                         cdr3_ranks = Counter()
                         for rec in recombinants:
                             for seq in rec.summary[0].split(","):
-                                V_ranks.update({str(seq): 1})
+                                V_ranks.update({str(seq): int(rec.contig_name.strip())})
                             for seq in rec.summary[1].split(","):
-                                D_ranks.update({str(seq): 1})
+                                D_ranks.update({str(seq):  int(rec.contig_name.strip())})
                             for seq in rec.summary[2].split(","):
-                                J_ranks.update({str(seq): 1})
+                                J_ranks.update({str(seq):  int(rec.contig_name.strip())})
                             if rec.cdr3 is not None and len(rec.cdr3) != 0:
-                                cdr3_ranks.update({rec.cdr3[1]: 1})
+                                cdr3_ranks.update({rec.cdr3[1]:  int(rec.contig_name.strip())})
 
-                        ret_dict[receptor][locus] = pd.DataFrame([{"cell_name": self.name ,"V": [x[0] for x in V_ranks.most_common(3)],
-                                                                   "V counts": [x[1] for x in V_ranks.most_common(3)],
-                                    "D": [x[0] for x in D_ranks.most_common(3)],"D counts": [x[1] for x in
-                                         D_ranks.most_common(3)],
-                                    "J": [x[0] for x in J_ranks.most_common(3)],"J counts": [x[1] for x in
-                                         J_ranks.most_common(3)],
-                                    "CDR3": [x[0] for x in cdr3_ranks.most_common(3)],"CDR3 counts": [x[1] for x in
-                                                                                                   cdr3_ranks.most_common(3)]}],
-                                                                 columns=["cell_name","V","V counts", "D","D counts","J","J counts",
-                                                                          "CDR3","CDR3 counts"])
-                        '''
-                        V_most_common = [x[0] for x in
-                                         V_ranks.most_common(3)]
-                        D_most_common = [x[0] for x in
-                                         D_ranks.most_common(3)]
-                        J_most_common = [x[0] for x in
-                                         J_ranks.most_common(3)]
-                        CDR3_most_common = [x[0] for x in
-                                         cdr3_ranks.most_common(3)]
+                        ret_dict[receptor][locus] = pd.DataFrame([{"cell_name": self.name ,
+                                                                   "V first": "NA" if len(V_ranks) == 0 else V_ranks.most_common(3)[0][0],
+                                                                   "V first counts": 0 if len(V_ranks) == 0  else V_ranks.most_common(3)[0][1],
+                                                                   "V second": "NA" if len(V_ranks) < 2 else V_ranks.most_common(3)[1][0],
+                                                                   "V second counts": 0 if len(V_ranks) < 2 else  V_ranks.most_common(3)[1][1],
+                                                                   "D first": "NA" if len(D_ranks) == 0 else D_ranks.most_common(3)[0][0],
+                                                                   "D first counts": 0 if len(D_ranks) == 0 else D_ranks.most_common(3)[0][1],
+                                                                   "D second": "NA" if len(D_ranks) < 2 else  D_ranks.most_common(3)[1][0],
+                                                                   "D second counts": 0 if len(D_ranks) < 2 else D_ranks.most_common(3)[1][1],
+                                                                   "J first": "NA"  if len(J_ranks) == 0 else J_ranks.most_common(3)[0][0],
+                                                                   "J first counts": 0 if len(J_ranks) == 0 else J_ranks.most_common(3)[0][1],
+                                                                   "J second": "NA"  if len(J_ranks) < 2 else J_ranks.most_common(3)[1][0],
+                                                                   "J second counts": 0  if len(J_ranks) < 2 else J_ranks.most_common(3)[1][1],
+                                                                   "CDR3 first": "NA" if len(cdr3_ranks) == 0 else cdr3_ranks.most_common(3)[0][0],
+                                                                   "CDR3 first counts": 0 if len(cdr3_ranks) == 0 else cdr3_ranks.most_common(3)[0][1],
+                                                                   "CDR3 second":"NA" if len(cdr3_ranks) < 2 else cdr3_ranks.most_common(3)[1][0],
+                                                                   "CDR3 second counts": 0 if len(cdr3_ranks) < 2  else cdr3_ranks.most_common(3)[1][1]}],
+                                                                 columns=["cell_name","V first","V first counts",
+                                                                          "V second","V second counts",
+                                                                          "D first","D first counts",
+                                                                          "D second","D second counts",
+                                                                          "J first", "J first counts",
+                                                                          "J second", "J second counts",
+                                                                          "CDR3 first", "CDR3 first counts",
+                                                                          "CDR3 second", "CDR3 second counts"])
 
-                        to_remove = []
-
-                        set_common = V_most_common + D_most_common + J_most_common
-                        for rec in recombinants:
-                            if not(self.are_intersects(rec.summary[0].split(','),V_most_common) and self.are_intersects(rec.summary[1].split(','),D_most_common)\
-                                    and self.are_intersects(rec.summary[2].split(','),J_most_common)):
-                                to_remove.append(rec)
-                            else:
-                                hit_to_remove = []
-                                for hit in rec.hit_table:
-                                    if hit[2] not in set_common:
-                                        hit_to_remove.append(hit)
-                                for hit in hit_to_remove:
-                                    self.recombinants[receptor][locus][self.recombinants[receptor][locus].index(rec)].hit_table.remove(hit)
-
-                        for rec in to_remove:
-                            self.recombinants[receptor][locus].remove(rec)
-                        '''
-        self.after_filtering_reads = self.get_len()
         print("ret_dict")
         print(str(ret_dict))
         return ret_dict

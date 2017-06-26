@@ -116,10 +116,11 @@ def gunzip_fastq(file,dest):
     subprocess.getoutput("""gunzip -c %s > %s  """ % (file, dest))
 
 
-def split_by_cells(high_confidence_barcodes,wells_cells_file,output_dir,fastq1,fastq2):
+def split_by_cells(plate_name,high_confidence_barcodes,wells_cells_file,output_dir,fastq1,fastq2):
     cells_to_path = dict()
     map_cell_to_barcode = pd.read_csv(wells_cells_file, delimiter='\t',
                                       usecols=['Well_ID','well_coordinates', 'Cell_barcode', 'Amp_batch_ID', 'plate_ID'])
+    map_cell_to_barcode = map_cell_to_barcode[map_cell_to_barcode['Amp_batch_ID'] == plate_name]
     # grouping to cells by barcodes
     checked_cells, cell_barcode_mapping = group_to_cells(high_confidence_barcodes, map_cell_to_barcode)
     #generate a data frame with columns=["cell_name","cell_barcode","umi_barcode","query_names","lines"]
@@ -128,12 +129,12 @@ def split_by_cells(high_confidence_barcodes,wells_cells_file,output_dir,fastq1,f
     for cell_barcode in checked_cells.keys():
         cell_name = map_cell_to_barcode[map_cell_to_barcode['Cell_barcode'] == cell_barcode]['well_coordinates'].tolist()[0]
         well_id = map_cell_to_barcode[map_cell_to_barcode['Cell_barcode'] == cell_barcode]['Well_ID'].tolist()[0]
-        for barcode in cell_barcode_mapping[cell_barcode]:
+        for barcode in set(cell_barcode_mapping[cell_barcode]):
             to_append = [{"well_id":well_id,"cell_name": cell_name,"cell_barcode": barcode,"umi_barcode": r}
                                                   for r in high_confidence_barcodes[high_confidence_barcodes["cell_barcode"]==barcode]["umi_barcode"].__iter__()]
             plate_mapping = plate_mapping.append(to_append)
             map[barcode] = cell_name
-    high_conf = pd.merge(plate_mapping,high_confidence_barcodes, on=["cell_barcode","umi_barcode"], sort=False)
+    high_conf = pd.merge(plate_mapping,high_confidence_barcodes, on=["cell_barcode","umi_barcode"],sort=False,how='inner')
 
     high_conf.to_csv(output_dir + "/final_high_conf.csv")
 
