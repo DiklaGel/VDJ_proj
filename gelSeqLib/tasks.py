@@ -159,7 +159,7 @@ class Plate_Task(Task):
 
         # Perform core functions
 
-        # self.split_to_cells()
+        self.split_to_cells()
         mapper = [_CELLrun(fasta.replace('.fasta',''), self.output_dir + "/" + fasta, self.output_dir)
                   for fasta in os.listdir(self.output_dir) if ".fasta" in fasta]
         for job in mapper:
@@ -311,6 +311,7 @@ class Cell_Task(Task):
         igblast_seqtype = self.config.get('IgBlast_options', 'igblast_seqtype')
 
         # IgBlast of assembled contigs
+
         VDJ_func.run_IgBlast(igblastn, self.fasta, self.receptor_name, self.loci,
                                 self.output_dir, self.cell_name, self.species,
                                 igblast_index_location,
