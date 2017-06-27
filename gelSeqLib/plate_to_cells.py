@@ -153,19 +153,9 @@ def split_by_cells(plate_name,high_confidence_barcodes,wells_cells_file,output_d
                     break
         final_output = final_output.append([{"well_id": well_id, "cell_name": cell_name,
                       "#reads": cell_group["num"].sum(),
-                      "#umi distribution":[count for count
-                                           in [cell_group[cell_group["umi_barcode"] == umi]["num"].sum() for umi in pd.unique(cell_group["umi_barcode"])]]}],ignore_index=True)
-        '''
+                      "#umi distribution":" ".join([str(count) for count
+                                           in [cell_group[cell_group["umi_barcode"] == umi]["num"].sum() for umi in pd.unique(cell_group["umi_barcode"])]])}],ignore_index=True)
 
-        for i in range(0,len(group)):
-            for j in range(len(group) - 1, i, -1):
-                a = group.loc[i]["umi_barcode"]
-                b =  group.loc[j]["umi_barcode"]
-                if align_func.hamming_distance(a,b) <= 1:
-                    group[j,"umi_barcode"] = group.loc[i]["umi_barcode"]
-        final_output.append({"well_id":well_id, "cell_name":cell_name, "#reads":group["num"].sum(), "#umi distribution":
-            [count for count in group[group["umi_barcode"] == umi]["num"].sum() for umi in pd.unique(group["umi_barcode"])]})
-        '''
     final_output.to_csv(output_dir + "/final_output.csv")
     create_fasta_per_cell(fastq1, fastq2, high_confidence_barcodes, map, output_dir)
 
