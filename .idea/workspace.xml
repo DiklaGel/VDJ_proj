@@ -1,28 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1f3e8759-58e1-4dbd-80d5-980aa4a2fe39" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python_lsf_wrapper" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/new_protocol/combine_files.sh" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/new_protocol/process_new_protocol.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plates_project/README" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plates_project/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python_lsf_wrapper/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python_lsf_wrapper/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python_lsf_wrapper/.idea/preferred-vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python_lsf_wrapper/.idea/python_lsf_wrapper.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python_lsf_wrapper/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python_lsf_wrapper/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python_lsf_wrapper/uria.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/gelSeqLib/find_clones.py" afterPath="$PROJECT_DIR$/plates_project/find_clones.py" />
+    <list default="true" id="1f3e8759-58e1-4dbd-80d5-980aa4a2fe39" name="Default" comment="29/08/2017 10:45&#10;&#10;">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gelSeq.conf" afterPath="$PROJECT_DIR$/gelSeq.conf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gelSeqLib/__init__.py" afterPath="$PROJECT_DIR$/gelSeqLib/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gelSeqLib/core.py" afterPath="$PROJECT_DIR$/gelSeqLib/core.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gelSeqLib/plate_to_cells.py" afterPath="$PROJECT_DIR$/gelSeqLib/plate_to_cells.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gelSeqLib/tasks.py" afterPath="$PROJECT_DIR$/gelSeqLib/tasks.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plates_project/groupToClones.R" afterPath="$PROJECT_DIR$/plates_project/groupToClones.R" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plates_project/msaAndClustering.R" afterPath="$PROJECT_DIR$/plates_project/msaAndClustering.R" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -75,11 +59,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="280">
               <caret line="144" column="47" lean-forward="true" selection-start-line="144" selection-start-column="47" selection-end-line="144" selection-end-column="47" />
-              <folding>
-                <marker date="1499933004303" expanded="true" signature="5903:8574" ph="..." />
-                <marker date="1499933004303" expanded="true" signature="7520:7582" ph="..." />
-                <marker date="1499933004303" expanded="true" signature="8052:8152" ph="..." />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -911,7 +891,14 @@
       <option name="project" value="LOCAL" />
       <updated>1498570946746</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="29/08/2017 10:45&#10;&#10;">
+      <created>1503992864810</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1503992864810</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -945,7 +932,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="first version" />
     <MESSAGE value="gelSeq" />
     <MESSAGE value="11:50" />
     <MESSAGE value="14:38" />
@@ -970,7 +956,8 @@
     <MESSAGE value="26062017 11:00&#10;&#10;&#10;" />
     <MESSAGE value="26062017 17:36&#10;&#10;&#10;" />
     <MESSAGE value="27062017 17:00&#10;&#10;&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="27062017 17:00&#10;&#10;&#10;" />
+    <MESSAGE value="29/08/2017 10:45&#10;&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="29/08/2017 10:45&#10;&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1229,11 +1216,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
           <caret line="144" column="47" lean-forward="true" selection-start-line="144" selection-start-column="47" selection-end-line="144" selection-end-column="47" />
-          <folding>
-            <marker date="1499933004303" expanded="true" signature="5903:8574" ph="..." />
-            <marker date="1499933004303" expanded="true" signature="7520:7582" ph="..." />
-            <marker date="1499933004303" expanded="true" signature="8052:8152" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
