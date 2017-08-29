@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/VDJ_proj.iml" filepath="$PROJECT_DIR$/.idea/VDJ_proj.iml" />
-      <module fileurl="file://$USER_HOME$/python_libs/python_lsf_wrapper/.idea/python_lsf_wrapper.iml" filepath="$USER_HOME$/python_libs/python_lsf_wrapper/.idea/python_lsf_wrapper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/python_lsf_wrapper/.idea/python_lsf_wrapper.iml" filepath="$PROJECT_DIR$/python_lsf_wrapper/.idea/python_lsf_wrapper.iml" />
     </modules>
   </component>
 </project>

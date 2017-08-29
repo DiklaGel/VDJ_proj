@@ -1,11 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1f3e8759-58e1-4dbd-80d5-980aa4a2fe39" name="Default" comment="26062017 11:00&#10;&#10;&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gelSeqLib/find_clones.py" />
+    <list default="true" id="1f3e8759-58e1-4dbd-80d5-980aa4a2fe39" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python_lsf_wrapper" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/new_protocol/combine_files.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/new_protocol/process_new_protocol.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plates_project/README" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plates_project/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python_lsf_wrapper/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python_lsf_wrapper/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python_lsf_wrapper/.idea/preferred-vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python_lsf_wrapper/.idea/python_lsf_wrapper.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python_lsf_wrapper/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python_lsf_wrapper/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python_lsf_wrapper/uria.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/gelSeqLib/find_clones.py" afterPath="$PROJECT_DIR$/plates_project/find_clones.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gelSeq.conf" afterPath="$PROJECT_DIR$/gelSeq.conf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gelSeqLib/__init__.py" afterPath="$PROJECT_DIR$/gelSeqLib/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gelSeqLib/core.py" afterPath="$PROJECT_DIR$/gelSeqLib/core.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gelSeqLib/plate_to_cells.py" afterPath="$PROJECT_DIR$/gelSeqLib/plate_to_cells.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gelSeqLib/tasks.py" afterPath="$PROJECT_DIR$/gelSeqLib/tasks.py" />
     </list>
+    <ignored path="$PROJECT_DIR$/.idea/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,47 +37,49 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="union_table.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/testing_dir/union_table.sh">
+        <entry file="file://$PROJECT_DIR$/plates_project/union_table.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="75" lean-forward="false" selection-start-line="17" selection-start-column="75" selection-end-line="17" selection-end-column="75" />
+            <state relative-caret-position="75">
+              <caret line="5" column="32" lean-forward="false" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="find_clones.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/gelSeqLib/find_clones.py">
+      <file leaf-file-name="platesrc.cfg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plates_project/platesrc.cfg">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+            <state relative-caret-position="105">
+              <caret line="7" column="24" lean-forward="false" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cluster_clones.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plates_project/cluster_clones.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="100">
+              <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
               <folding>
-                <element signature="e#23#36#0" expanded="true" />
+                <element signature="e#22#35#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="plate_to_cells.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="plate_to_cells.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gelSeqLib/plate_to_cells.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="58" column="32" lean-forward="false" selection-start-line="58" selection-start-column="32" selection-end-line="58" selection-end-column="32" />
+            <state relative-caret-position="280">
+              <caret line="144" column="47" lean-forward="true" selection-start-line="144" selection-start-column="47" selection-end-line="144" selection-end-column="47" />
               <folding>
-                <element signature="e#0#9#0" expanded="true" />
+                <marker date="1499933004303" expanded="true" signature="5903:8574" ph="..." />
+                <marker date="1499933004303" expanded="true" signature="7520:7582" ph="..." />
+                <marker date="1499933004303" expanded="true" signature="8052:8152" ph="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="align_func.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gelSeqLib/align_func.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="70">
-              <caret line="21" column="4" lean-forward="false" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -66,12 +87,29 @@
       <file leaf-file-name="tasks.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gelSeqLib/tasks.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2295">
-              <caret line="118" column="12" lean-forward="true" selection-start-line="118" selection-start-column="12" selection-end-line="118" selection-end-column="55" />
-              <folding>
-                <element signature="e#415#2661#0" expanded="false" />
-                <element signature="e#17087#17879#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="15">
+              <caret line="8" column="86" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LSF.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/python_lsf_wrapper/LSF.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="705">
+              <caret line="50" column="73" lean-forward="false" selection-start-line="50" selection-start-column="70" selection-end-line="50" selection-end-column="73" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="platesrc_old.cfg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plates_project/platesrc_old.cfg">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="28" lean-forward="false" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -87,20 +125,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>locus</find>
-      <find>&quot;reads</find>
-      <find>recom</find>
-      <find>run</find>
-      <find>pars</find>
-      <find>p</find>
-      <find>{cell_name}</find>
-      <find>per</find>
-      <find>perf</find>
-      <find>from_</find>
-      <find>choos</find>
-      <find>final_output</find>
-      <find>row</find>
-      <find>sort</find>
       <find>sort_</find>
       <find>parse</find>
       <find>final</find>
@@ -110,13 +134,27 @@
       <find>uni</find>
       <find>high</find>
       <find>choo</find>
-      <find>hamm</find>
       <find>fasta_seq</find>
       <find>fasta</find>
       <find>.fasta</find>
       <find>distr</find>
       <find>group</find>
       <find>clus</find>
+      <find>pickle</find>
+      <find>to_csv</find>
+      <find>conf</find>
+      <find>self.co</find>
+      <find>self.config.</find>
+      <find>well</find>
+      <find>sub</find>
+      <find>hamm</find>
+      <find>row</find>
+      <find>pd.un</find>
+      <find>hist</find>
+      <find>threshold</find>
+      <find>split_by_cells</find>
+      <find>wells_cells_file</find>
+      <find>sort</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -139,7 +177,6 @@
         <option value="$PROJECT_DIR$/gelSeqLib/launcher.py" />
         <option value="$PROJECT_DIR$/gelSeqLib/plate.py" />
         <option value="$PROJECT_DIR$/plates/103_S10_L001/E4/IgBLAST_output/E4_TCR_TCR_B.IgBLASTOut" />
-        <option value="$PROJECT_DIR$/gelSeq.conf" />
         <option value="$PROJECT_DIR$/plates/103_S10_L001/E4/unfiltered_TCR_seqs/unfiltered_TCRs.txt" />
         <option value="$PROJECT_DIR$/plates/CellLSF.py" />
         <option value="$PROJECT_DIR$/plates/103_S10_L001_A/H14/reads/H14.fasta" />
@@ -152,24 +189,34 @@
         <option value="$PROJECT_DIR$/plates/108_S12_L001/A9.log" />
         <option value="$PROJECT_DIR$/gelSeqLib/io_func.py" />
         <option value="$USER_HOME$/python_libs/python_lsf_wrapper/LSF.py" />
-        <option value="$PROJECT_DIR$/gelSeqLib/__init__.py" />
-        <option value="$PROJECT_DIR$/gelSeqLib/core.py" />
         <option value="$PROJECT_DIR$/testing_dir/run_plate.sh" />
-        <option value="$PROJECT_DIR$/gelSeqLib/tasks.py" />
         <option value="$PROJECT_DIR$/gelSeqLib/VDJ_func.py" />
-        <option value="$PROJECT_DIR$/gelSeqLib/plate_to_cells.py" />
-        <option value="$PROJECT_DIR$/testing_dir/submit_plates.sh" />
         <option value="$PROJECT_DIR$/testing_dir/find_clones.py" />
+        <option value="$PROJECT_DIR$/testing_dir/submit_plates.sh" />
         <option value="$PROJECT_DIR$/testing_dir/union_table.sh" />
+        <option value="$PROJECT_DIR$/gelSeqLib/core.py" />
         <option value="$PROJECT_DIR$/gelSeqLib/find_clones.py" />
+        <option value="$PROJECT_DIR$/gelSeqLib/cluster_clones.py" />
+        <option value="$PROJECT_DIR$/gelSeqLib/__init__.py" />
+        <option value="$PROJECT_DIR$/new_protocol/combine_files.sh" />
+        <option value="$PROJECT_DIR$/gelSeqLib/tasks.py" />
+        <option value="$PROJECT_DIR$/gelSeq.conf" />
+        <option value="$PROJECT_DIR$/new_protocol/process_new_protocol.py" />
+        <option value="$PROJECT_DIR$/plates_project/README" />
+        <option value="$PROJECT_DIR$/plates_project/platesrc_old.cfg" />
+        <option value="$PROJECT_DIR$/plates_project/submit_plates.sh" />
+        <option value="$PROJECT_DIR$/plates_project/platesrc.cfg" />
+        <option value="$PROJECT_DIR$/plates_project/union_table.sh" />
+        <option value="$PROJECT_DIR$/plates_project/cluster_clones.py" />
+        <option value="$PROJECT_DIR$/gelSeqLib/plate_to_cells.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="9" />
+    <option name="x" value="8" />
     <option name="y" value="31" />
-    <option name="width" value="1361" />
-    <option name="height" value="705" />
+    <option name="width" value="1362" />
+    <option name="height" value="696" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -309,7 +356,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="python_lsf_wrapper" />
+              <option name="myItemId" value="VDJ_proj" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -322,6 +369,10 @@
               <option name="myItemId" value="VDJ_proj" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gelSeqLib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -331,46 +382,19 @@
     <property name="last_opened_file_path" value="$USER_HOME$/tracer" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="ToolWindowEvent Log.ShowToolbar" value="false" />
+    <property name="ToolWindowPython Console.ShowToolbar" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/testing_dir" />
+      <recent name="$PROJECT_DIR$/gelSeqLib" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/plates/109_S13_L001" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/testing_dir" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/gelSeqLib" />
-    </key>
   </component>
-  <component name="RunManager" selected="Python.find_clones">
-    <configuration default="false" name="union_table.sh" type="BashConfigurationType" factoryName="Bash" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="bash" />
-      <option name="INTERPRETER_PATH" value="/usr/bin/env" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/testing_dir" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/testing_dir/union_table.sh" />
-      <option name="PARAMETERS" value="" />
-      <module name="VDJ_proj" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="__main__" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="VDJ_proj" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/gelSeq.py" />
-      <option name="PARAMETERS" value="cell -s Hsap --loci=B $PROJECT_DIR$/plates/AB2512/A3.fasta A3 $PROJECT_DIR$/plates/AB2512" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Bash.union_table.sh (1)">
     <configuration default="false" name="find_clones" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -384,7 +408,63 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="VDJ_proj" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/gelSeqLib/find_clones.py" />
-      <option name="PARAMETERS" value="$USER_HOME$/output/result.csv $USER_HOME$/output" />
+      <option name="PARAMETERS" value="$USER_HOME$/output/result_050717.csv $USER_HOME$/output" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="submit_plates.sh (1)" type="BashConfigurationType" factoryName="Bash" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="bash" />
+      <option name="INTERPRETER_PATH" value="/usr/bin/env" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/plates_project" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/plates_project/submit_plates.sh" />
+      <option name="PARAMETERS" value="" />
+      <module name="VDJ_proj" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="process_new_protocol" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/new_protocol" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="VDJ_proj" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/new_protocol/process_new_protocol.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="union_table.sh (1)" type="BashConfigurationType" factoryName="Bash" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="bash" />
+      <option name="INTERPRETER_PATH" value="/usr/bin/env" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/plates_project" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/plates_project/union_table.sh" />
+      <option name="PARAMETERS" value="" />
+      <module name="VDJ_proj" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="cluster_clones" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/plates_project" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="VDJ_proj" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/plates_project/cluster_clones.py" />
+      <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
@@ -536,6 +616,17 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
+    <configuration default="false" name="combine_files.sh" type="BashConfigurationType" factoryName="Bash">
+      <option name="INTERPRETER_OPTIONS" value="bash\i=0" />
+      <option name="INTERPRETER_PATH" value="/usr/bin/env" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/new_protocol" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/new_protocol/combine_files.sh" />
+      <option name="PARAMETERS" value="" />
+      <module name="VDJ_proj" />
+      <envs />
+      <method />
+    </configuration>
     <configuration default="false" name="run_plate.sh" type="BashConfigurationType" factoryName="Bash">
       <option name="INTERPRETER_OPTIONS" value="bash" />
       <option name="INTERPRETER_PATH" value="/usr/bin/env" />
@@ -558,18 +649,23 @@
       <envs />
       <method />
     </configuration>
-    <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Bash.run_plate.sh" />
-      <item index="1" class="java.lang.String" itemvalue="Bash.submit_plates.sh" />
-      <item index="2" class="java.lang.String" itemvalue="Bash.union_table.sh" />
-      <item index="3" class="java.lang.String" itemvalue="Python.__main__" />
-      <item index="4" class="java.lang.String" itemvalue="Python.find_clones" />
+    <list size="8">
+      <item index="0" class="java.lang.String" itemvalue="Bash.combine_files.sh" />
+      <item index="1" class="java.lang.String" itemvalue="Bash.run_plate.sh" />
+      <item index="2" class="java.lang.String" itemvalue="Bash.submit_plates.sh" />
+      <item index="3" class="java.lang.String" itemvalue="Python.find_clones" />
+      <item index="4" class="java.lang.String" itemvalue="Bash.submit_plates.sh (1)" />
+      <item index="5" class="java.lang.String" itemvalue="Python.process_new_protocol" />
+      <item index="6" class="java.lang.String" itemvalue="Bash.union_table.sh (1)" />
+      <item index="7" class="java.lang.String" itemvalue="Python.cluster_clones" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="Python.find_clones" />
-        <item index="1" class="java.lang.String" itemvalue="Bash.union_table.sh" />
-        <item index="2" class="java.lang.String" itemvalue="Python.__main__" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Bash.union_table.sh (1)" />
+        <item index="1" class="java.lang.String" itemvalue="Bash.submit_plates.sh (1)" />
+        <item index="2" class="java.lang.String" itemvalue="Python.cluster_clones" />
+        <item index="3" class="java.lang.String" itemvalue="Python.process_new_protocol" />
+        <item index="4" class="java.lang.String" itemvalue="Python.find_clones" />
       </list>
     </recent_temporary>
   </component>
@@ -808,58 +904,42 @@
       <option name="project" value="LOCAL" />
       <updated>1498487803777</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="27062017 17:00&#10;&#10;&#10;">
+      <created>1498570946746</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1498570946746</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="9" y="31" width="1361" height="705" extended-state="0" />
-    <editor active="false" />
+    <frame x="8" y="31" width="1362" height="696" extended-state="0" />
+    <editor active="true" />
     <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.110866375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug Logs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3586098" sideWeight="0.12123439" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3349131" sideWeight="0.8740849" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30331755" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Execute Anonymous" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3222749" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21528289" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug Logs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328594" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3349131" sideWeight="0.11054173" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33123028" sideWeight="0.8894583" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Execute Anonymous" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3221154" sideWeight="0.49707174" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3586098" sideWeight="0.87876564" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Salesforce" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Salesforce" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31730768" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32852563" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3270142" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36334914" sideWeight="0.8894583" order="3" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug Logs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2748815" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3191153" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Execute Anonymous" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3222749" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28257686" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328594" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4549763" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Salesforce" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -889,7 +969,8 @@
     <MESSAGE value="20062017 16:00&#10;&#10;&#10;" />
     <MESSAGE value="26062017 11:00&#10;&#10;&#10;" />
     <MESSAGE value="26062017 17:36&#10;&#10;&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="26062017 17:36&#10;&#10;&#10;" />
+    <MESSAGE value="27062017 17:00&#10;&#10;&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="27062017 17:00&#10;&#10;&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -898,11 +979,6 @@
           <url>file://$PROJECT_DIR$/gelSeqLib/core.py</url>
           <line>329</line>
           <option name="timeStamp" value="203" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/gelSeqLib/plate_to_cells.py</url>
-          <line>205</line>
-          <option name="timeStamp" value="209" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/gelSeqLib/VDJ_func.py</url>
@@ -922,43 +998,15 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="225" />
+      <option name="time" value="268" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/plates/103_S10_L001_A/H14/reads/H14.fasta" />
-    <entry file="file://$PROJECT_DIR$/plates/103_S10_L001_A/A23/reads/A23.fasta" />
-    <entry file="file://$PROJECT_DIR$/plates/103_S10_L001_A/A16/reads/A16.fasta" />
-    <entry file="file://$PROJECT_DIR$/plates/109_S13_L001/A1/reads/A1.fasta" />
-    <entry file="file://$PROJECT_DIR$/plates/109_S13_L001/A11/reads/A11.fasta" />
-    <entry file="file://$PROJECT_DIR$/plates/109_S13_L001/A1/IgBLAST_output/A1_TCR_TCR_B.IgBLASTOut" />
-    <entry file="file://$PROJECT_DIR$/plates/109_S13_L001/A17/filtered_TCR_seqs/cell_name.txt" />
-    <entry file="file://$PROJECT_DIR$/plates/109_S13_L001/A22/filtered_TCR_seqs/cell_name.txt" />
-    <entry file="file://$PROJECT_DIR$/plates/109_S13_L001/A11/filtered_TCR_seqs/A11_cdr3_aln" />
-    <entry file="file://$PROJECT_DIR$/plates/109_S13_L001/A11/filtered_TCR_seqs/A11_cdr3.fasta" />
-    <entry file="file://$PROJECT_DIR$/plates/109_S13_L001/A11/filtered_TCR_seqs/A11_cdr3.aln" />
-    <entry file="file://$PROJECT_DIR$/plates/109_S13_L001/A11/unfiltered_TCR_seqs/unfiltered_TCRs.txt" />
-    <entry file="file://$PROJECT_DIR$/plates/109_S13_L001/M18/filtered_TCR_seqs/filtered_TCRs.txt" />
-    <entry file="file://$PROJECT_DIR$/plates/109_S13_L001/M18/IgBLAST_output/M18_TCR_TCR_B.IgBLASTOut" />
     <entry file="file://$PROJECT_DIR$/plates/109_S13_L001/A11/IgBLAST_output/A11_TCR_TCR_B.IgBLASTOut" />
     <entry file="file://$PROJECT_DIR$/plates/109_S13_L001/A11/filtered_TCR_seqs/filtered_TCRs.txt" />
     <entry file="file://$PROJECT_DIR$/plates/109_S13_L001/A11/filtered_TCR_seqs/A11.txt" />
     <entry file="file://$PROJECT_DIR$/plates/109_S13_L001/A11/filtered_TCR_seqs/A11_B.csv" />
-    <entry file="file://$USER_HOME$/python_libs/python_lsf_wrapper/example.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="49" column="6" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/python_libs/python_lsf_wrapper/uria.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="7" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/plates/108_S12_L001/A4.err" />
     <entry file="file://$PROJECT_DIR$/plates/109_S13_L001/A17/out.out" />
     <entry file="file://$PROJECT_DIR$/plates/108_S12_L001/A6.log" />
@@ -991,42 +1039,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/python_libs/python_lsf_wrapper/LSF.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="50" column="73" lean-forward="false" selection-start-line="50" selection-start-column="70" selection-end-line="50" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/python_libs/python_lsf_wrapper/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gelSeqLib/io_func.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1980">
-          <caret line="144" column="27" lean-forward="false" selection-start-line="144" selection-start-column="17" selection-end-line="144" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gelSeqLib/launcher.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gelSeqLib/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/testing_dir/run_plate.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -1035,29 +1047,89 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plates/AB2512/A3_TCR_B.IgBLASTOut" />
-    <entry file="file://$PROJECT_DIR$/gelSeqLib/VDJ_func.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="99" column="28" lean-forward="false" selection-start-line="99" selection-start-column="4" selection-end-line="99" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gelSeqLib/core.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5175">
-          <caret line="345" column="114" lean-forward="false" selection-start-line="345" selection-start-column="114" selection-end-line="345" selection-end-column="114" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testing_dir/find_clones.py">
+    <entry file="file://$PROJECT_DIR$/testing_dir/find_clones.py" />
+    <entry file="file://$PROJECT_DIR$/python_lsf_wrapper/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testing_dir/submit_plates.sh" />
+    <entry file="file://$PROJECT_DIR$/code_assafs.m" />
+    <entry file="file://$PROJECT_DIR$/gelSeqLib/core.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1147">
+          <caret line="345" column="144" lean-forward="false" selection-start-line="345" selection-start-column="144" selection-end-line="345" selection-end-column="144" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testing_dir/union_table.sh" />
+    <entry file="file://$PROJECT_DIR$/gelSeqLib/find_clones.py" />
+    <entry file="file://$PROJECT_DIR$/gelSeqLib/cluster_clones.py" />
+    <entry file="file://$PROJECT_DIR$/gelSeqLib/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python_lsf_wrapper/uria.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="7" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python_lsf_wrapper/example.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="44" column="2" lean-forward="true" selection-start-line="44" selection-start-column="2" selection-end-line="44" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gelSeqLib/align_func.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="43" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new_protocol/combine_files.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="43" lean-forward="false" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plates_project/pelet" />
+    <entry file="file://$PROJECT_DIR$/gelSeqLib/io_func.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="15" column="4" lean-forward="false" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gelSeq.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="19" lean-forward="false" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gelSeqLib/VDJ_func.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4">
+          <caret line="798" column="4" lean-forward="false" selection-start-line="798" selection-start-column="4" selection-end-line="798" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new_protocol/process_new_protocol.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="81" column="23" lean-forward="false" selection-start-line="81" selection-start-column="23" selection-end-line="81" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -1065,61 +1137,102 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gelSeqLib/__main__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gelSeqLib/launcher.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="24" column="35" lean-forward="false" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plates_project/README">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plates_project/platesrc_old.cfg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="28" lean-forward="false" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testing_dir/submit_plates.sh">
+    <entry file="file://$PROJECT_DIR$/plates_project/platesrc.cfg">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+        <state relative-caret-position="105">
+          <caret line="7" column="24" lean-forward="false" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plates_project/union_table.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="32" lean-forward="false" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python_lsf_wrapper/LSF.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="705">
+          <caret line="50" column="73" lean-forward="false" selection-start-line="50" selection-start-column="70" selection-end-line="50" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plates_project/find_clones.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="52" column="27" lean-forward="false" selection-start-line="52" selection-start-column="27" selection-end-line="52" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plates_project/submit_plates.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gelSeqLib/tasks.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2295">
-          <caret line="118" column="12" lean-forward="true" selection-start-line="118" selection-start-column="12" selection-end-line="118" selection-end-column="55" />
-          <folding>
-            <element signature="e#415#2661#0" expanded="false" />
-            <element signature="e#17087#17879#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="15">
+          <caret line="8" column="86" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testing_dir/union_table.sh">
+    <entry file="file://$PROJECT_DIR$/plates_project/cluster_clones.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="75" lean-forward="false" selection-start-line="17" selection-start-column="75" selection-end-line="17" selection-end-column="75" />
-          <folding />
+        <state relative-caret-position="100">
+          <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+          <folding>
+            <element signature="e#22#35#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gelSeqLib/plate_to_cells.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="58" column="32" lean-forward="false" selection-start-line="58" selection-start-column="32" selection-end-line="58" selection-end-column="32" />
+        <state relative-caret-position="280">
+          <caret line="144" column="47" lean-forward="true" selection-start-line="144" selection-start-column="47" selection-end-line="144" selection-end-column="47" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gelSeqLib/align_func.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="21" column="4" lean-forward="false" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gelSeqLib/find_clones.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding>
-            <element signature="e#23#36#0" expanded="true" />
+            <marker date="1499933004303" expanded="true" signature="5903:8574" ph="..." />
+            <marker date="1499933004303" expanded="true" signature="7520:7582" ph="..." />
+            <marker date="1499933004303" expanded="true" signature="8052:8152" ph="..." />
           </folding>
         </state>
       </provider>

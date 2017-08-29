@@ -1,14 +1,22 @@
 #!/usr/bin/env python
 
-import os,sys
-import subprocess
-from collections import defaultdict
-import argparse
+
 import numpy as np
 import pandas as pd
+import matplotlib
+import networkx
+from Bio import Phylo
+from Bio.Phylo.TreeConstruction import DistanceCalculator
+from itertools import combinations
+import pickle
+import numpy
 from Bio import pairwise2
+from Bio import AlignIO
+# from gelSeqLib import align_func, io_func
 
-from gelSeqLib import align_func, io_func
+
+'''
+
 
 parser = argparse.ArgumentParser(add_help=True,description="find clones of cells with the same VDJ sequence",
                 formatter_class=argparse.ArgumentDefaultsHelpFormatter)
@@ -33,10 +41,21 @@ with open(fasta_file,'w+') as fas:
 
 alignment_file = align_func.clustalw_align(fasta_file,sys.stdout)
 
-groups = df.groupby("Patient")
 '''
-for patient, patient_group in groups:
-    cdr3_groups = patient_group.groupby(["CDR3 first","V first"])
-    d = pd.concat([,cdr3_group])
-    res_df = res_df.append([{"Patient":patient, "clone": clone,}])
-'''
+
+aln = AlignIO.read('/home/labs/amit/diklag/output/cdr3.aln','clustal')
+
+calculator = DistanceCalculator('identity')
+dm = calculator.get_distance(aln)
+with open('/home/labs/amit/diklag/output/dm.pkl','wb') as f:
+    pickle.dump(dm,f,protocol=0)
+
+l = list(combinations(range(len(dm.names)),2))
+distmat = np.repeat(np.inf, len(l))
+
+for index in range(len(l)):
+    distmat[index] = dm.matrix[l[index][1]][l[index][0]]
+
+
+with open('/home/labs/amit/diklag/output/distmap.pkl','wb') as f:
+    pickle.dump(distmat,f,protocol=0)

@@ -19,7 +19,7 @@ def threshold(groups):
     hist, not_important = np.histogram(groups, density=True, bins=groups[len(groups) - 1])
     sum = 0
     i = -1
-    while sum + hist[i+1] < 0.99 and i < 500:
+    while sum + hist[i+1] < 0.98 and i < 500:
         sum += hist[i+1]
         i += 1
     return i

@@ -1,18 +1,18 @@
 import argparse
 import os
-import sys
-import glob
-import warnings
 import pickle
 import subprocess
+import sys
+import warnings
+
 import pandas as pd
-sys.path.insert(0, '/home/labs/amit/diklag/python_libs/python_lsf_wrapper/')
-from LSF import LSF, wait_for_jobs,count_jobs
+sys.path.insert(0, '/home/labs/amit/diklag/PycharmProjects/VDJ_proj/python_lsf_wrapper/')
+from LSF import LSF, wait_for_jobs
 
 from configparser import ConfigParser
 
-from gelSeqLib import plate_to_cells,VDJ_func, io_func, align_func
-from gelSeqLib import base_dir, wells_cells_file
+from gelSeqLib import plate_to_cells,VDJ_func, io_func
+from gelSeqLib import base_dir
 
 
 
@@ -23,7 +23,7 @@ class Task:
                              default=1)
     base_parser.add_argument('--config_file', '-c', metavar="<CONFIG_FILE>",
                              help='config file to use',
-                             default='~/.tracerrc')
+                             default='~/.gelseqrc')
 
     config = None
 
@@ -41,11 +41,11 @@ class Task:
     def read_config(self, config_file):
         # Read config file
         if not config_file:
-            config_file = '~/.tracerrc'
+            config_file = '~/.gelseqrc'
         config_file = os.path.expanduser(config_file)
         if not os.path.isfile(config_file):
             print(
-                "Config file not found at ~/.tracerrc. Using default tracer.conf in repo...")
+                "Config file not found at ~/.gelseqrc. Using default gelSeq.conf in repo...")
             config_file = os.path.join(base_dir, 'gelSeq.conf')
         VDJ_func.check_config_file(config_file)
         config = ConfigParser()
@@ -154,7 +154,7 @@ class Plate_Task(Task):
         # Set-up output directories
         root_output_dir = os.path.abspath(self.output_dir)
         io_func.makeOutputDir(root_output_dir)
-        self.output_dir = root_output_dir + "/" + self.plate_name
+        self.output_dir = os.path.join(root_output_dir , self.plate_name)
         io_func.makeOutputDir(self.output_dir)
 
         # Perform core functions
@@ -192,10 +192,15 @@ class Plate_Task(Task):
                                                                           "CDR3 second", "CDR3 second counts"]]
         df1.to_csv(self.output_dir + "/final_table.csv")
 
+        for file in os.listdir(self.output_dir):
+            if ".fasta" in file or ".err" in file or ".log" in file or ".pkl" in file:
+                os.remove(self.output_dir + "/" + file)
+
 
     def split_to_cells(self):
         high_confidence_barcodes = plate_to_cells.filter_abundant_barcodes(self.fastq2)
         high_confidence_barcodes.to_csv(self.output_dir+"/high_conf.csv")
+        wells_cells_file = self.config.get('project directories','wells_cells_file')
         plate_to_cells.split_by_cells(self.plate_name,high_confidence_barcodes, wells_cells_file, self.output_dir, self.fastq1, self.fastq2)
 
 
